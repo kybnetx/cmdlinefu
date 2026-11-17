@@ -1,0 +1,76 @@
+<html>
+	<head>
+		<title>
+			Grep Recursively Through Single File Extension
+		</title>
+		<link rel='stylesheet' href='style.css' type='text/css' />
+	</head>
+	<body>
+		<div id="terminal-header">
+			<h1>
+				Grep Recursively Through Single File Extension
+			</h1>
+		</div>
+		<div class="terminal-display one-liner" id="terminal-display-main">
+			<div class="line command">
+				grep --include=*.py -lir "delete" .
+			</div>
+			<div class="sample-output c5 output">
+				<pre>
+./attachment.py
+./tests/functional/testcases.py
+./tests/functional/better_twill.py
+./ticket/report.py
+./ticket/api.py
+./ticket/model.py
+./ticket/roadmap.py
+./ticket/admin.py
+./ticket/default_workflow.py
+./ticket/web_ui.py
+./wiki/api.py
+./wiki/model.py
+./wiki/interwiki.py
+./wiki/admin.py
+./wiki/web_ui.py
+./config.py
+./mimeview/patch.py
+./perm.py
+./versioncontrol/web_ui/log.py
+./versioncontrol/web_ui/changeset.py
+./versioncontrol/svn_fs.py
+./versioncontrol/api.py
+./versioncontrol/svn_prop.py
+./versioncontrol/cache.py
+./versioncontrol/diff.py
+./upgrades/db13.py
+./upgrades/db12.py
+./upgrades/db11.py
+./upgrades/db9.py
+./upgrades/db20.py
+./upgrades/db23.py
+./util/__init__.py
+./cache.py
+./web/session.py
+./web/auth.py
+./test.py
+</pre>
+			</div>
+			<div class="details description">
+				<p>
+					Trac 0.12.2-stable
+				</p>
+			</div>
+		</div>
+		<h3>
+			Alternatives
+		</h3>
+		<h3>
+			What others think
+		</h3>
+		<div class="comment comment0 body" id="comments">
+			<p>
+				the -i isn't necessary -- that's for case-insensitive string matching, has nothing to do with recursion nor filenames.
+			</p>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,7 @@
+commandlinefu_id: 13082
+translator:
+  weibo: tgic
+command: |-
+  netstat -tunlapo
+summary: |-
+  查看tcp和udp监听的socket

@@ -1,0 +1,7 @@
+commandlinefu_id: 884
+translator:
+  weibo: tgic
+command: |-
+  history -w <switch to another terminal> history -r
+summary: |-
+  复制历史

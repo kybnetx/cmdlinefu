@@ -1,0 +1,7 @@
+commandlinefu_id: 9909
+translator:
+  weibo: tgic
+command: |-
+  printf "$PWD/%s\n" *
+summary: |-
+  全路径ls

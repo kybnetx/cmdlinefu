@@ -1,0 +1,59 @@
+<html>
+	<head>
+		<title>
+			Propagate X session cookies on a different user and login as that user
+		</title>
+		<link rel='stylesheet' href='style.css' type='text/css' />
+	</head>
+	<body>
+		<div id="terminal-header">
+			<h1>
+				Propagate X session cookies on a different user and login as that user
+			</h1>
+		</div>
+		<div class="terminal-display one-liner" id="terminal-display-main">
+			<div class="line command">
+				read -p 'Username: ' u;sudo -H -u $u xauth add $(xauth list|grep :$(echo ${DISPLAY: -4:2}));sudo su - $u
+			</div>
+			<div class="sample-output c5 output">
+				<pre>
+$ id -un
+olduser
+$ xauth list
+localhost/unix:10  MIT-MAGIC-COOKIE-1  fcc8934e033577e212791d9fa9e0aaff
+localhost/unix:11  MIT-MAGIC-COOKIE-1  3b3c04952077c667430536d2ef621275
+$ echo $DISPLAY
+localhost:10.0
+$ read -p 'Username: ' u;sudo -H -u $u xauth add $(xauth list|grep $(echo ${DISPLAY: -4:2}));sudo su - $u
+Username: newuser
+Password:
+$ id -un
+newuser
+$ xauth list
+localhost/unix:10  MIT-MAGIC-COOKIE-1  fcc8934e033577e212791d9fa9e0aaff
+$ echo $DISPLAY
+localhost:10.0
+</pre>
+			</div>
+			<div class="details description">
+				<p>
+					Reads a username from
+				</p>
+			</div>
+		</div>
+		<h3>
+			Alternatives
+		</h3>
+		<h3>
+			What others think
+		</h3>
+		<div class="comment comment0 body" id="comments">
+			<p>
+				Please make a simple read comand to understant.
+			</p>
+			<p>
+				thanks
+			</p>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,7 @@
+commandlinefu_id: 13466
+translator:
+  weibo: tgic
+command: |-
+  ip route list 0/0
+summary: |-
+  默认网关

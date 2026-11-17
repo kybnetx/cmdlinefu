@@ -1,0 +1,7 @@
+commandlinefu_id: 13103
+translator:
+  weibo: tgic
+command: |-
+  lsof -c diff -o -r1 | grep $file
+summary: |-
+  跟踪diff进度

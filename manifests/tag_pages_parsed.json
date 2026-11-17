@@ -1,0 +1,164 @@
+{
+ "tags/1000_devices.html": {
+  "tag_id": 1000,
+  "offset": 0,
+  "capture_ts": "20260716021034",
+  "n": 5,
+  "listing_total_on_page": 5,
+  "effective_url": "https://web.archive.org/web/20260716021034id_/https://www.commandlinefu.com/commands/tagged/1000/devices",
+  "n_with_tags_block": 5
+ },
+ "tags/1001_comic.html": {
+  "tag_id": 1001,
+  "offset": 0,
+  "capture_ts": "20260515174335",
+  "n": 17,
+  "listing_total_on_page": 17,
+  "effective_url": "https://web.archive.org/web/20260515174335id_/https://www.commandlinefu.com/commands/tagged/1001/comic",
+  "n_with_tags_block": 17
+ },
+ "tags/1002_webcomic.html": {
+  "tag_id": 1002,
+  "offset": 0,
+  "capture_ts": "20260208211054",
+  "n": 11,
+  "listing_total_on_page": 11,
+  "effective_url": "https://web.archive.org/web/20260208211054id_/https://www.commandlinefu.com/commands/tagged/1002/webcomic",
+  "n_with_tags_block": 11
+ },
+ "tags/1003_hard-drive.html": {
+  "tag_id": 1003,
+  "offset": 0,
+  "capture_ts": "20251212032901",
+  "n": 3,
+  "listing_total_on_page": 3,
+  "effective_url": "https://web.archive.org/web/20251212032901id_/https://www.commandlinefu.com/commands/tagged/1003/hard-drive",
+  "n_with_tags_block": 3
+ },
+ "tags/1004_tweak.html": {
+  "tag_id": 1004,
+  "offset": 0,
+  "capture_ts": "20130509043103",
+  "n": 1,
+  "listing_total_on_page": null,
+  "effective_url": "https://web.archive.org/web/20130509043103id_/http://www.commandlinefu.com/commands/tagged/1004/tweak",
+  "n_with_tags_block": 1
+ },
+ "tags/1005_ssd.html": {
+  "tag_id": 1005,
+  "offset": 0,
+  "capture_ts": "20260608112110",
+  "n": 4,
+  "listing_total_on_page": 4,
+  "effective_url": "https://web.archive.org/web/20260608112110id_/https://www.commandlinefu.com/commands/tagged/1005/ssd",
+  "n_with_tags_block": 4
+ },
+ "tags/1006_url.html": {
+  "tag_id": 1006,
+  "offset": 0,
+  "capture_ts": "20260121104310",
+  "n": 23,
+  "listing_total_on_page": 23,
+  "effective_url": "https://web.archive.org/web/20260121104310id_/https://www.commandlinefu.com/commands/tagged/1006/url",
+  "n_with_tags_block": 23
+ },
+ "tags/1007_match.html": {
+  "tag_id": 1007,
+  "offset": 0,
+  "capture_ts": "20260118134507",
+  "n": 5,
+  "listing_total_on_page": 5,
+  "effective_url": "https://web.archive.org/web/20260118134507id_/https://www.commandlinefu.com/commands/tagged/1007/match",
+  "n_with_tags_block": 5
+ },
+ "tags/1008_url-matching.html": {
+  "tag_id": 1008,
+  "offset": 0,
+  "capture_ts": "20250918053317",
+  "n": 4,
+  "listing_total_on_page": 4,
+  "effective_url": "https://web.archive.org/web/20250918053317id_/https://www.commandlinefu.com/commands/tagged/1008/url-matching",
+  "n_with_tags_block": 4
+ },
+ "tags/1009_pwgen.html": {
+  "tag_id": 1009,
+  "offset": 0,
+  "capture_ts": "20260717212137",
+  "n": 3,
+  "listing_total_on_page": 3,
+  "effective_url": "https://web.archive.org/web/20260717212137id_/https://www.commandlinefu.com/commands/tagged/1009/pwgen",
+  "n_with_tags_block": 3
+ },
+ "tags/100_space.html": {
+  "tag_id": 100,
+  "offset": 0,
+  "capture_ts": "20260718083522",
+  "n": 8,
+  "listing_total_on_page": 8,
+  "effective_url": "https://web.archive.org/web/20260718083522id_/https://www.commandlinefu.com/commands/tagged/100/space",
+  "n_with_tags_block": 8
+ },
+ "tags/1010_week.html": {
+  "tag_id": 1010,
+  "offset": 0,
+  "capture_ts": "20260607083644",
+  "n": 4,
+  "listing_total_on_page": 4,
+  "effective_url": "https://web.archive.org/web/20260607083644id_/https://www.commandlinefu.com/commands/tagged/1010/week",
+  "n_with_tags_block": 4
+ },
+ "tags/1011_ruby.html": {
+  "tag_id": 1011,
+  "offset": 0,
+  "capture_ts": "20260712154027",
+  "n": 24,
+  "listing_total_on_page": 24,
+  "effective_url": "https://web.archive.org/web/20260712154027id_/https://www.commandlinefu.com/commands/tagged/1011/ruby",
+  "n_with_tags_block": 24
+ },
+ "tags/1012_i18n.html": {
+  "tag_id": 1012,
+  "offset": 0,
+  "capture_ts": "20260215110653",
+  "n": 2,
+  "listing_total_on_page": 2,
+  "effective_url": "https://web.archive.org/web/20260215110653id_/https://www.commandlinefu.com/commands/tagged/1012/i18n",
+  "n_with_tags_block": 2
+ },
+ "tags/1013_thread.html": {
+  "tag_id": 1013,
+  "offset": 0,
+  "capture_ts": "20251212164557",
+  "n": 2,
+  "listing_total_on_page": 2,
+  "effective_url": "https://web.archive.org/web/20251212164557id_/https://www.commandlinefu.com/commands/tagged/1013/thread",
+  "n_with_tags_block": 2
+ },
+ "tags/101_size.html": {
+  "tag_id": 101,
+  "offset": 0,
+  "capture_ts": "20260609122519",
+  "n": 25,
+  "listing_total_on_page": 62,
+  "effective_url": "https://web.archive.org/web/20260609122519id_/https://www.commandlinefu.com/commands/tagged/101/size",
+  "n_with_tags_block": 25
+ },
+ "tags/10_date-manipulation.html": {
+  "tag_id": 10,
+  "offset": 0,
+  "capture_ts": "20260609123314",
+  "n": 23,
+  "listing_total_on_page": 23,
+  "effective_url": "https://web.archive.org/web/20260609123314id_/https://www.commandlinefu.com/commands/tagged/10/date-manipulation",
+  "n_with_tags_block": 23
+ },
+ "samples/t.html": {
+  "tag_id": 10,
+  "offset": 0,
+  "capture_ts": null,
+  "n": 19,
+  "listing_total_on_page": null,
+  "effective_url": "http://www.commandlinefu.com/commands/tagged/10/date-manipulation",
+  "n_with_tags_block": 19
+ }
+}

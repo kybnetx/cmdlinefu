@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta name="author" content="" />
+    <meta name="description" content="sudo !! - (Run the last command as root Useful when you forget to use sudo for a command.  \&quot;!!\&quot; grabs the last run command.). The best command line collection on the internet, submit yours and save your favorites. " />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Run the last command as root, " />
+    <meta name="verify-v1" content="hEPILeJT+vssH+kKHD8JrK8sqHYIg4GWIVV8P1I8gsY=" />
+    <meta name="google-site-verification" content="r2fSppde5Egt3_2qSPb6LEsT2BqWAM0wRlb00A8LLhg" />
+    <link rel="stylesheet" href="/css/browser_reset.css?2012-03-04-09-53" type="text/css" /> 
+    <link rel="stylesheet" href="/css/styles.css?2012-03-04-09-53" type="text/css" />
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Droid+Sans+Mono" type="text/css" >
+    
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+    
+    <link rel="search" type="application/opensearchdescription+xml" title="commandlinefu.com search plugin" href="/mozilla_search_plugin.xml" />
+    
+        
+    <title>Run the last command as root</title>
+    
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/prototype/1.6.0.3/prototype.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/scriptaculous/1.8.2/scriptaculous.js?load=effects,controls"></script>
+    <script type="text/javascript" src="/js/site-behaviour.js?2018-03-04-09-53"></script>
+    <script type="text/javascript" src="/js/Growler.js?2018-03-04-09-53"></script>
+    <script type="text/javascript" src="/js/prettify/prettify.js?2018-03-04-09-53"></script>
+    <link rel="stylesheet" href="/js/prettify/prettify.css?2018-03-04-09-53" type="text/css" />
+    
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/clf.min.css" type="text/css" />
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/agate.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<!--    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>-->
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-55581850-1', 'auto', {'allowLinker': true});
+	  ga('require', 'linker');
+	  ga('linker:autoLink', ['danstools.com','unixtimestamp.com','url-encode-decode.com','cssfontstack.com','hexcolortool.com','htaccessredirect.net','jspretty.com','jsmini.com','jsobfuscate.com','md5hashgenerator.com','regextester.com','cleancss.com','favicon-generator.org','website-performance.org','permissions-calculator.org','conversoes.org','convertissez.fr','convertitore.net','elconvertidor.com','files-conversion.com','henkan-muryo.com','konvertirung.org','konvertor.org','tahwil.net','zhuan-huan.com','bootsnipp.com','commandlinefu.com'] );
+	  ga('send', 'pageview');
+	</script>
+</head>
+
+<body>
+    <nav class="navbar navbar-fixed-top navbar-bootsnipp animate" role="navigation" style="z-index: 9999999">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="animbrand">
+        <a class="navbar-brand animate" href="//www.commandlinefu.com"><strong><span class="glyphicon glyphicon-console" style="padding:2px 4px 4px 4px;margin-right:5px;background:#333"></span><span style="color:black;">COMMANDLINEFU</span>.COM</strong></a>
+      </div>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/commands/edit" class="">+New</a></li>
+        <li class="dropdown dropdown-right">
+          <a href="#" class="dropdown-toggle " data-toggle="dropdown">Commands <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li class=""><a href="/" class="">Latest </a></li>
+            <li class=""><a href="/commands/browse/sort-by-votes" class="">All-time Greats </a></li>
+            <li class=""><a href="/commands/browse/last-month/sort-by-votes" class="">Hot this month </a></li>
+            <li class=""><a href="/commands/forthewicked" class="">The Wicked </a></li>
+            <li class=""><a href="/commands/random" class="">Random </a></li>
+<!--            <li class=""><a href="/" class="">Tags </a></li>
+            <li class=""><a href="/" class="">Functions </a></li>-->
+          </ul>
+        </li>
+        <li >
+          <a href="/users/signin">Login </a>
+        </li>
+      </ul>
+		<div id="search" style="display:inline;">
+          <form id="search-form" action="/search/handler" method="post">
+				<div id="search-container" style="margin-top:9px;">
+				  <img id="loading" src="/images/tag-loader.gif" style="display:none;float:right;margin: 5px 5px 0 0;" />
+	              <input id="search-query" type="text" class="inactive" autocomplete="off" name="q" placeholder="grep the archive">
+				</div>
+          </form>
+			<div id="search-options" style="display:none"></div>
+		</div>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container" style="padding-top:20px;">
+ <div class="row">
+  <div class="col-md-9 col-lg-8">
+		
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</p>
+<ins class="adsbygoogle"
+     style="display:block;"
+     data-ad-client="ca-pub-8815422507798180"
+     data-ad-slot="5700240528"
+    data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<p>
+        <!--<h1 style="font-size:2em;">Run the last command as root</h1>-->
+<div class="terminal-display" id="terminal-display-main">
+        <div class="one-liner">
+		<div class="col-md-8 col-lg-9 details">
+            <h1 style="color:#0c9103;font-size: 1.5em;font-weight: bold;overflow: hidden;">
+                Run the last command as root            </h1>
+                <div class="" title="Click to select this command" style="position:relative;border:1px dotted #ccc;border-radius:3px">
+                    <span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+                    <span style="padding-left:2em;font-weight:bold" class="command code bash">sudo !!</span>
+                </div>
+            <div class="description">
+                Useful when you forget to use sudo for a command.  "!!" grabs the last run command. 
+            </div>
+            		</div>
+		<div class="col-md-4 col-lg-3" style="padding-top:10px">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-13" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-13" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:13px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-13">1227</div>
+					<div class="clearfix"></div>
+                </div>
+                <div class="author" style="text-align:right">
+                    By: <a href="/commands/by/root">root</a>
+                </div>
+                <div class="date" style="text-align:right">
+                2009-01-26 10:26:48                </div>
+				<div class="functions text-right">
+														</div>
+                    <div class="text-right">
+						<span class="pull-right">
+							<a class="text-muted" href="#comment">
+							<span class="glyphicon glyphicon-comment"></span>
+							32</a>
+						</span>
+                        						<span class="pull-right" style="margin-right: 1em;">
+                        	<a class="favourite-link" href="javascript:void(0)"><i id="toggle-favourite-13" class="glyphicon glyphicon-star-empty"></i></a>
+						</span>
+
+                    </div>
+
+		</div>
+		<div class="col-md-12">
+                
+		</div>
+                    <div class="btn-group" style="position:absolute;right:22px;margin-top:10px;cursor:pointer;">
+                      <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="glyphicon glyphicon-option-vertical"></span>
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a href="/commands/edit/0/13" title="Submit a superior alternative">Submit alternative</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a class="report-link" id="report-13" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+                        <li><a href="/commands/duplicate/13" title="Report as duplicate">Report as a duplicate</a></li>
+                      </ul>
+                    </div>
+<!--
+        <div class="details">
+            <div class="votes">
+                <div class="num-votes" id="num-votes-13">1227</div>
+                <div class="voting-options">
+                    <a href="javascript:void(0)" class="vote-button" id="vote-up-13">Up</a><br/>
+                    <a href="javascript:void(0)" class="vote-button" id="vote-down-13">Down</a>
+                </div>
+            </div>
+        </div>
+-->
+    </div>
+</div>
+
+	<div class="panel panel-default">
+  <div class="panel-heading" style="background:white">
+    	<h2 class="panel-title">6 Alternatives
+		<a style="color:rgba(12, 145, 3, 0.70);" class="pull-right" href="/commands/edit/0/13" >+ Submit Alt</a>
+		</h2>
+	  </div>
+	<ul class="list-group">
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/7114/use-result-of-the-last-command" title="Find out what others think of this command">Use result of the last command</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    \$ which python
+/usr/bin/python
+\$ ll `!!`
+lrwxrwxrwx 1 root root 9 2010-11-08 22:01 /usr/bin/python -> python2.6 
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-7114">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre></pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-7114" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-7114" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-7114">10</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">`!!`</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/strzel_a">strzel_a</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2010-11-19 17:40:01                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/7114/use-result-of-the-last-command#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						1</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-7114" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/7114" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-7114" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/7114" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                                        </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/10277/run-the-last-command-as-root" title="Find out what others think of this command">Run the last command as root</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    Same as `sudo !!`. If you do not have permission to be sudo or sudo does not installed on your system, you can use this. 
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-10277">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre></pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-10277" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-10277" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-10277">3</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">su -c &quot;!!&quot;</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/mesuutt">mesuutt</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2012-02-21 15:38:30                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/10277/run-the-last-command-as-root#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						0</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-10277" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/10277" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-10277" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/10277" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/su">su</a>
+                                            </div>
+                                                        </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/2794/run-the-last-command-as-root-opensolaris-version-with-rbac" title="Find out what others think of this command">Run the last command as root - (Open)Solaris version with RBAC</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                     
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-2794">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre></pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-2794" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-2794" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-2794">2</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">pfexec !!</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/ilyxa">ilyxa</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2009-07-29 10:57:00                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/2794/run-the-last-command-as-root-opensolaris-version-with-rbac#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						0</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-2794" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/2794" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-2794" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/2794" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                                        </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/12200/run-the-last-command-as-root" title="Find out what others think of this command">Run the last command as root</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    this command also can run the last command as root 
+what's more, sudo !-2 can run the second last command as root , and so on 
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-12200">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre></pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-12200" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-12200" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-12200">1</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">sudo !-1</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/datamining">datamining</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2013-04-22 03:45:14                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/12200/run-the-last-command-as-root#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						0</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-12200" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/12200" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-12200" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/12200" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/sudo">sudo</a>
+                                            </div>
+                                                        </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/20467/run-the-last-command-as-root" title="Find out what others think of this command">Run the last command as root</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    Runs the last command as root.  This works in bash too.  Kind of bulky, but makes a great alias. 
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-20467">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre></pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-20467" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-20467" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-20467">0</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">sudo $(history -p !!)</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/keith">keith</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2017-04-19 12:16:40                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/20467/run-the-last-command-as-root#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						0</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-20467" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/20467" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-20467" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/20467" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/sudo">sudo</a>
+                                            </div>
+                                                        </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                    	</ul>
+</div>
+
+
+
+<div class="panel panel-default">
+	<div class="panel-heading" style="background-color:white">
+            <a name="comment"></a>
+		<h3 class="panel-title">What Others Think</h3>
+	</div>
+<div id="comments">
+    <div class="comment comment0">
+        <div class="body">
+            This one might be my most commonly used "one liner". I even wrote a post about it in my blog ;)            <div class="meta" style="padding-left:20px">
+        		<img class="gravatar" src="https://www.gravatar.com/avatar/87a678c32ae96535b512b457b7830f2f?d=monsterid&s=50" />
+                <a href="/commands/by/JackiesJungle">JackiesJungle</a>
+				&middot;
+                903 weeks ago                            </div>
+        </div>
+    </div>
+    <div class="comment comment1">
+        <div class="body">
+            Doesn't this only work under ZSH ?            <div class="meta" style="padding-left:20px">
+        		<img class="gravatar" src="https://www.gravatar.com/avatar/aab3a0416dee80a9d6d05ac08cf38a17?d=monsterid&s=50" />
+                <a href="/commands/by/pyrho">pyrho</a>
+				&middot;
+                902 weeks and 6 days ago                            </div>
+        </div>
+    </div>
+    <div class="comment comment0">
+        <div class="body">
+            doesnt seem to work under bash/centos4?            <div class="meta" style="padding-left:20px">
+        		<img class="gravatar" src="https://www.gravatar.com/avatar/1a91f9be3abde90c2ac21a52265ee545?d=monsterid&s=50" />
+                <a href="/commands/by/trix">trix</a>
+				&middot;
+                902 weeks and 5 days ago                            </div>
+        </div>
+    </div>
+    <div class="comment comment1">
+        <div class="body">
+            work on Ubuntu 8.04            <div class="meta" style="padding-left:20px">
+        		<img class="gravatar" src="https://www.gravatar.com/avatar/90a7e8c91a09f7f5d52d8ae566bf07bd?d=monsterid&s=50" />
+                <a href="/commands/by/mrbyte">mrbyte</a>
+				&middot;
+                902 weeks and 5 days ago                            </div>
+        </div>
+    </div>
+    <div class="comment comment0">
+        <div class="body">
+            works on fedora with bash!            <div class="meta" style="padding-left:20px">
+        		<img class="gravatar" src="https://www.gravatar.com/avatar/7bd28f15a49d5e5848d6ec70e584e625?d=monsterid&s=50" />
+                <a href="/commands/by/betsubetsu">betsubetsu</a>
+				&middot;
+                902 weeks and 1 day ago                            </div>
+        </div>
+    </div>
+    <div class="comment comment1">
+        <div class="body">
+            I almost never use sudo.  It promotes bad security: using the same password for root and and for regular users.            <div class="meta" style="padding-left:20px">
+        		<img class="gravatar" src="https://www.gravatar.com/avatar/76a48f348109c77a429491cddc428459?d=monsterid&s=50" />
+                <a href="/commands/by/grep">grep</a>
+				&middot;
+                902 weeks ago                            </div>
+        </div>
+    </div>
+    <div class="comment comment0">
+        <div class="body">
+            This command owns all.
+<code>chmod 755 foo.bar</code>
+<code>operation not permitted</code>
+<code>sudo !!</code>
+<code>sudo chmod 755 foo.bar</code>
+<code>[sudo] password for waldo:</code>
+<code>(insert text of elation here)</code>            <div class="meta" style="padding-left:20px">
+        		<img class="gravatar" src="https://www.gravatar.com/avatar/eaffc9634bc765df1f8487c44bd915b0?d=monsterid&s=50" />
+                <a href="/commands/by/farglenargle">farglenargle</a>
+				&middot;
+                901 weeks and 3 days ago                            </div>
+        </div>
+    </div>
+    <div class="comment comment1">
+        <div class="body">
+            works in bash/Debian !!            <div class="meta" style="padding-left:20px">
+        		<img class="gravatar" src="https://www.gravatar.com/avatar/f22e4747da1aa27e363d86d40ff442fe?d=monsterid&s=50" />
+                <a href="/commands/by/prayer">prayer</a>
+				&middot;
+                900 weeks and 6 days ago                            </div>
+        </div>
+    </div>
+    <div class="comment comment0">
+        <div class="body">
+            I love you.
+Befor I'v been so pissed off after typing long stings of command, and then have forgotten sudo. Therefor having to go all the way to the beginning of the command and enter sudo.
+Love it             <div class="meta" style="padding-left:20px">
+        		<img class="gravatar" src="https://www.gravatar.com/avatar/93a676a11c0d9f9a55fc045612887a7e?d=monsterid&s=50" />
+                <a href="/commands/by/Meeko">Meeko</a>
+				&middot;
+                899 weeks and 2 days ago                            </div>
+        </div>
+    </div>
+    <div class="comment comment1">
+        <div class="body">
+            lots of the machines we use don't do home key - they do ~ instead - go figure.
+this could be very usefull. Thanks.
+I use !$ a lot. repeats the last word in the previous command
+e.g. 
+ping 
+nslookup !$
+will translate to 
+nslookup 
+obviously the first ! grabs the previous line, and the second character does somnething else - ! grabs the first word, $ grabs the last word.
+anyone know any other variants or where to look up the man page - er... is it regexp or part of sh or perl or what??? ('scuse my ignorance - the unix needs a reverse lookup database)            <div class="meta" style="padding-left:20px">
+        		<img class="gravatar" src="https://www.gravatar.com/avatar/49818e727b8b8d7e93035aa5aaad906b?d=monsterid&s=50" />
+                <a href="/commands/by/bulwynkl">bulwynkl</a>
+				&middot;
+                898 weeks and 2 days ago                            </div>
+        </div>
+    </div>
+    <div class="comment comment0">
+        <div class="body">
+            Regarding using the "home" key to get to the beginning of a command.. I just wanted to note, that you can almost always use "Ctrl-A" to jump to the beginning of the line in Bash and many other programs.  I think it's part of libreadline?  Also, if you're using Bash in a Screen session, use Ctrl-A twice to jump to the beginning of a line.            <div class="meta" style="padding-left:20px">
+        		<img class="gravatar" src="https://www.gravatar.com/avatar/6cca88ba05241a8f6aa5f9d5200b72ae?d=monsterid&s=50" />
+                <a href="/commands/by/cmang">cmang</a>
+				&middot;
+                898 weeks and 1 day ago                            </div>
+        </div>
+    </div>
+    <div class="comment comment1">
+        <div class="body">
+            The HOME key is a single key press.
+Why chose a two key sequence instead of one?            <div class="meta" style="padding-left:20px">
+        		<img class="gravatar" src="https://www.gravatar.com/avatar/8298844c6c86a21d0da5ff2d2f159274?d=monsterid&s=50" />
+                <a href="/commands/by/mpb">mpb</a>
+				&middot;
+                897 weeks and 6 days ago                            </div>
+        </div>
+    </div>
+    <div class="comment comment0">
+        <div class="body">
+            I love this because it always feels like I'm yelling at my computer.
+<code>do_something</code>
+<code># i don't wanna...</code>
+<code>SUDO!!</code>
+<code># ok, fine...</code>            <div class="meta" style="padding-left:20px">
+        		<img class="gravatar" src="https://www.gravatar.com/avatar/dea8cffd5294dcd41e75fdec4c2e604e?d=monsterid&s=50" />
+                <a href="/commands/by/isaacs">isaacs</a>
+				&middot;
+                897 weeks and 3 days ago                            </div>
+        </div>
+    </div>
+    <div class="comment comment1">
+        <div class="body">
+            I vote this down, because 'sudo' is not meant to be used in this way.  Totally bad security practice!  Even if you are the only user in your computer, you are advised to put only those commands that are safe and commonly used in the sudoers file.  Otherwise, you are probably going to learn it in a hard way.            <div class="meta" style="padding-left:20px">
+        		<img class="gravatar" src="https://www.gravatar.com/avatar/df9028fcb6b065e000ffe8a4f03eeb38?d=monsterid&s=50" />
+                <a href="/commands/by/jxy">jxy</a>
+				&middot;
+                897 weeks and 1 day ago                            </div>
+        </div>
+    </div>
+    <div class="comment comment0">
+        <div class="body">
+            And I vote it up, because this -is- how sudo is intended to be used in many modern systems such as Ubuntu and OS X.            <div class="meta" style="padding-left:20px">
+        		<img class="gravatar" src="https://www.gravatar.com/avatar/2b8729c02bc2fb886b32ed23cb7b0a31?d=monsterid&s=50" />
+                <a href="/commands/by/qubyte">qubyte</a>
+				&middot;
+                895 weeks and 4 days ago                            </div>
+        </div>
+    </div>
+    <div class="comment comment1">
+        <div class="body">
+            I use Ctrl+p, Ctrl+a, sudo before.            <div class="meta" style="padding-left:20px">
+        		<img class="gravatar" src="https://www.gravatar.com/avatar/d5946e9e717a8f9ca4a168313352a2db?d=monsterid&s=50" />
+                <a href="/commands/by/kylexlau">kylexlau</a>
+				&middot;
+                890 weeks and 4 days ago                            </div>
+        </div>
+    </div>
+    <div class="comment comment0">
+        <div class="body">
+            This is great!            <div class="meta" style="padding-left:20px">
+        		<img class="gravatar" src="https://www.gravatar.com/avatar/317be1e1f6242f2bf6d8f885c13844ac?d=monsterid&s=50" />
+                <a href="/commands/by/marcop">marcop</a>
+				&middot;
+                871 weeks and 4 days ago                            </div>
+        </div>
+    </div>
+    <div class="comment comment1">
+        <div class="body">
+            Should work under bash, but you may have it disabled (set -H or set -o histexpand to reenable)            <div class="meta" style="padding-left:20px">
+        		<img class="gravatar" src="https://www.gravatar.com/avatar/5fde40544cff0001484ecae2466ce96e?d=monsterid&s=50" />
+                <a href="/commands/by/unixmonkey6345">unixmonkey6345</a>
+				&middot;
+                871 weeks and 3 days ago                            </div>
+        </div>
+    </div>
+    <div class="comment comment0">
+        <div class="body">
+            nice            <div class="meta" style="padding-left:20px">
+        		<img class="gravatar" src="https://www.gravatar.com/avatar/43f80a4250ebfafe870a52ab76750400?d=monsterid&s=50" />
+                <a href="/commands/by/haven489">haven489</a>
+				&middot;
+                854 weeks ago                            </div>
+        </div>
+    </div>
+    <div class="comment comment1">
+        <div class="body">
+            pretty good            <div class="meta" style="padding-left:20px">
+        		<img class="gravatar" src="https://www.gravatar.com/avatar/273ac8a6b487df7d26714a9ed92f06b5?d=monsterid&s=50" />
+                <a href="/commands/by/deargodzw">deargodzw</a>
+				&middot;
+                846 weeks and 3 days ago                            </div>
+        </div>
+    </div>
+    <div class="comment comment0">
+        <div class="body">
+            Worky fine, OS X Snow Leopard 10.6.3.            <div class="meta" style="padding-left:20px">
+        		<img class="gravatar" src="https://www.gravatar.com/avatar/b000ba0460252009f1cad5350404d016?d=monsterid&s=50" />
+                <a href="/commands/by/hced">hced</a>
+				&middot;
+                841 weeks and 4 days ago                            </div>
+        </div>
+    </div>
+    <div class="comment comment1">
+        <div class="body">
+            before I found `sudo !!` I used to do the following:
+1) arrow up (to get the last command from history)
+2) Ctrl+A (to put the cursor at the front of the command)
+3) type "sudo " and hit enter            <div class="meta" style="padding-left:20px">
+        		<img class="gravatar" src="https://www.gravatar.com/avatar/77e0fbde6c1c41bb57c4035f19cf9f4e?d=monsterid&s=50" />
+                <a href="/commands/by/jemptymethod">jemptymethod</a>
+				&middot;
+                816 weeks and 6 days ago                            </div>
+        </div>
+    </div>
+    <div class="comment comment0">
+        <div class="body">
+            WTF ? This is the best command for everyone ?
+Damn ubuntu lamers...            <div class="meta" style="padding-left:20px">
+        		<img class="gravatar" src="https://www.gravatar.com/avatar/0e8e582772b46e838049b0528b430d1b?d=monsterid&s=50" />
+                <a href="/commands/by/gormux">gormux</a>
+				&middot;
+                806 weeks and 4 days ago                            </div>
+        </div>
+    </div>
+    <div class="comment comment1">
+        <div class="body">
+            Don't listen to the "Sudo promotes bad security" types. You know what promotes worse security? Actually operating as root.            <div class="meta" style="padding-left:20px">
+        		<img class="gravatar" src="https://www.gravatar.com/avatar/0d203a22a644907b1352a7de11a4a73e?d=monsterid&s=50" />
+                <a href="/commands/by/Karunamon">Karunamon</a>
+				&middot;
+                757 weeks and 5 days ago                            </div>
+        </div>
+    </div>
+    <div class="comment comment0">
+        <div class="body">
+            awesome            <div class="meta" style="padding-left:20px">
+        		<img class="gravatar" src="https://www.gravatar.com/avatar/8435726c4889d23d4d4f138cfc6d4041?d=monsterid&s=50" />
+                <a href="/commands/by/jldbasa">jldbasa</a>
+				&middot;
+                748 weeks ago                            </div>
+        </div>
+    </div>
+    <div class="comment comment1">
+        <div class="body">
+            @jemptymethod me too            <div class="meta" style="padding-left:20px">
+        		<img class="gravatar" src="https://www.gravatar.com/avatar/b5bb82ee3eed61a3dc04d882fa38b6f1?d=monsterid&s=50" />
+                <a href="/commands/by/dfang">dfang</a>
+				&middot;
+                722 weeks and 6 days ago                            </div>
+        </div>
+    </div>
+    <div class="comment comment0">
+        <div class="body">
+            Works in OS X Mountain Lion 10.8.1            <div class="meta" style="padding-left:20px">
+        		<img class="gravatar" src="https://www.gravatar.com/avatar/c3ced3d59dc5a784592d6d34618f1913?d=monsterid&s=50" />
+                <a href="/commands/by/delete">delete</a>
+				&middot;
+                717 weeks and 3 days ago                            </div>
+        </div>
+    </div>
+    <div class="comment comment1">
+        <div class="body">
+            this command trick and many like it are part of the history command. 
+try
+man history
+for more variants
+if your shell does not have history it wont work            <div class="meta" style="padding-left:20px">
+        		<img class="gravatar" src="https://www.gravatar.com/avatar/49818e727b8b8d7e93035aa5aaad906b?d=monsterid&s=50" />
+                <a href="/commands/by/bulwynkl">bulwynkl</a>
+				&middot;
+                710 weeks and 1 day ago                            </div>
+        </div>
+    </div>
+    <div class="comment comment0">
+        <div class="body">
+            this command trick and many like it are part of the history command. 
+try
+man history
+for more variants
+if your shell does not have history it wont work            <div class="meta" style="padding-left:20px">
+        		<img class="gravatar" src="https://www.gravatar.com/avatar/49818e727b8b8d7e93035aa5aaad906b?d=monsterid&s=50" />
+                <a href="/commands/by/bulwynkl">bulwynkl</a>
+				&middot;
+                710 weeks and 1 day ago                            </div>
+        </div>
+    </div>
+    <div class="comment comment1">
+        <div class="body">
+            safer to type: /usr/bin/sudo !!
+For *any* command that will prompt for a password, it is more secure to type the full path (or pull it from shell history) because a common hack technique, if they can get access to your account, is to mess with your $PATH and plant a spoofed sudo which captures your typed password, prints an error message, and then execs the real sudo. 
+The user thinks "Oh, I miss-typed the password. I'll type it again".            <div class="meta" style="padding-left:20px">
+        		<img class="gravatar" src="https://www.gravatar.com/avatar/8298844c6c86a21d0da5ff2d2f159274?d=monsterid&s=50" />
+                <a href="/commands/by/mpb">mpb</a>
+				&middot;
+                592 weeks and 3 days ago                            </div>
+        </div>
+    </div>
+    <div class="comment comment0">
+        <div class="body">
+            Good post. I learn something new and challenging on sites I stumble upon on a daily basis.
+<a href="http://www.cuponism.com.my" rel="nofollow">www.cuponism.com.my</a>            <div class="meta" style="padding-left:20px">
+        		<img class="gravatar" src="https://www.gravatar.com/avatar/f277bb56df2715f97bd78a3f524a94a3?d=monsterid&s=50" />
+                <a href="/commands/by/broomhaylie">broomhaylie</a>
+				&middot;
+                304 weeks and 5 days ago                            </div>
+        </div>
+    </div>
+    <div class="comment comment1">
+        <div class="body">
+            Who doesn't use this at least once a day LOL            <div class="meta" style="padding-left:20px">
+        		<img class="gravatar" src="https://www.gravatar.com/avatar/f09fa30ecc7a5010a7765e1e1803bff9?d=monsterid&s=50" />
+                <a href="/commands/by/tg0000">tg0000</a>
+				&middot;
+                278 weeks and 6 days ago                            </div>
+        </div>
+    </div>
+</div>
+
+	<div class="panel-heading" style="background-color:white">
+		<h3 class="panel-title">What do you think?</h3>
+		<p>Any thoughts on this command?  Does it work on your machine? Can you do the same thing with only 14 characters?</p>
+	</div>
+	<p class="text-center" style="margin:25px;">You must be <a href="/users/signin">signed in</a> to comment.</p>
+</div>
+
+<!--<script>
+function showspam(){window.location+="?nofilter=1",window.location.reload(!0)}var sf=0;$(document).ready(function(){var e=new URL(document.location).searchParams;"1"===e.get("nofilter")?console.log("spam filter off"):$("div.comment").each(function(){this.getElementsByTagName("a").length>2&&(0===sf?($(this).replaceWith("<div style='background-color:#eee; padding-bottom:10px; padding-left: 15px'><h3>Likely Spam Filtered</h3><p>One or more comments in this thread have been hidden from view. To view them anyway, click <a href='"+window.location+"?nofilter=1' onclick='showspam();'>here</a>.</p></div>"),sf=1):$(this).remove()),this.getElementsByTagName("p")[0].innerHTML.length>10&&this.getElementsByTagName("p")[0].innerHTML.includes("href")&&$(this).remove()})});
+</script>-->
+  </div>
+  <div class="col-md-3 col-lg-4">
+
+            
+
+<div class="box-copy">
+    <h3 class="righthead">What's this?</h3>
+    <div class="toggleable">
+        <p><strong>commandlinefu.com</strong> is the place to record those command-line gems that you return to again and again.
+        That way others can gain from your <abbr title="Command-line interface">CLI</abbr> wisdom and you from theirs too.  All commands can be commented on, discussed and 
+        voted up or down. </p>
+		<p class="text-center"><a class="btn btn-warning" href="/commands/edit"><strong><i class="glyphicon glyphicon-plus"></i> Share Your Commands</strong></a></p>
+        <!-- <p>If you have a new feature suggestion or find a bug, please 
+        get in touch via <a href="http://commandlinefu.uservoice.com/"><strong>http://commandlinefu.uservoice.com/</strong></a><p>-->
+    </div>
+</div>
+<hr />
+<div class="box-copy">
+    <h3 class="righthead">Similar Commands</h3>
+			<p style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis">
+		<strong><a href="/commands/view/6154/type-partial-command-kill-this-command-check-something-you-forgot-yank-the-command-resume-typing.">type partial command, kill this command, check something you forgot, yank the command, resume typing.</a></strong>
+		</p>
+			<p style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis">
+		<strong><a href="/commands/view/6961/command-to-logout-all-the-users-in-one-command">Command to logout all the users in one command</a></strong>
+		</p>
+			<p style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis">
+		<strong><a href="/commands/view/20934/fingr-finger-like-command-local">fingr - 'Finger like' command (local)</a></strong>
+		</p>
+			<p style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis">
+		<strong><a href="/commands/view/6148/type-partial-command-kill-this-command-check-something-you-forgot-yank-the-command-resume-typing.">type partial command, kill this command, check something you forgot, yank the command, resume typing.</a></strong>
+		</p>
+	</div>
+<hr>
+<div class="box-copy">
+    <h3 class="righthead">Stay in the loop&hellip;</h3>
+    <div class="toggleable">
+        <dl>
+            <dt>Follow the Tweets.</dt>  
+            <dd>
+                <a href="http://twitter.com/commandlinefu"><img class="link-img" src="/images/twitter.jpg" /></a>
+                <p>Every new command is wrapped in a tweet and posted
+                to <a href="http://twitter.com">Twitter</a>. Following the stream is a great way of staying abreast of the latest commands.  For the more discerning, 
+                there are Twitter accounts for commands that get a minimum of 3 and 10 votes - that way only the great commands get tweeted.</p>
+                <p>
+                &raquo; <a style="font-weight:bold;" href="http://twitter.com/commandlinefu">http://twitter.com/commandlinefu</a><br/>
+                &raquo; <a style="font-weight:bold;" href="http://twitter.com/commandlinefu3">http://twitter.com/commandlinefu3</a><br/>
+                &raquo; <a style="font-weight:bold;" href="http://twitter.com/commandlinefu10">http://twitter.com/commandlinefu10</a>
+                </p>
+            </dd>
+            <dt>Subscribe to the feeds.</dt>
+            <dd>
+                <a style="font-weight:bold;" href="http://feeds2.feedburner.com/Command-line-fu"><img class="link-img" src="/images/rss.gif" /></a>
+                <p>Use your favourite RSS aggregator to stay in touch with the latest commands.  There are feeds mirroring the 3 Twitter streams
+                as well as for virtually every other subset (users, tags, functions,&hellip;):</p>
+                <p>Subscribe to the feed for:</p>
+                <ul id="feed-links">
+                <li>&raquo; <a style="font-weight:bold;" href="http://feeds2.feedburner.com/Command-line-fu">all commands</a></li>
+                <li>&raquo; <a style="font-weight:bold;" href="/feed/threeup">commands with 3 up-votes</a> (commandlinefu3)</li>
+                <li>&raquo; <a style="font-weight:bold;" href="/feed/tenup">commands with 10 up-votes</a> (commandlinefu10)</li>
+                                </ul>
+            </dd>
+        </dl>
+    </div>
+</div>
+
+<!--
+<div class="box-copy">
+    <a class="visibility-toggle" id="box-copy-tags">Hide</a>
+    <h3>Top Tags</h3>
+    <div class="toggleable"><br>
+        <a href="/commands/tagged/112/awk">awk</a>, <a href="/commands/tagged/34/bash">bash</a></li>, 
+	<a href="/commands/tagged/235/curl">curl</a>, 
+	<a href="/commands/tagged/123/find">find</a>, 
+	<a href="/commands/tagged/163/grep">grep</a>, 
+	<a href="/commands/tagged/64/linux">Linux</a>, <a href="/commands/tagged/110/sed">sed</a></li>
+	</ul>
+    </div>
+</div>
+
+<div class="box-copy">
+    <a class="visibility-toggle" id="box-copy-functions">Hide</a>
+    <h3>Functions</h3>
+    <div class="toggleable">
+            </div>
+</div>
+-->
+
+  </div>
+ </div>
+</div>
+
+<footer class="bs-footer" role="contentinfo" style="background-color:#F5F5F5;">
+  <div class="container">
+    <p style="padding-top:20px;">commandlinefu.com &copy; 2018 <a href="https://www.danstools.com" target="_blank">Dan's Tools</a> | <a href="/site/faq">FAQs</a> | <a href="/site/api">API</a> | <a href="/site/widget">Widget</a>  | <a href="/site/privacy">Privacy</a></p>
+  </div>
+
+</footer>
+
+
+<!--    <div id="wrapper">
+        
+        <div id="right-block">
+        </div>
+        
+        <div id="header">
+            <h4><a href="/commands/browse" title="commandlinefu.com - the greatest commands on the web"><img src="/images/header-logo.jpg" alt="commandlinefu.com" /></a></h4>
+            <div id="nav">
+                <strong><a href="/commands/random" title="Lucky dip">Random</a></strong> |
+                <strong><a href="/commands/browse/last-week/sort-by-votes" title="Piping host commands from the last 7 days">Hot this week</a></strong> |
+                <strong><a href="/commands/browse/sort-by-votes" title="See the all-time greatest commands">All-time greats</a></strong> &bull;
+                <strong><a href="/site/faq"><abbr title="Frequently asked questions">FAQ</abbr></a></strong> |
+                <strong><a href="/site/api"><abbr title="API documentation">API</abbr></a></strong> |
+                <strong><a href="/site/widget"><abbr title="Javascript widget">Widget</abbr></a></strong>
+            </div>    
+            <div id="search">
+                <form id="search-form" action="/search/handler" method="post" >
+                    <div id="search-container">
+                        <img id="loading" src="/images/tag-loader.gif" style="display:none;float:right;margin: 5px 5px 0 0;" />
+                        <input type="text" id="search-query" class="inactive" name="q" autocomplete="off" value="" placeholder="type here to grep the archive..." />
+                    </div>
+                </form>
+                <div style="display:none" id="search-options"></div>
+            </div>
+        </div>
+        
+        
+        <div id="left-block">
+        </div>
+        
+        <div id="footer">
+        
+            <div class="advertising">
+                            </div>
+        </div>
+    </div>
+-->    
+    
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script>
+    $.noConflict();
+
+    if (typeof Prototype !== "undefined" && Prototype.BrowserFeatures.ElementExtensions)
+    {
+        var disablePrototypeJS = function (method, pluginsToDisable)
+        {
+            var handler = function (event)
+            {
+                event.target[method] = undefined;
+                setTimeout(function ()
+                {
+                    delete event.target[method];
+                }, 0);
+            };
+
+            pluginsToDisable.each(function (plugin)
+            {
+                jQuery(window).on(method + '.bs.' + plugin, handler);
+            });
+        },
+
+        pluginsToDisable = ['collapse', 'dropdown', 'modal', 'tooltip', 'popover', 'tab','collect'];
+        disablePrototypeJS('show', pluginsToDisable);
+        disablePrototypeJS('hide', pluginsToDisable);
+    }
+	</script>
+	<script>
+jQuery( document ).ready(function() {
+
+	hljs.initHighlightingOnLoad();
+	hljs.configure({useBR: true});
+
+	jQuery('span.code').each(function(i, block) {
+	  hljs.highlightBlock(block);
+	});
+
+    if (1==0 && window.canRunAds === true) {
+        jQuery('#blocker').hide();
+    } else { jQuery('#blocker').show(); }
+});
+
+	</script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <script src="/js/ads.js"></script>
+
+    </body>
+</html>

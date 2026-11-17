@@ -1,0 +1,7 @@
+commandlinefu_id: 4266
+translator:
+  weibo: tgic
+command: |-
+  perl -ne 'print "$. - $_"' infile.txt
+summary: |-
+  打印行号

@@ -1,0 +1,7 @@
+commandlinefu_id: 1551
+translator:
+  weibo: tgic
+command: |-
+  'ALT+.' or '<ESC> .'
+summary: |-
+  刚才的命令

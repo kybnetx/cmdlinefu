@@ -1,0 +1,7 @@
+commandlinefu_id: 10116
+translator:
+  weibo: tgic
+command: |-
+  ${path//'/'/'\/'}
+summary: |-
+  ESCAPE 变量

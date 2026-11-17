@@ -1,0 +1,126 @@
+{
+ "generated": "2026-11-17",
+ "sources": [
+  {
+   "id": "hf",
+   "name": "Hugging Face b-mc2/cli-commands-explained",
+   "url": "https://huggingface.co/datasets/b-mc2/cli-commands-explained/resolve/main/cli_commands_explained.json",
+   "retrieved": "2026-11-17",
+   "license": "CC0 (dataset card); underlying content user-submitted",
+   "raw": "raw/hf/cli_commands_explained.json",
+   "sha256": "3b288acacc13343439b0940cad972a99c670b3a80e4c731e96b0bf2d38f58f24",
+   "counts": {
+    "rows": 16098,
+    "commandlinefu_rows": 14053,
+    "unique_ids": 14041,
+    "duplicate_rows": 12,
+    "non_commandlinefu_excluded": 2045
+   }
+  },
+  {
+   "id": "cdx_views",
+   "name": "Wayback CDX command view pages",
+   "url": "http://web.archive.org/cdx/search/cdx?url=commandlinefu.com/commands/view/&matchType=prefix&output=txt&fl=original,timestamp&collapse=urlkey&filter=statuscode:200",
+   "retrieved": "2026-11-17",
+   "license": "Internet Archive terms",
+   "raw": "raw/cdx/views.txt",
+   "sha256": "fd5a9c3c539540fe9c715bc187db632aeef1cd841f17c4d3a156072b02195fe2",
+   "counts": {
+    "lines": 15243,
+    "unique_command_ids": 14806,
+    "ids_not_in_hf": 952,
+    "hf_ids_without_capture": 187
+   }
+  },
+  {
+   "id": "cdx_tags",
+   "name": "Wayback CDX tag listing pages",
+   "url": "http://web.archive.org/cdx/search/cdx?url=commandlinefu.com/commands/tagged/&matchType=prefix",
+   "retrieved": "2026-11-17",
+   "license": "Internet Archive terms",
+   "raw": [
+    "raw/cdx/tagurls.txt",
+    "raw/cdx/tag_all.txt"
+   ],
+   "sha256": {
+    "raw/cdx/tagurls.txt": "f287eca2e54030199cc53d59b18b6103ba8a6d72affb61b3276ee5f3cf80232d",
+    "raw/cdx/tag_all.txt": "5bad6727b3806576489e8a585a92795d126d2bd7d9b9b6a2aac2df31fdeb0e88"
+   },
+   "counts": {
+    "tagurls_lines": 2966,
+    "tag_all_lines": 6546,
+    "unique_tag_ids": 2944
+   }
+  },
+  {
+   "id": "wayback_html",
+   "name": "Wayback raw (id_) captures of view and tag pages",
+   "url": "https://web.archive.org/web/<ts>id_/<url>",
+   "retrieved": "2026-11-17",
+   "license": "Internet Archive terms",
+   "raw": "raw/wayback_html/",
+   "counts": {
+    "view_pages_saved": 18,
+    "tag_pages_saved": 17,
+    "sample_pages_saved": 5,
+    "successful_fetch_log_lines": 35,
+    "port80_failures_logged": 6,
+    "pending_jobs_not_fetched": 4782
+   },
+   "note": "Wayback refused connections from the VM on port 80 then port 443 on 2026-11-17; route stopped after two failed rounds. Resume with tools/wayback_fetch.sh over manifests/wayback_pending_jobs.tsv."
+  },
+  {
+   "id": "tg123",
+   "name": "GitHub tg123/commandlinefu.cn",
+   "url": "https://github.com/tg123/commandlinefu.cn",
+   "retrieved": "2026-11-17",
+   "license": "Unlicense",
+   "raw": [
+    "raw/tg123_commandlinefu.cn-master.tar.gz",
+    "raw/tg123/"
+   ],
+   "sha256": {
+    "raw/tg123_commandlinefu.cn-master.tar.gz": "686df44dc1775c901077d17ee1a5e539f807dc960785224d9f3d09afd710be4d"
+   },
+   "counts": {
+    "yaml_files": 11615,
+    "unique_valid_ids": 10248,
+    "spam_quarantined": 1302,
+    "review_not_in_clean": 328,
+    "duplicate_id": 1,
+    "added_to_clean": 304
+   }
+  },
+  {
+   "id": "flatcap",
+   "name": "GitHub flatcap/misc-commandlinefu",
+   "url": "https://github.com/flatcap/misc-commandlinefu",
+   "retrieved": "2026-11-17",
+   "license": "none stated",
+   "raw": [
+    "raw/flatcap/misc-commandlinefu-main.tar.gz",
+    "raw/flatcap/extracted/"
+   ],
+   "sha256": {
+    "raw/flatcap/misc-commandlinefu-main.tar.gz": "0a7520d326a3a49d40ef0c831d2c3451f102ae62abbf378f8eb0f5f6dbebb916"
+   },
+   "counts": {
+    "html_parsed": 569,
+    "no_command_quarantined": 4,
+    "added_to_clean": 1
+   }
+  },
+  {
+   "id": "yedeying",
+   "name": "GitHub yedeying/commandlinefu-offline",
+   "url": "https://github.com/yedeying/commandlinefu-offline",
+   "retrieved": "2026-11-17",
+   "license": "none stated",
+   "raw": "raw/yedeying/commandlinefu-offline.tar.gz",
+   "sha256": "53cc6def47c4ddc1983b7a40e88c3f7978fc5fa511a04e56d84716b204eb9ba9",
+   "counts": {
+    "used_for": "CSS assets only; js/data.js retained raw, not merged (Chinese titles, no IDs verified)"
+   }
+  }
+ ]
+}

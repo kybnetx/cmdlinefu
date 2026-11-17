@@ -1,0 +1,7 @@
+commandlinefu_id: 1293
+translator:
+  weibo: 'fw8899'
+command: |-
+  sudo find / -mmin 60 -type f
+summary: |-
+  找出机器上过去60分钟内发生过修改的文件

@@ -1,0 +1,7 @@
+commandlinefu_id: 2944
+translator:
+  weibo: tgic
+command: |-
+  dig +short $HOSTNAME
+summary: |-
+  查询ip

@@ -1,0 +1,7 @@
+commandlinefu_id: 6275
+translator:
+  weibo: 'fw8899'
+command: |-
+  echo "1+1" | bc
+summary: |-
+  命令行模式下用bc进行计算

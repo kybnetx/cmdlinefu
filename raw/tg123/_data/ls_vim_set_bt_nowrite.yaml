@@ -1,0 +1,7 @@
+commandlinefu_id: 9945
+translator:
+  weibo: tgic
+command: |-
+  ls | vim +'set bt=nowrite' -
+summary: |-
+  使 vim 读取stdin

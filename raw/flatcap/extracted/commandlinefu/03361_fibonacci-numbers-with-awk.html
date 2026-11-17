@@ -1,0 +1,199 @@
+<html>
+	<head>
+		<title>
+			Fibonacci numbers with awk
+		</title>
+		<link rel='stylesheet' href='style.css' type='text/css' />
+	</head>
+	<body>
+		<div id="terminal-header">
+			<h1>
+				Fibonacci numbers with awk
+			</h1>
+		</div>
+		<div class="terminal-display one-liner" id="terminal-display-main">
+			<div class="line command">
+				awk 'BEGIN {a=1;b=1;for(i=0;i&lt;'${NUM}';i++){print a;c=a+b;a=b;b=c}}'
+			</div>
+			<div class="sample-output c5 output">
+				<pre>
+1
+1
+2
+3
+5
+8
+13
+21
+34
+55
+89
+144
+233
+377
+610
+987
+1597
+2584
+4181
+6765
+10946
+17711
+28657
+</pre>
+			</div>
+			<div class="details description">
+				<p>
+					Does not require input to function or complete. Number of iterations controlled by shell variable $NUM.
+				</p>
+			</div>
+		</div>
+		<h3>
+			Alternatives
+		</h3>
+		<div class="terminal-display">
+			<div class="one-liner">
+				<div class="line command">
+					seq 50| awk 'BEGIN {a=1; b=1} {print a; c=a+b; a=b; b=c}'
+				</div>
+				<div class="sample-output c5 output">
+					<pre>
+1
+1
+2
+3
+5
+8
+13
+21
+34
+55
+89
+144
+233
+377
+610
+987
+1597
+2584
+4181
+6765
+10946
+17711
+28657
+46368
+75025
+121393
+196418
+317811
+514229
+832040
+1346269
+2178309
+3524578
+5702887
+9227465
+14930352
+24157817
+39088169
+63245986
+102334155
+165580141
+267914296
+433494437
+701408733
+1134903170
+1836311903
+2971215073
+4807526976
+7778742049
+12586269025
+</pre>
+				</div>
+				<div class="details description">
+					<p>
+						Another combination of seq and awk. Not very efficient, but sufficiently quick.
+					</p>
+				</div>
+			</div>
+			<div class="one-liner">
+				<div class="line command">
+					awk 'func f(n){return(n&lt;2?n:f(n-1)+f(n-2))}BEGIN{while(a&lt;24){print f(a++)}}'
+				</div>
+				<div class="sample-output c5 output">
+					<pre>
+0
+1
+1
+2
+3
+5
+8
+13
+21
+34
+55
+89
+144
+233
+377
+610
+987
+1597
+2584
+4181
+6765
+10946
+17711
+28657
+</pre>
+				</div>
+				<div class="details description">
+					<p>
+						recursive version, "pure" AWK
+					</p>
+				</div>
+			</div>
+			<div class="one-liner">
+				<div class="line command">
+					prev=0;next=1;echo $prev;while(true);do echo $next;sum=$(($prev+$next));prev=$next;next=$sum;sleep 1;done
+				</div>
+				<div class="details"></div>
+			</div>
+			<div class="one-liner">
+				<div class="line command">
+					gawk '{n=$1;a=0;b=1;c=1;for(i=1;i&lt;n;i++){c=a+b;a=b;b=c};print c}' &lt;&lt; eof
+				</div>
+				<div class="sample-output c5 output">
+					<pre>
+finish input with:
+999
+0
+1
+2
+3
+eof
+26863810024485337815052569207027905710267776959038865271418527606059667101451514099303873236210167827650084004405807693119964697202348044908203804335127173454055409270617765081794282450393830849992803129229312
+1
+1
+1
+2
+</pre>
+				</div>
+				<div class="details description">
+					<p>
+						only take the first field on each row to compute the fibo on this number
+					</p>
+				</div>
+			</div>
+		</div>
+		<h3>
+			What others think
+		</h3>
+		<div class="comment comment0 body" id="comments">
+			<p>
+				The Fibononacci sequence is supposed to start from 0, not 1.
+			</p>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,7 @@
+commandlinefu_id: 7872
+translator:
+  weibo: tgic
+command: |-
+  sed "s/<[^>]\+>//g" file
+summary: |-
+  清除所有html标签

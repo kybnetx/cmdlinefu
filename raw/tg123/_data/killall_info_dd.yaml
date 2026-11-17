@@ -1,0 +1,7 @@
+commandlinefu_id: 5440
+translator:
+  weibo: tgic
+command: |-
+  killall -INFO dd
+summary: |-
+  查看dd进度

@@ -1,0 +1,7 @@
+commandlinefu_id: 1724
+translator:
+  weibo: tgic
+command: |-
+  cat *.mpg > all.mpg
+summary: |-
+  合并mpg到一个文件

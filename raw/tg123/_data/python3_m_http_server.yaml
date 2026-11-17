@@ -1,0 +1,7 @@
+commandlinefu_id: 9841
+translator:
+  weibo: tgic
+command: |-
+  python3 -m http.server
+summary: |-
+  临时下载服务器 python3

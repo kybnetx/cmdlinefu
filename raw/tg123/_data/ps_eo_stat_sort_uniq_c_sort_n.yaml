@@ -1,0 +1,7 @@
+commandlinefu_id: 8170
+translator:
+  weibo: tgic
+command: |-
+  ps -eo stat= | sort | uniq -c | sort -n
+summary: |-
+  按状态统计进程数量

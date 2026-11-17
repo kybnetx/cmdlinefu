@@ -1,0 +1,7 @@
+commandlinefu_id: 12889
+translator:
+  weibo: 'fw8899'
+command: |-
+  find /var/lib/cassandra/data -depth -type d -iwholename "*/snapshots/*" -printf "%Ty-%Tm-%Td  %p\n" | sort
+summary: |-
+  按日期列出cassandra镜像

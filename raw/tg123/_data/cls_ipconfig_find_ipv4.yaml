@@ -1,0 +1,7 @@
+commandlinefu_id: 12960
+translator:
+  weibo: 'fw8899'
+command: |-
+  cls && ipconfig | find "IPv4"
+summary: |-
+  显示Windows IPv4，其他隐藏

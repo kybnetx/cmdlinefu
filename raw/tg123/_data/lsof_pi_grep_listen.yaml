@@ -1,0 +1,7 @@
+commandlinefu_id: 9395
+translator:
+  weibo: tgic
+command: |-
+  lsof -Pi | grep LISTEN
+summary: |-
+  检查端口是否打开

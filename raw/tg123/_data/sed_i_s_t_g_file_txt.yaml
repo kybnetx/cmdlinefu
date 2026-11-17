@@ -1,0 +1,7 @@
+commandlinefu_id: 9196
+translator:
+  weibo: tgic
+command: |-
+  sed -i 's/[ \t]\+$//g' file.txt
+summary: |-
+  删除结尾空白
