@@ -1,9 +1,12 @@
-{"id": 13, "kind": "title_differs", "base": "Run the last command as root", "other": "Command-line-fuAlpha", "other_source": "wayback_view", "capture_ts": null}
 {"id": 13, "kind": "votes_temporal", "base": 1219, "base_source": "hf", "other": 38, "other_source": "wayback_view", "capture_ts": null}
 {"id": 13, "kind": "votes_temporal", "base": 1219, "base_source": "hf", "other": 1227, "other_source": "wayback_view", "capture_ts": null}
 {"id": 4204, "kind": "votes_temporal", "base": 8, "base_source": "hf", "other": 9, "other_source": "wayback_tag_listing", "capture_ts": "20260717212137"}
 {"id": 8686, "kind": "votes_temporal", "base": 2, "base_source": "hf", "other": 1, "other_source": "wayback_tag_listing", "capture_ts": "20260717212137"}
 {"id": 7543, "kind": "author_differs", "base": "EBAH", "other": "ebah80", "other_source": "wayback_tag_listing", "capture_ts": "20260609122519"}
+{"id": 24708, "kind": "votes_temporal", "base": 2, "base_source": "hf", "other": 1, "other_source": "wayback_tag_listing", "capture_ts": "20260512121629"}
+{"id": 4373, "kind": "votes_temporal", "base": 31, "base_source": "hf", "other": 32, "other_source": "wayback_tag_listing", "capture_ts": "20260306202924"}
+{"id": 4373, "kind": "votes_temporal", "base": 31, "base_source": "hf", "other": 32, "other_source": "wayback_tag_listing", "capture_ts": "20260606074115"}
+{"id": 5422, "kind": "votes_temporal", "base": 6, "base_source": "hf", "other": 5, "other_source": "wayback_tag_listing", "capture_ts": "20130509022136"}
 {"id": 10325, "kind": "author_differs", "base": "EBAH", "other": "ebah80", "other_source": "wayback_tag_listing", "capture_ts": "20260609123314"}
 {"id": 10325, "kind": "votes_temporal", "base": 1, "base_source": "hf", "other": 0, "other_source": "wayback_tag_listing", "capture_ts": null}
 {"id": 8670, "kind": "votes_temporal", "base": -2, "base_source": "hf", "other": -1, "other_source": "wayback_tag_listing", "capture_ts": null}

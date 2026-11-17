@@ -60,14 +60,15 @@
    "license": "Internet Archive terms",
    "raw": "raw/wayback_html/",
    "counts": {
-    "view_pages_saved": 18,
-    "tag_pages_saved": 17,
+    "view_pages_saved": 21,
+    "tag_pages_saved": 52,
     "sample_pages_saved": 5,
-    "successful_fetch_log_lines": 35,
+    "successful_fetch_log_lines": 73,
+    "failed_fetch_log_lines": 16,
     "port80_failures_logged": 6,
-    "pending_jobs_not_fetched": 4782
+    "pending_jobs_not_fetched": 4744
    },
-   "note": "Wayback refused connections from the VM on port 80 then port 443 on 2026-11-17; route stopped after two failed rounds. Resume with tools/wayback_fetch.sh over manifests/wayback_pending_jobs.tsv."
+   "note": "Wayback refused connections from the VM on 2026-11-17 (port 80, then 443). A second, short round later that evening saved 38 more pages (3 view, 35 tag) before port 443 was refused again; route stopped. Resume with tools/wayback_fetch.sh over manifests/wayback_pending_jobs.tsv."
   },
   {
    "id": "tg123",
@@ -121,6 +122,23 @@
    "counts": {
     "used_for": "CSS assets only; js/data.js retained raw, not merged (Chinese titles, no IDs verified)"
    }
+  },
+  {
+   "id": "grok_mirror_site",
+   "name": "Third-party static mirror site \"commandlinefu-mirror-site.tar.xz\" (generated with Grok, supplied by the user)",
+   "url": null,
+   "retrieved": "2026-11-17",
+   "license": "none stated; content derived from commandlinefu.com community submissions",
+   "raw": "raw/grok/commandlinefu-mirror-site.tar.xz",
+   "sha256": "1a20b214014688fbe5550984721c64747370957f0ce8803ca593f2950c22a548",
+   "counts": {
+    "command_pages_parsed": 14953,
+    "gap_commands_usable": 582,
+    "descriptions_usable": 113,
+    "tag_pairs_usable": 17921
+   },
+   "used_for": "thirdparty/grok/ only (layer=third_party_unverified). Never merged into clean/. No raw captures behind it; AI descriptions and inferred \"derived\" tags on its pages were not extracted."
   }
- ]
+ ],
+ "updated": "2026-11-17 (rev 2)"
 }

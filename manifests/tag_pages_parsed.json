@@ -134,6 +134,60 @@
   "effective_url": "https://web.archive.org/web/20251212164557id_/https://www.commandlinefu.com/commands/tagged/1013/thread",
   "n_with_tags_block": 2
  },
+ "tags/1014_thcount.html": {
+  "tag_id": 1014,
+  "offset": 0,
+  "capture_ts": "20251206065145",
+  "n": 1,
+  "listing_total_on_page": 1,
+  "effective_url": "https://web.archive.org/web/20251206065145id_/https://www.commandlinefu.com/commands/tagged/1014/thcount",
+  "n_with_tags_block": 1
+ },
+ "tags/1015_arp.html": {
+  "tag_id": 1015,
+  "offset": 0,
+  "capture_ts": "20260122172816",
+  "n": 3,
+  "listing_total_on_page": 3,
+  "effective_url": "https://web.archive.org/web/20260122172816id_/https://www.commandlinefu.com/commands/tagged/1015/arp",
+  "n_with_tags_block": 3
+ },
+ "tags/1016_pcre.html": {
+  "tag_id": 1016,
+  "offset": 0,
+  "capture_ts": "20260609115935",
+  "n": 5,
+  "listing_total_on_page": 5,
+  "effective_url": "https://web.archive.org/web/20260609115935id_/https://www.commandlinefu.com/commands/tagged/1016/pcre",
+  "n_with_tags_block": 5
+ },
+ "tags/1017_netcat-nc.html": {
+  "tag_id": 1017,
+  "offset": 0,
+  "capture_ts": "20260710142607",
+  "n": 3,
+  "listing_total_on_page": 3,
+  "effective_url": "https://web.archive.org/web/20260710142607id_/https://www.commandlinefu.com/commands/tagged/1017/netcat-nc",
+  "n_with_tags_block": 3
+ },
+ "tags/1018_winxp.html": {
+  "tag_id": 1018,
+  "offset": 0,
+  "capture_ts": "20260712150429",
+  "n": 1,
+  "listing_total_on_page": 1,
+  "effective_url": "https://web.archive.org/web/20260712150429id_/https://www.commandlinefu.com/commands/tagged/1018/winxp",
+  "n_with_tags_block": 1
+ },
+ "tags/1019_savitabhabhi.html": {
+  "tag_id": 1019,
+  "offset": 0,
+  "capture_ts": "20130509021237",
+  "n": 1,
+  "listing_total_on_page": null,
+  "effective_url": "https://web.archive.org/web/20130509021237id_/http://www.commandlinefu.com/commands/tagged/1019/savitabhabhi",
+  "n_with_tags_block": 1
+ },
  "tags/101_size.html": {
   "tag_id": 101,
   "offset": 0,
@@ -142,6 +196,231 @@
   "listing_total_on_page": 62,
   "effective_url": "https://web.archive.org/web/20260609122519id_/https://www.commandlinefu.com/commands/tagged/101/size",
   "n_with_tags_block": 25
+ },
+ "tags/1020_image-resize-imagemagick-morify.html": {
+  "tag_id": 1020,
+  "offset": 0,
+  "capture_ts": "20260314050803",
+  "n": 2,
+  "listing_total_on_page": 2,
+  "effective_url": "https://web.archive.org/web/20260314050803id_/https://www.commandlinefu.com/commands/tagged/1020/image-resize-imagemagick-morify",
+  "n_with_tags_block": 2
+ },
+ "tags/1021_getfacl.html": {
+  "tag_id": 1021,
+  "offset": 0,
+  "capture_ts": "20260214011420",
+  "n": 3,
+  "listing_total_on_page": 3,
+  "effective_url": "https://web.archive.org/web/20260214011420id_/https://www.commandlinefu.com/commands/tagged/1021/getfacl",
+  "n_with_tags_block": 3
+ },
+ "tags/1023_acl.html": {
+  "tag_id": 1023,
+  "offset": 0,
+  "capture_ts": "20260211152438",
+  "n": 4,
+  "listing_total_on_page": 4,
+  "effective_url": "https://web.archive.org/web/20260211152438id_/https://www.commandlinefu.com/commands/tagged/1023/acl",
+  "n_with_tags_block": 4
+ },
+ "tags/1024_reminder.html": {
+  "tag_id": 1024,
+  "offset": 0,
+  "capture_ts": "20260417185140",
+  "n": 2,
+  "listing_total_on_page": 2,
+  "effective_url": "https://web.archive.org/web/20260417185140id_/https://www.commandlinefu.com/commands/tagged/1024/reminder",
+  "n_with_tags_block": 2
+ },
+ "tags/1025_icons.html": {
+  "tag_id": 1025,
+  "offset": 0,
+  "capture_ts": "20260512121629",
+  "n": 6,
+  "listing_total_on_page": 6,
+  "effective_url": "https://web.archive.org/web/20260512121629id_/https://www.commandlinefu.com/commands/tagged/1025/icons",
+  "n_with_tags_block": 6
+ },
+ "tags/1026_preserve.html": {
+  "tag_id": 1026,
+  "offset": 0,
+  "capture_ts": "20260608113555",
+  "n": 1,
+  "listing_total_on_page": 1,
+  "effective_url": "https://web.archive.org/web/20260608113555id_/https://www.commandlinefu.com/commands/tagged/1026/preserve",
+  "n_with_tags_block": 1
+ },
+ "tags/1027_do.html": {
+  "tag_id": 1027,
+  "offset": 0,
+  "capture_ts": "20260413042641",
+  "n": 2,
+  "listing_total_on_page": 2,
+  "effective_url": "https://web.archive.org/web/20260413042641id_/https://www.commandlinefu.com/commands/tagged/1027/do",
+  "n_with_tags_block": 2
+ },
+ "tags/1029_urldecode.html": {
+  "tag_id": 1029,
+  "offset": 0,
+  "capture_ts": "20250814174250",
+  "n": 3,
+  "listing_total_on_page": 3,
+  "effective_url": "https://web.archive.org/web/20250814174250id_/https://www.commandlinefu.com/commands/tagged/1029/urldecode",
+  "n_with_tags_block": 3
+ },
+ "tags/102_sort.html": {
+  "tag_id": 102,
+  "offset": 0,
+  "capture_ts": "20260414081753",
+  "n": 25,
+  "listing_total_on_page": 176,
+  "effective_url": "https://web.archive.org/web/20260414081753id_/https://www.commandlinefu.com/commands/tagged/102/sort",
+  "n_with_tags_block": 25
+ },
+ "tags/1037_ps1.html": {
+  "tag_id": 1037,
+  "offset": 0,
+  "capture_ts": "20260412061704",
+  "n": 7,
+  "listing_total_on_page": 7,
+  "effective_url": "https://web.archive.org/web/20260412061704id_/https://www.commandlinefu.com/commands/tagged/1037/ps1",
+  "n_with_tags_block": 7
+ },
+ "tags/1040_rdesktop.html": {
+  "tag_id": 1040,
+  "offset": 0,
+  "capture_ts": "20260420192138",
+  "n": 5,
+  "listing_total_on_page": 5,
+  "effective_url": "https://web.archive.org/web/20260420192138id_/https://www.commandlinefu.com/commands/tagged/1040/rdesktop",
+  "n_with_tags_block": 5
+ },
+ "tags/1041_pcap.html": {
+  "tag_id": 1041,
+  "offset": 0,
+  "capture_ts": "20260513012817",
+  "n": 3,
+  "listing_total_on_page": 3,
+  "effective_url": "https://web.archive.org/web/20260513012817id_/https://www.commandlinefu.com/commands/tagged/1041/pcap",
+  "n_with_tags_block": 3
+ },
+ "tags/1042_wireshark.html": {
+  "tag_id": 1042,
+  "offset": 0,
+  "capture_ts": "20260306202924",
+  "n": 13,
+  "listing_total_on_page": 13,
+  "effective_url": "https://web.archive.org/web/20260306202924id_/https://www.commandlinefu.com/commands/tagged/1042/wireshark",
+  "n_with_tags_block": 13
+ },
+ "tags/1043_tshark.html": {
+  "tag_id": 1043,
+  "offset": 0,
+  "capture_ts": "20260606074115",
+  "n": 10,
+  "listing_total_on_page": 10,
+  "effective_url": "https://web.archive.org/web/20260606074115id_/https://www.commandlinefu.com/commands/tagged/1043/tshark",
+  "n_with_tags_block": 10
+ },
+ "tags/1046_postgresql.html": {
+  "tag_id": 1046,
+  "offset": 0,
+  "capture_ts": "20260711091136",
+  "n": 12,
+  "listing_total_on_page": 12,
+  "effective_url": "https://web.archive.org/web/20260711091136id_/https://www.commandlinefu.com/commands/tagged/1046/postgresql",
+  "n_with_tags_block": 12
+ },
+ "tags/1047_a%20href=.html": {
+  "tag_id": 1047,
+  "offset": 0,
+  "capture_ts": "20130509022136",
+  "n": 2,
+  "listing_total_on_page": null,
+  "effective_url": "https://web.archive.org/web/20130509022136id_/http://www.commandlinefu.com/commands/tagged/1047/a%20href=",
+  "n_with_tags_block": 2
+ },
+ "tags/1047_pager.html": {
+  "tag_id": 1047,
+  "offset": 0,
+  "capture_ts": "20260411122314",
+  "n": 3,
+  "listing_total_on_page": 3,
+  "effective_url": "https://web.archive.org/web/20260411122314id_/https://www.commandlinefu.com/commands/tagged/1047/pager",
+  "n_with_tags_block": 3
+ },
+ "tags/1048_shell-function.html": {
+  "tag_id": 1048,
+  "offset": 0,
+  "capture_ts": "20251107070029",
+  "n": 6,
+  "listing_total_on_page": 6,
+  "effective_url": "https://web.archive.org/web/20251107070029id_/https://www.commandlinefu.com/commands/tagged/1048/shell-function",
+  "n_with_tags_block": 6
+ },
+ "tags/1049_argument.html": {
+  "tag_id": 1049,
+  "offset": 0,
+  "capture_ts": "20260719162535",
+  "n": 8,
+  "listing_total_on_page": 8,
+  "effective_url": "https://web.archive.org/web/20260719162535id_/https://www.commandlinefu.com/commands/tagged/1049/argument",
+  "n_with_tags_block": 8
+ },
+ "tags/104_perl.html": {
+  "tag_id": 104,
+  "offset": 0,
+  "capture_ts": "20260715044109",
+  "n": 25,
+  "listing_total_on_page": 190,
+  "effective_url": "https://web.archive.org/web/20260715044109id_/https://www.commandlinefu.com/commands/tagged/104/perl",
+  "n_with_tags_block": 25
+ },
+ "tags/1050_parsing.html": {
+  "tag_id": 1050,
+  "offset": 0,
+  "capture_ts": "20260712025214",
+  "n": 6,
+  "listing_total_on_page": 6,
+  "effective_url": "https://web.archive.org/web/20260712025214id_/https://www.commandlinefu.com/commands/tagged/1050/parsing",
+  "n_with_tags_block": 6
+ },
+ "tags/1051_solid-archive.html": {
+  "tag_id": 1051,
+  "offset": 0,
+  "capture_ts": "20260120180424",
+  "n": 1,
+  "listing_total_on_page": 1,
+  "effective_url": "https://web.archive.org/web/20260120180424id_/https://www.commandlinefu.com/commands/tagged/1051/solid-archive",
+  "n_with_tags_block": 1
+ },
+ "tags/1052_uudecode.html": {
+  "tag_id": 1052,
+  "offset": 0,
+  "capture_ts": "20260215233411",
+  "n": 5,
+  "listing_total_on_page": 5,
+  "effective_url": "https://web.archive.org/web/20260215233411id_/https://www.commandlinefu.com/commands/tagged/1052/uudecode",
+  "n_with_tags_block": 5
+ },
+ "tags/1053_file-transfer.html": {
+  "tag_id": 1053,
+  "offset": 0,
+  "capture_ts": "20260613210116",
+  "n": 7,
+  "listing_total_on_page": 7,
+  "effective_url": "https://web.archive.org/web/20260613210116id_/https://www.commandlinefu.com/commands/tagged/1053/file-transfer",
+  "n_with_tags_block": 7
+ },
+ "tags/105_csh.html": {
+  "tag_id": 105,
+  "offset": 0,
+  "capture_ts": "20260211180222",
+  "n": 8,
+  "listing_total_on_page": 8,
+  "effective_url": "https://web.archive.org/web/20260211180222id_/https://www.commandlinefu.com/commands/tagged/105/csh",
+  "n_with_tags_block": 8
  },
  "tags/10_date-manipulation.html": {
   "tag_id": 10,

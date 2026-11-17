@@ -2,15 +2,15 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 3,text-processing,,Text Processing,,anchor_text|cdx_url|per_command_block
 4,process-management,,Process Management,,anchor_text|cdx_url
 5,filesystem,,Filesystem,,anchor_text|cdx_url|per_command_block
-6,shell-programming,,Shell programming,,anchor_text|cdx_url
+6,shell-programming,,Shell programming,,anchor_text|cdx_url|per_command_block
 7,c-programming,,C Programming,,anchor_text|cdx_url
 8,programming,,Programming,,anchor_text|cdx_url
 9,batch-utilities,,Batch Utilities,,anchor_text|cdx_url
 10,date-manipulation,,Date manipulation,,anchor_text|cdx_url|per_command_block
 11,network,,Network,,anchor_text|cdx_url|per_command_block
 12,system-administration,,System Administration,,anchor_text|cdx_url|per_command_block
-13,mysql,,mysql,,anchor_text|cdx_url
-14,image-processing,,Image processing,,anchor_text|cdx_url
+13,mysql,,mysql,,anchor_text|cdx_url|per_command_block
+14,image-processing,,Image processing,,anchor_text|cdx_url|per_command_block
 15,version-control,,version control,,anchor_text|cdx_url
 16,keyboard-shortcuts,,keyboard shortcuts,,anchor_text|cdx_url
 17,video,,video,,anchor_text|cdx_url|per_command_block
@@ -22,22 +22,22 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 23,meminfo,,meminfo,,anchor_text|cdx_url
 24,memory,,memory,,anchor_text|cdx_url
 25,memory-usage,,memory usage,,anchor_text|cdx_url|per_command_block
-26,audio,,audio,,anchor_text|cdx_url
+26,audio,,audio,,anchor_text|cdx_url|per_command_block
 27,os-x,,Os X,,anchor_text|cdx_url|per_command_block
 28,security,,Security,,anchor_text|cdx_url|per_command_block
-29,history,,history,,anchor_text|cdx_url
+29,history,,history,,anchor_text|cdx_url|per_command_block
 30,upcase-uppercase,,"upcase, uppercase,",,anchor_text|cdx_url
 31,a%20href=,cat,cat,,anchor_text|cdx_url|per_command_block
 32,audins.js,ssh|ssh&quot,ssh,,anchor_text|cdx_url|per_command_block
 33,copy-paste,,copy paste,,anchor_text|cdx_url
 34,bash,,bash,,anchor_text|cdx_url|per_command_block
 35,svn,,svn,,anchor_text|cdx_url
-36,vim,,vim,,anchor_text|cdx_url
+36,vim,,vim,,anchor_text|cdx_url|per_command_block
 37,sudo,,sudo,,anchor_text|cdx_url
 38,tee,,tee,,anchor_text|cdx_url
 39,blockdev,,blockdev,,anchor_text|cdx_url
-40,debian,,Debian,,anchor_text|cdx_url
-41,imagemagick,,ImageMagick,,anchor_text|cdx_url
+40,debian,,Debian,,anchor_text|cdx_url|per_command_block
+41,imagemagick,,ImageMagick,,anchor_text|cdx_url|per_command_block
 42,graphviz,,,,cdx_url
 43,x,,X,,anchor_text|cdx_url
 44,ubuntu,,Ubuntu,,anchor_text|cdx_url|per_command_block
@@ -64,7 +64,7 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 65,-net,,,,cdx_url
 66,net,,net,,anchor_text|cdx_url
 67,git,,git,,anchor_text|cdx_url|per_command_block
-68,audins.js,diff,diff,,anchor_text|cdx_url
+68,audins.js,diff,diff,,anchor_text|cdx_url|per_command_block
 69,resolution,,resolution,,anchor_text|cdx_url
 70,which,,which,,anchor_text|cdx_url
 71,capslock,,capslock,,anchor_text|cdx_url
@@ -75,7 +75,7 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 76,ffmpeg,,ffmpeg,,anchor_text|cdx_url
 77,wma,,,,cdx_url
 78,ogg,,ogg,,anchor_text|cdx_url
-79,mplayer,,mplayer,,anchor_text|cdx_url
+79,mplayer,,mplayer,,anchor_text|cdx_url|per_command_block
 80,stream,,stream,,anchor_text|cdx_url
 81,rip,,rip,,anchor_text|cdx_url
 82,affinity,,,,cdx_url
@@ -83,7 +83,7 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 84,multicore,,multicore,,anchor_text|cdx_url
 85,windows,,windows,,anchor_text|cdx_url|per_command_block
 86,icon,,,,cdx_url
-87,extract,,extract,,anchor_text|cdx_url
+87,extract,,extract,,anchor_text|cdx_url|per_command_block
 88,mount,,mount,,anchor_text|cdx_url|per_command_block
 89,remount,,,,cdx_url
 90,rw,,,,cdx_url
@@ -94,22 +94,22 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 95,mount-point,,mount point,,anchor_text|cdx_url|per_command_block
 96,disk-usage,,disk usage,,anchor_text|cdx_url|per_command_block
 97,man,,man,,anchor_text|cdx_url
-98,netcat,,netcat,,anchor_text|cdx_url
-99,a%20href=,less,less,,anchor_text|cdx_url
+98,netcat,,netcat,,anchor_text|cdx_url|per_command_block
+99,a%20href=,less,less,,anchor_text|cdx_url|per_command_block
 100,space,,space,,anchor_text|cdx_url|per_command_block
 101,size,,size,,anchor_text|cdx_url|per_command_block
 102,sort,,sort,,anchor_text|cdx_url|per_command_block
 103,hidden,,hidden,,anchor_text|cdx_url|per_command_block
 104,perl,,perl,,anchor_text|cdx_url|per_command_block
-105,csh,,csh,,anchor_text|cdx_url
+105,csh,,csh,,anchor_text|cdx_url|per_command_block
 106,solaris,,solaris,,anchor_text|cdx_url|per_command_block
 107,nawk,,nawk,,anchor_text|cdx_url
-108,ifconfig,,ifconfig,,anchor_text|cdx_url
+108,ifconfig,,ifconfig,,anchor_text|cdx_url|per_command_block
 109,egrep,,egrep,,anchor_text|cdx_url
 110,sed,,sed,,anchor_text|cdx_url|per_command_block
-111,zgrep,,zgrep,,anchor_text|cdx_url
+111,zgrep,,zgrep,,anchor_text|cdx_url|per_command_block
 112,awk,,awk,,anchor_text|cdx_url|per_command_block
-113,uniq,,uniq,,anchor_text|cdx_url
+113,uniq,,uniq,,anchor_text|cdx_url|per_command_block
 114,emacs,,emacs,,anchor_text|cdx_url
 115,pim,,PIM,,anchor_text|cdx_url
 116,mencoder,,mencoder,,anchor_text|cdx_url
@@ -122,14 +122,14 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 123,find,,find,,anchor_text|cdx_url|per_command_block
 124,du,,du,,anchor_text|cdx_url|per_command_block
 125,ls,,ls,,anchor_text|cdx_url|per_command_block
-126,alias,,alias,,anchor_text|cdx_url
+126,alias,,alias,,anchor_text|cdx_url|per_command_block
 127,macosx,,macosx,,anchor_text|cdx_url|per_command_block
 128,wildcard,,wildcard,,anchor_text|cdx_url
 129,log,,log,,anchor_text|cdx_url|per_command_block
-130,ip,,IP,,anchor_text|cdx_url
+130,ip,,IP,,anchor_text|cdx_url|per_command_block
 131,network-card,,network card,,anchor_text|cdx_url
 132,sfdisk,,sfdisk,,anchor_text|cdx_url
-133,image,,image,,anchor_text|cdx_url
+133,image,,image,,anchor_text|cdx_url|per_command_block
 134,partition,,partition,,anchor_text|cdx_url|per_command_block
 135,recovery,,recovery,,anchor_text|cdx_url|per_command_block
 136,restore,,restore,,anchor_text|cdx_url
@@ -143,7 +143,7 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 144,youtube,,youtube,,anchor_text|cdx_url|per_command_block
 145,streaming,,streaming,,anchor_text|cdx_url
 146,flash,,flash,,anchor_text|cdx_url
-147,color,,color,,anchor_text|cdx_url
+147,color,,color,,anchor_text|cdx_url|per_command_block
 148,mv,,mv,,anchor_text|cdx_url|per_command_block
 149,mp3gain,,mp3gain,,anchor_text|cdx_url
 150,vorbisgain,,,,cdx_url
@@ -191,30 +191,30 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 192,openssh,,openssh,,anchor_text|cdx_url
 193,exif,,exif,,anchor_text|cdx_url
 194,photo,,photo,,anchor_text|cdx_url
-195,a%20href=,more,more,,anchor_text|cdx_url
-196,prompt,,prompt,,anchor_text|cdx_url
+195,a%20href=,more,more,,anchor_text|cdx_url|per_command_block
+196,prompt,,prompt,,anchor_text|cdx_url|per_command_block
 197,vote,,,,cdx_url
 198,down,,down,,anchor_text|cdx_url
 199,comment,,comment,,anchor_text|cdx_url
 200,reason,,,,cdx_url
 201,unix,,unix,,anchor_text|cdx_url|per_command_block
-202,shell,,shell,,anchor_text|cdx_url
+202,shell,,shell,,anchor_text|cdx_url|per_command_block
 203,cd,,cd,,anchor_text|cdx_url
 205,p4,,p4,,anchor_text|cdx_url
 206,scm,,SCM,,anchor_text|cdx_url
 207,perforce,,Perforce,,anchor_text|cdx_url
-208,column,,column,,anchor_text|cdx_url
+208,column,,column,,anchor_text|cdx_url|per_command_block
 209,serial,,serial,,anchor_text|cdx_url
 210,stty,,stty,,anchor_text|cdx_url
 211,a%20href=,read,read,,anchor_text|cdx_url|per_command_block
 212,write,,write,,anchor_text|cdx_url|per_command_block
 213,readline,,readline,,anchor_text|cdx_url
-214,vi,,vi,,anchor_text|cdx_url
+214,vi,,vi,,anchor_text|cdx_url|per_command_block
 215,xvkbd,,xvkbd,,anchor_text|cdx_url
 216,sendkeys,,,,cdx_url
 217,xsendevent,,,,cdx_url
 218,automation,,automation,,anchor_text|cdx_url|per_command_block
-219,script,,script,,anchor_text|cdx_url
+219,script,,script,,anchor_text|cdx_url|per_command_block
 220,keypress,,,,cdx_url
 221,clean,,clean,,anchor_text|cdx_url|per_command_block
 222,project,,project,,anchor_text|cdx_url
@@ -228,12 +228,12 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 230,global,,global,,anchor_text|cdx_url
 231,home,,,,cdx_url
 232,music,,music,,anchor_text|cdx_url
-233,kill,,kill,,anchor_text|cdx_url
+233,kill,,kill,,anchor_text|cdx_url|per_command_block
 234,futurama,,futurama,,anchor_text|cdx_url
 235,curl,,curl,,anchor_text|cdx_url|per_command_block
 236,logoff,,,,cdx_url
 237,pgrep,,pgrep,,anchor_text|cdx_url
-238,tar,,tar,,anchor_text|cdx_url
+238,tar,,tar,,anchor_text|cdx_url|per_command_block
 239,xvidcap,,,,cdx_url
 240,compiz,,,,cdx_url
 241,directories,,directories,,anchor_text|cdx_url|per_command_block
@@ -243,12 +243,12 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 245,scan,,scan,,anchor_text|cdx_url
 246,scanner,,scanner,,anchor_text|cdx_url
 247,xsane,,,,cdx_url
-248,mp3,,mp3,,anchor_text|cdx_url
+248,mp3,,mp3,,anchor_text|cdx_url|per_command_block
 249,avi,,avi,,anchor_text|cdx_url
 250,printing,,printing,,anchor_text|cdx_url
-251,seq,,seq,,anchor_text|cdx_url
+251,seq,,seq,,anchor_text|cdx_url|per_command_block
 252,depth,,,,cdx_url
-253,basename,,basename,,anchor_text|cdx_url
+253,basename,,basename,,anchor_text|cdx_url|per_command_block
 254,dirname,,dirname,,anchor_text|cdx_url
 255,while,,while,,anchor_text|cdx_url|per_command_block
 256,faac,,,,cdx_url
@@ -262,7 +262,7 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 264,head,,HEAD,,anchor_text|cdx_url|per_command_block
 265,http,,http,,anchor_text|cdx_url|per_command_block
 266,files,,files,,anchor_text|cdx_url|per_command_block
-267,csv,,CSV,,anchor_text|cdx_url
+267,csv,,CSV,,anchor_text|cdx_url|per_command_block
 268,headers,,headers,,anchor_text|cdx_url
 269,rsync,,rsync,,anchor_text|cdx_url|per_command_block
 270,rsynch,,rsynch,,anchor_text|cdx_url
@@ -282,7 +282,7 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 284,monitor,monitoring,monitoring,,anchor_text|cdx_url
 285,telnet,,telnet,,anchor_text|cdx_url
 286,literal,,literal,,anchor_text|cdx_url
-287,bang,,,,cdx_url
+287,bang,,bang,,anchor_text|cdx_url|per_command_block
 288,shutdown,,Shutdown,,anchor_text|cdx_url
 289,reboot,,Reboot,,anchor_text|cdx_url
 290,rename-extension,,,,cdx_url
@@ -294,8 +294,8 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 296,firefox,,firefox,,anchor_text|cdx_url|per_command_block
 297,gmailfs,,,,cdx_url
 298,fuse,,fuse,,anchor_text|cdx_url
-299,dpkg,,dpkg,,anchor_text|cdx_url
-300,netstat,,netstat,,anchor_text|cdx_url
+299,dpkg,,dpkg,,anchor_text|cdx_url|per_command_block
+300,netstat,,netstat,,anchor_text|cdx_url|per_command_block
 301,cut,,cut,,anchor_text|cdx_url|per_command_block
 302,yelp,,yelp,,anchor_text|cdx_url
 303,info,,info,,anchor_text|cdx_url
@@ -330,7 +330,7 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 332,dates,,dates,,anchor_text|cdx_url|per_command_block
 333,cpus,,,,cdx_url
 334,merge,,merge,,anchor_text|cdx_url
-335,tcpdump,,tcpdump,,anchor_text|cdx_url
+335,tcpdump,,tcpdump,,anchor_text|cdx_url|per_command_block
 336,bzip2-gzip-compression,,"bzip2, gzip, compression,",,anchor_text|cdx_url
 337,scramble-jumble-shuf,,,,cdx_url
 338,output,,output,,anchor_text|cdx_url|per_command_block
@@ -339,7 +339,7 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 341,redirect,,redirect,,anchor_text|cdx_url|per_command_block
 342,root,,root,,anchor_text|cdx_url
 343,delicious,,delicious,,anchor_text|cdx_url
-344,bookmarks,,bookmarks,,anchor_text|cdx_url
+344,bookmarks,,bookmarks,,anchor_text|cdx_url|per_command_block
 345,xmms2,,xmms2,,anchor_text|cdx_url
 346,identify,,identify,,anchor_text|cdx_url
 347,dos2unix,,,,cdx_url
@@ -348,40 +348,40 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 350,fix,,fix,,anchor_text|cdx_url
 351,regex,,regex,,anchor_text|cdx_url|per_command_block
 352,-keybindings,,,,cdx_url
-353,permissions,,permissions,,anchor_text|cdx_url
+353,permissions,,permissions,,anchor_text|cdx_url|per_command_block
 354,a%20href=,function,function,,anchor_text|cdx_url|per_command_block
-355,photos,,photos,,anchor_text|cdx_url
+355,photos,,photos,,anchor_text|cdx_url|per_command_block
 356,x0vnc4server,,,,cdx_url
 357,x0vnc,,,,cdx_url
 358,vnc,,vnc,,anchor_text|cdx_url
 359,locate,,locate,,anchor_text|cdx_url
 360,pid,,PID,,anchor_text|cdx_url
-361,apache,lsof,lsof,,anchor_text|cdx_url
+361,apache,lsof,lsof,,anchor_text|cdx_url|per_command_block
 362,tee,,"tee,",,anchor_text|cdx_url
 363,record,,record,,anchor_text|cdx_url
 364,backend,,,,cdx_url
 365,client,,,,cdx_url
 366,side,,,,cdx_url
 367,hostname,,hostname,,anchor_text|cdx_url
-368,wc,,wc,,anchor_text|cdx_url
+368,wc,,wc,,anchor_text|cdx_url|per_command_block
 369,gentoo,,Gentoo,,anchor_text|cdx_url|per_command_block
 370,emerge,,emerge,,anchor_text|cdx_url
 371,use,,,,cdx_url
 372,fun,,fun,,anchor_text|cdx_url
-373,gnulinux,,GNU/Linux,,anchor_text|cdx_url
+373,gnulinux,,GNU/Linux,,anchor_text|cdx_url|per_command_block
 374,time,,time,,anchor_text|cdx_url|per_command_block
 375,chroot,,,,cdx_url
 376,ldap,,ldap,,anchor_text|cdx_url|per_command_block
 377,source,,source,,anchor_text|cdx_url
-378,chmod,,chmod,,anchor_text|cdx_url
-379,md5sum,,md5sum,,anchor_text|cdx_url
+378,chmod,,chmod,,anchor_text|cdx_url|per_command_block
+379,md5sum,,md5sum,,anchor_text|cdx_url|per_command_block
 380,password,,password,,anchor_text|cdx_url|per_command_block
 381,harddisk,,harddisk,,anchor_text|cdx_url|per_command_block
 382,hardware,,hardware,,anchor_text|cdx_url|per_command_block
 383,storage,,storage,,anchor_text|cdx_url
 384,mkdir,,mkdir,,anchor_text|cdx_url
 385,cobbler,,cobbler,,anchor_text|cdx_url
-386,print,,print,,anchor_text|cdx_url
+386,print,,print,,anchor_text|cdx_url|per_command_block
 387,rm,,rm,,anchor_text|cdx_url
 388,mplayer-video,,"mplayer, video",,anchor_text|cdx_url
 389,gps,,gps,,anchor_text|cdx_url
@@ -403,7 +403,7 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 406,dpkg-query,,dpkg-query,,anchor_text|cdx_url
 407,tr,,tr,,anchor_text|cdx_url|per_command_block
 408,cpio,,cpio,,anchor_text|cdx_url
-409,notify-send,,notify-send,,anchor_text|cdx_url
+409,notify-send,,notify-send,,anchor_text|cdx_url|per_command_block
 410,flac,,flac,,anchor_text|cdx_url
 411,ape,,,,cdx_url
 412,wavpack,,,,cdx_url
@@ -418,7 +418,7 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 421,xfce,,xfce,,anchor_text|cdx_url
 422,shredding,,shredding,,anchor_text|cdx_url
 423,python,,python,,anchor_text|cdx_url|per_command_block
-424,mail,,mail,,anchor_text|cdx_url
+424,mail,,mail,,anchor_text|cdx_url|per_command_block
 425,attachment,,attachment,,anchor_text|cdx_url
 426,apropos,,apropos,,anchor_text|cdx_url
 427,help,,help,,anchor_text|cdx_url
@@ -432,7 +432,7 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 435,internet,,internet,,anchor_text|cdx_url
 436,finance,,,,cdx_url
 437,pipes,,pipes,,anchor_text|cdx_url
-438,cygwin,,cygwin,,anchor_text|cdx_url
+438,cygwin,,cygwin,,anchor_text|cdx_url|per_command_block
 439,bsd,,bsd,,anchor_text|cdx_url
 440,vbox,,,,cdx_url
 441,virtual,,virtual,,anchor_text|cdx_url
@@ -445,7 +445,7 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 449,hashing,,,,cdx_url
 450,encoding,,encoding,,anchor_text|cdx_url|per_command_block
 451,jpeg,,jpeg,,anchor_text|cdx_url
-452,jpg,,jpg,,anchor_text|cdx_url
+452,jpg,,jpg,,anchor_text|cdx_url|per_command_block
 453,corrupt,,corrupt,,anchor_text|cdx_url
 454,sync,,sync,,anchor_text|cdx_url
 455,nautilus,,nautilus,,anchor_text|cdx_url
@@ -464,7 +464,7 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 468,same-files,,,,cdx_url
 469,fail2ban,,,,cdx_url
 470,json,,json,,anchor_text|cdx_url|per_command_block
-471,validation,,validation,,anchor_text|cdx_url
+471,validation,,validation,,anchor_text|cdx_url|per_command_block
 472,wrap,,,,cdx_url
 473,fold,,fold,,anchor_text|cdx_url
 474,text,,text,,anchor_text|cdx_url|per_command_block
@@ -472,7 +472,7 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 476,newline,,newline,,anchor_text|cdx_url
 477,utf,,,,cdx_url
 478,iso,,iso,,anchor_text|cdx_url
-479,sleep,,sleep,,anchor_text|cdx_url
+479,sleep,,sleep,,anchor_text|cdx_url|per_command_block
 480,timer,,timer,,anchor_text|cdx_url
 481,pmset,,,,cdx_url
 482,remove,,remove,,anchor_text|cdx_url
@@ -494,7 +494,7 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 498,performance,,performance,,anchor_text|cdx_url|per_command_block
 499,flv,,flv,,anchor_text|cdx_url
 500,smtp,,smtp,,anchor_text|cdx_url
-501,html,,html,,anchor_text|cdx_url
+501,html,,html,,anchor_text|cdx_url|per_command_block
 502,gunzip,,gunzip,,anchor_text|cdx_url
 503,gzip,,gzip,,anchor_text|cdx_url
 504,count,,count,,anchor_text|cdx_url|per_command_block
@@ -528,7 +528,7 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 533,postfix,,Postfix,,anchor_text|cdx_url
 534,css,,css,,anchor_text|cdx_url
 535,tarball,,tarball,,anchor_text|cdx_url
-536,branches,,branches,,anchor_text|cdx_url
+536,branches,,branches,,anchor_text|cdx_url|per_command_block
 537,a%20href=,zsh,zsh,,anchor_text|cdx_url|per_command_block
 538,mac-wireless-hack-change,,"MAC , Wireless, hack, change",,anchor_text|cdx_url
 539,ntp,,,,cdx_url
@@ -536,19 +536,19 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 541,change,,change,,anchor_text|cdx_url
 542,usb,,usb,,anchor_text|cdx_url|per_command_block
 543,filesize,,filesize,,anchor_text|cdx_url|per_command_block
-544,cp,,cp,,anchor_text|cdx_url
+544,cp,,cp,,anchor_text|cdx_url|per_command_block
 545,for,,for,,anchor_text|cdx_url|per_command_block
 546,ncdu,,ncdu,,anchor_text|cdx_url
-547,ncurses,,ncurses,,anchor_text|cdx_url
+547,ncurses,,ncurses,,anchor_text|cdx_url|per_command_block
 548,apache,,apache,,anchor_text|cdx_url
 549,httpd,,httpd,,anchor_text|cdx_url
 550,finder,,finder,,anchor_text|cdx_url
 551,token,,token,,anchor_text|cdx_url
-552,bash-tricks,,bash tricks,,anchor_text|cdx_url
+552,bash-tricks,,bash tricks,,anchor_text|cdx_url|per_command_block
 553,parameters,,,,cdx_url
 554,scp,,scp,,anchor_text|cdx_url
 555,irc,,irc,,anchor_text|cdx_url
-556,nc,,nc,,anchor_text|cdx_url
+556,nc,,nc,,anchor_text|cdx_url|per_command_block
 557,col,,col,,anchor_text|cdx_url
 558,amarok,,,,cdx_url
 559,od,,od,,anchor_text|cdx_url
@@ -562,7 +562,7 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 567,numbers,,numbers,,anchor_text|cdx_url|per_command_block
 568,ruby-bash,,"ruby, bash",,anchor_text|cdx_url|per_command_block
 569,paste,,paste,,anchor_text|cdx_url
-570,pwd,,pwd,,anchor_text|cdx_url
+570,pwd,,pwd,,anchor_text|cdx_url|per_command_block
 571,sysstat,,,,cdx_url
 572,clipboard,,clipboard,,anchor_text|cdx_url
 573,quicklook,,,,cdx_url
@@ -589,7 +589,7 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 594,pax,,,,cdx_url
 595,file-rename,,file rename,,anchor_text|cdx_url
 596,calc,,calc,,anchor_text|cdx_url
-597,bc-l,,bc -l,,anchor_text|cdx_url
+597,bc-l,,bc -l,,anchor_text|cdx_url|per_command_block
 598,nfs,,nfs,,anchor_text|cdx_url
 599,gfs,,,,cdx_url
 600,safe,,safe,,anchor_text|cdx_url
@@ -611,24 +611,24 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 616,cal,,cal,,anchor_text|cdx_url|per_command_block
 617,iconv,,iconv,,anchor_text|cdx_url
 618,nfo,,,,cdx_url
-619,test,,test,,anchor_text|cdx_url
+619,test,,test,,anchor_text|cdx_url|per_command_block
 620,check,,check,,anchor_text|cdx_url|per_command_block
 621,pkill,,pkill,,anchor_text|cdx_url
 622,clear,,clear,,anchor_text|cdx_url
-623,a%20href=,tput,tput,,anchor_text|cdx_url
+623,a%20href=,tput,tput,,anchor_text|cdx_url|per_command_block
 624,lang,,,,cdx_url
 625,archive,,archive,,anchor_text|cdx_url
 626,7z,,7z,,anchor_text|cdx_url
 627,7zip,,7zip,,anchor_text|cdx_url
 628,zip,,zip,,anchor_text|cdx_url
 629,compress,,compress,,anchor_text|cdx_url
-630,network-performance,,network performance,,anchor_text|cdx_url
+630,network-performance,,network performance,,anchor_text|cdx_url|per_command_block
 631,installed-packages,,,,cdx_url
 632,duplicate-directories,,duplicate directories,,anchor_text|cdx_url
 633,duplicate-directory,,duplicate directory,,anchor_text|cdx_url
-634,remind,,remind,,anchor_text|cdx_url
+634,remind,,remind,,anchor_text|cdx_url|per_command_block
 635,growl,,growl,,anchor_text|cdx_url
-636,postgres,,PostGres,,anchor_text|cdx_url
+636,postgres,,PostGres,,anchor_text|cdx_url|per_command_block
 637,kill-pkill-process,,kill pkill process,,anchor_text|cdx_url
 638,kill,,,,cdx_url
 639,pkill,,,,cdx_url
@@ -645,7 +645,7 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 650,pbcopy,,pbcopy,,anchor_text|cdx_url
 651,tidy,,tidy,,anchor_text|cdx_url
 652,logs,,logs,,anchor_text|cdx_url
-653,xml,,xml,,anchor_text|cdx_url
+653,xml,,xml,,anchor_text|cdx_url|per_command_block
 654,google,,google,,anchor_text|cdx_url|per_command_block
 655,google-calendar,,,,cdx_url
 656,start,,,,cdx_url
@@ -672,20 +672,20 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 677,progress,,progress,,anchor_text|cdx_url
 678,testing,,testing,,anchor_text|cdx_url
 679,development,,development,,anchor_text|cdx_url
-680,freebsd,,FreeBSD,,anchor_text|cdx_url
+680,freebsd,,FreeBSD,,anchor_text|cdx_url|per_command_block
 681,aliases,,aliases,,anchor_text|cdx_url
 682,rc.conf,,,,cdx_url
-683,stat,,stat,,anchor_text|cdx_url
-684,octal,,octal,,anchor_text|cdx_url
+683,stat,,stat,,anchor_text|cdx_url|per_command_block
+684,octal,,octal,,anchor_text|cdx_url|per_command_block
 685,exiftool,,exiftool,,anchor_text|cdx_url
-686,rev,,rev,,anchor_text|cdx_url
+686,rev,,rev,,anchor_text|cdx_url|per_command_block
 687,module,,module,,anchor_text|cdx_url
 688,indent,,indent,,anchor_text|cdx_url
 689,download,,download,,anchor_text|cdx_url|per_command_block
 690,resume,,resume,,anchor_text|cdx_url
-691,mp3info,,mp3info,,anchor_text|cdx_url
-692,id3,,id3,,anchor_text|cdx_url
-693,tag,,tag,,anchor_text|cdx_url
+691,mp3info,,mp3info,,anchor_text|cdx_url|per_command_block
+692,id3,,id3,,anchor_text|cdx_url|per_command_block
+693,tag,,tag,,anchor_text|cdx_url|per_command_block
 694,attachments,,,,cdx_url
 695,mutt,,mutt,,anchor_text|cdx_url
 696,parallel,,parallel,,anchor_text|cdx_url|per_command_block
@@ -722,14 +722,14 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 727,gui,,GUI,,anchor_text|cdx_url
 728,aix,,aix,,anchor_text|cdx_url|per_command_block
 729,korn-shell,,korn shell,,anchor_text|cdx_url|per_command_block
-730,move,,move,,anchor_text|cdx_url
+730,move,,move,,anchor_text|cdx_url|per_command_block
 731,mate,,mate,,anchor_text|cdx_url
 732,textmate,,textmate,,anchor_text|cdx_url
 733,darwin,,darwin,,anchor_text|cdx_url
 734,rmdir,,rmdir,,anchor_text|cdx_url
 735,ddos,,ddos,,anchor_text|cdx_url
 736,xmlstarlet,,xmlstarlet,,anchor_text|cdx_url
-737,rss,,rss,,anchor_text|cdx_url
+737,rss,,rss,,anchor_text|cdx_url|per_command_block
 738,prefix,,prefix,,anchor_text|cdx_url
 739,mailx,,mailx,,anchor_text|cdx_url
 740,networking,,networking,,anchor_text|cdx_url
@@ -740,13 +740,13 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 745,folder,,folder,,anchor_text|cdx_url|per_command_block
 746,http_code,,http_code,,anchor_text|cdx_url|per_command_block
 747,eval,,eval,,anchor_text|cdx_url
-748,sql,,sql,,anchor_text|cdx_url
+748,sql,,sql,,anchor_text|cdx_url|per_command_block
 749,mysqldump,,mysqldump,,anchor_text|cdx_url
 750,wordpress,,wordpress,,anchor_text|cdx_url
 751,nohup,,nohup,,anchor_text|cdx_url
 752,logout,,logout,,anchor_text|cdx_url
 753,background,,background,,anchor_text|cdx_url
-754,execute,,execute,,anchor_text|cdx_url
+754,execute,,execute,,anchor_text|cdx_url|per_command_block
 755,at,,at,,anchor_text|cdx_url|per_command_block
 756,espeak,,espeak,,anchor_text|cdx_url
 757,read-text,,,,cdx_url
@@ -793,8 +793,8 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 801,web-browser,,web browser,,anchor_text|cdx_url
 802,dc,,dc,,anchor_text|cdx_url
 803,dscl,,,,cdx_url
-804,group,,group,,anchor_text|cdx_url
-805,users,,users,,anchor_text|cdx_url
+804,group,,group,,anchor_text|cdx_url|per_command_block
+805,users,,users,,anchor_text|cdx_url|per_command_block
 806,file-descriptor,,file descriptor,,anchor_text|cdx_url
 808,stats,,stats,,anchor_text|cdx_url
 809,floppy,,,,cdx_url
@@ -806,7 +806,7 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 815,q,,,,cdx_url
 816,power,,power,,anchor_text|cdx_url
 817,dump,,dump,,anchor_text|cdx_url
-818,gmail,,gmail,,anchor_text|cdx_url
+818,gmail,,gmail,,anchor_text|cdx_url|per_command_block
 819,charset,,,,cdx_url
 820,label,,label,,anchor_text|cdx_url
 821,xdg-open,,xdg-open,,anchor_text|cdx_url
@@ -833,15 +833,15 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 842,gstreamer,,gstreamer,,anchor_text|cdx_url
 843,decode,,,,cdx_url
 844,cipher,,cipher,,anchor_text|cdx_url
-845,a%20href=,builtin,builtin,,anchor_text|cdx_url
+845,a%20href=,builtin,builtin,,anchor_text|cdx_url|per_command_block
 846,built-in,,built-in,,anchor_text|cdx_url
-847,a%20href=,askapache|python,askapache,,anchor_text|cdx_url
+847,a%20href=,askapache|python,askapache,,anchor_text|cdx_url|per_command_block
 848,who,,who,,anchor_text|cdx_url
 849,whoami,,whoami,,anchor_text|cdx_url
 850,uname,,uname,,anchor_text|cdx_url
 851,putty,,putty,,anchor_text|cdx_url
 852,username,,username,,anchor_text|cdx_url
-853,prompt_command,,PROMPT_COMMAND,,anchor_text|cdx_url
+853,prompt_command,,PROMPT_COMMAND,,anchor_text|cdx_url|per_command_block
 854,ssh_tty,,SSH_TTY,,anchor_text|cdx_url
 855,bps,,,,cdx_url
 856,speed,,speed,,anchor_text|cdx_url|per_command_block
@@ -886,8 +886,8 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 895,lamp,,,,cdx_url
 896,server,,server,,anchor_text|cdx_url|per_command_block
 897,install,,install,,anchor_text|cdx_url
-898,linux-unix,,Linux UNIX,,anchor_text|cdx_url
-899,su,,su,,anchor_text|cdx_url
+898,linux-unix,,Linux UNIX,,anchor_text|cdx_url|per_command_block
+899,su,,su,,anchor_text|cdx_url|per_command_block
 900,reverse-dns,,,,cdx_url
 901,nslookup,,nslookup,,anchor_text|cdx_url|per_command_block
 902,geometry,,,,cdx_url
@@ -895,22 +895,22 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 904,dangerous,,dangerous,,anchor_text|cdx_url
 905,tv,,TV,,anchor_text|cdx_url
 906,bash-perl,,,,cdx_url
-907,.bash_profile,,.bash_profile,,anchor_text|cdx_url
+907,.bash_profile,,.bash_profile,,anchor_text|cdx_url|per_command_block
 908,aliase,,,,cdx_url
 909,nice,,nice,,anchor_text|cdx_url
 910,search-and-replace,,search and replace,,anchor_text|cdx_url
 911,a%20href=,sh,sh,,anchor_text|cdx_url|per_command_block
-912,processes,,processes,,anchor_text|cdx_url
+912,processes,,processes,,anchor_text|cdx_url|per_command_block
 913,lifehacker,,,,cdx_url
 914,terminal-title,,terminal title,,anchor_text|cdx_url
 915,last-command,,last command,,anchor_text|cdx_url
 916,oernii,,oernii,,anchor_text|cdx_url
 917,revision,,revision,,anchor_text|cdx_url
-918,awk-sort,,"awk, sort",,anchor_text|cdx_url
+918,awk-sort,,"awk, sort",,anchor_text|cdx_url|per_command_block
 919,whoneedsvi,,,,cdx_url
-920,printf,,printf,,anchor_text|cdx_url
+920,printf,,printf,,anchor_text|cdx_url|per_command_block
 921,urandom,,urandom,,anchor_text|cdx_url
-922,devnull,,/dev/null,,anchor_text|cdx_url
+922,devnull,,/dev/null,,anchor_text|cdx_url|per_command_block
 923,hup,,,,cdx_url
 924,sighup,,,,cdx_url
 925,fields,,fields,,anchor_text|cdx_url
@@ -926,7 +926,7 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 935,fullurl,,,,cdx_url
 936,full-url,,,,cdx_url
 937,dimensions,,,,cdx_url
-938,uuencode,,uuencode,,anchor_text|cdx_url
+938,uuencode,,uuencode,,anchor_text|cdx_url|per_command_block
 939,for-each,,for-each,,anchor_text|cdx_url
 940,compression-format,,,,cdx_url
 941,fdisk,,fdisk,,anchor_text|cdx_url
@@ -948,17 +948,17 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 957,terminfo,,terminfo,,anchor_text|cdx_url
 958,termcap,,termcap,,anchor_text|cdx_url
 959,external,,external,,anchor_text|cdx_url
-960,binary-clock,,binary clock,,anchor_text|cdx_url
+960,binary-clock,,binary clock,,anchor_text|cdx_url|per_command_block
 961,stainless.app,,,,cdx_url
 962,speaker-test,,,,cdx_url
 963,cpuinfo,,cpuinfo,,anchor_text|cdx_url
 964,maildir,,Maildir,,anchor_text|cdx_url
-965,mailboxes,,mailboxes,,anchor_text|cdx_url
+965,mailboxes,,mailboxes,,anchor_text|cdx_url|per_command_block
 966,mbox,,,,cdx_url
 968,omploader,,omploader,,anchor_text|cdx_url
 969,ubuntu-linux-bash-cli-apt-aptitude,,ubuntu linux bash cli apt aptitude,,anchor_text|cdx_url
-970,mime,,mime,,anchor_text|cdx_url
-971,munpack,,,,cdx_url
+970,mime,,mime,,anchor_text|cdx_url|per_command_block
+971,munpack,,munpack,,anchor_text|cdx_url|per_command_block
 972,dotfiles,,dotfiles,,anchor_text|cdx_url
 973,show,,show,,anchor_text|cdx_url
 974,geoip,,geoip,,anchor_text|cdx_url
@@ -968,7 +968,7 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 978,sensors,,sensors,,anchor_text|cdx_url
 979,bbc,,,,cdx_url
 980,albumart,,,,cdx_url
-981,lsmod,,lsmod,,anchor_text|cdx_url
+981,lsmod,,lsmod,,anchor_text|cdx_url|per_command_block
 982,modinfo,,modinfo,,anchor_text|cdx_url
 983,sox,,sox,,anchor_text|cdx_url
 984,cdrdao,,cdrdao,,anchor_text|cdx_url
@@ -1002,44 +1002,44 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 1012,i18n,,i18n,,anchor_text|cdx_url|per_command_block
 1013,thread,,thread,,anchor_text|cdx_url|per_command_block
 1014,thcount,,thcount,,anchor_text|cdx_url|per_command_block
-1015,arp,,Arp,,anchor_text|cdx_url
-1016,pcre,,pcre,,anchor_text|cdx_url
-1017,netcat-nc,,netcat nc,,anchor_text|cdx_url
+1015,arp,,Arp,,anchor_text|cdx_url|per_command_block
+1016,pcre,,pcre,,anchor_text|cdx_url|per_command_block
+1017,netcat-nc,,netcat nc,,anchor_text|cdx_url|per_command_block
 1018,winxp,,winxp,,anchor_text|cdx_url|per_command_block
 1019,savitabhabhi,,savitabhabhi,,anchor_text|cdx_url|per_command_block
-1020,image-resize-imagemagick-morify,,,,cdx_url
-1021,getfacl,,getfacl,,anchor_text|cdx_url
-1022,setfacl,,setfacl,,anchor_text|cdx_url
-1023,acl,,ACL,,anchor_text|cdx_url
-1024,reminder,,reminder,,anchor_text|cdx_url
-1025,icons,,icons,,anchor_text|cdx_url
-1026,preserve,,,,cdx_url
-1027,do,,do,,anchor_text|cdx_url
-1029,urldecode,,urldecode,,anchor_text|cdx_url
+1020,image-resize-imagemagick-morify,,"image, resize, imagemagick, morify",,anchor_text|cdx_url|per_command_block
+1021,getfacl,,getfacl,,anchor_text|cdx_url|per_command_block
+1022,setfacl,,setfacl,,anchor_text|cdx_url|per_command_block
+1023,acl,,ACL,,anchor_text|cdx_url|per_command_block
+1024,reminder,,reminder,,anchor_text|cdx_url|per_command_block
+1025,icons,,icons,,anchor_text|cdx_url|per_command_block
+1026,preserve,,preserve,,anchor_text|cdx_url|per_command_block
+1027,do,,do,,anchor_text|cdx_url|per_command_block
+1029,urldecode,,urldecode,,anchor_text|cdx_url|per_command_block
 1030,zcat,,zcat,,anchor_text|cdx_url
 1031,analysis,,analysis,,anchor_text|cdx_url
 1032,xmllint,,xmllint,,anchor_text|cdx_url
 1033,tune,,,,cdx_url
 1034,guitar,,,,cdx_url
 1035,play,,play,,anchor_text|cdx_url
-1036,hanukkah,,,,cdx_url
-1037,ps1,,ps1,,anchor_text|cdx_url
+1036,hanukkah,,hanukkah,,anchor_text|cdx_url|per_command_block
+1037,ps1,,ps1,,anchor_text|cdx_url|per_command_block
 1038,banner,,banner,,anchor_text|cdx_url
 1039,game,,Game,,anchor_text|cdx_url
-1040,rdesktop,,rdesktop,,anchor_text|cdx_url
-1041,pcap,,pcap,,anchor_text|cdx_url
-1042,wireshark,,wireshark,,anchor_text|cdx_url
-1043,tshark,,tshark,,anchor_text|cdx_url
-1044,capture,,capture,,anchor_text|cdx_url
-1045,sniff,,sniff,,anchor_text|cdx_url
-1046,postgresql,,postgresql,,anchor_text|cdx_url
-1047,a%20href=,pager,pager,,anchor_text|cdx_url
-1048,shell-function,,,,cdx_url
+1040,rdesktop,,rdesktop,,anchor_text|cdx_url|per_command_block
+1041,pcap,,pcap,,anchor_text|cdx_url|per_command_block
+1042,wireshark,,wireshark,,anchor_text|cdx_url|per_command_block
+1043,tshark,,tshark,,anchor_text|cdx_url|per_command_block
+1044,capture,,capture,,anchor_text|cdx_url|per_command_block
+1045,sniff,,sniff,,anchor_text|cdx_url|per_command_block
+1046,postgresql,,postgresql,,anchor_text|cdx_url|per_command_block
+1047,a%20href=,pager,pager,,anchor_text|cdx_url|per_command_block
+1048,shell-function,,shell function,,anchor_text|cdx_url|per_command_block
 1049,argument,,argument,,anchor_text|cdx_url|per_command_block
 1050,parsing,,parsing,,anchor_text|cdx_url|per_command_block
-1051,solid-archive,,,,cdx_url
-1052,uudecode,,uudecode,,anchor_text|cdx_url
-1053,file-transfer,,file transfer,,anchor_text|cdx_url
+1051,solid-archive,,solid archive,,anchor_text|cdx_url|per_command_block
+1052,uudecode,,uudecode,,anchor_text|cdx_url|per_command_block
+1053,file-transfer,,file transfer,,anchor_text|cdx_url|per_command_block
 1054,recursive,,recursive,,anchor_text|cdx_url
 1055,pause,,pause,,anchor_text|cdx_url
 1056,continue,,,,cdx_url
@@ -1089,7 +1089,7 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 1100,subversion,,subversion,,anchor_text|cdx_url
 1101,cookies,,cookies,,anchor_text|cdx_url
 1102,lanscan,,lanscan,,anchor_text|cdx_url
-1103,nl,,nl,,anchor_text|cdx_url
+1103,nl,,nl,,anchor_text|cdx_url|per_command_block
 1104,trivia,,,,cdx_url
 1105,facebook,,facebook,,anchor_text|cdx_url
 1106,lvm,,lvm,,anchor_text|cdx_url
@@ -1119,7 +1119,7 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 1130,xming,,,,cdx_url
 1131,gedit,,,,cdx_url
 1132,select,,select,,anchor_text|cdx_url
-1133,weather,,weather,,anchor_text|cdx_url
+1133,weather,,weather,,anchor_text|cdx_url|per_command_block
 1134,temperature,,temperature,,anchor_text|cdx_url
 1135,fahrenheit,,,,cdx_url
 1136,nwmgr,,,,cdx_url
@@ -1181,7 +1181,7 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 1194,merriam-webster,,merriam-webster,,anchor_text|cdx_url
 1195,aplay,,aplay,,anchor_text|cdx_url
 1196,english,,English,,anchor_text|cdx_url
-1197,join,,join,,anchor_text|cdx_url
+1197,join,,join,,anchor_text|cdx_url|per_command_block
 1198,dictionary,,dictionary,,anchor_text|cdx_url
 1199,dictionary.com,,dictionary.com,,anchor_text|cdx_url
 1200,mpg321,,mpg321,,anchor_text|cdx_url
@@ -1204,7 +1204,7 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 1217,instapaper,,instapaper,,anchor_text|cdx_url
 1218,package,,package,,anchor_text|cdx_url
 1219,limit,,limit,,anchor_text|cdx_url
-1220,if,,if,,anchor_text|cdx_url
+1220,if,,if,,anchor_text|cdx_url|per_command_block
 1221,cpanel,,,,cdx_url
 1222,joke,,joke,,anchor_text|cdx_url
 1223,chattr,,,,cdx_url
@@ -1231,8 +1231,8 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 1244,ddprogress-speed-pv,,,,cdx_url
 1245,weblogic,,weblogic,,anchor_text|cdx_url
 1246,most-used,,most-used,,anchor_text|cdx_url
-1247,sigwinch,,,,cdx_url
-1248,a%20href=,lines,LINES,,anchor_text|cdx_url
+1247,sigwinch,,SIGWINCH,,anchor_text|cdx_url|per_command_block
+1248,a%20href=,lines,LINES,,anchor_text|cdx_url|per_command_block
 1249,phone,,,,cdx_url
 1250,cdma,,cdma,,anchor_text|cdx_url
 1251,homepage,,homepage,,anchor_text|cdx_url
@@ -1262,7 +1262,7 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 1275,nginx,,nginx,,anchor_text|cdx_url
 1276,deaggregate,,,,cdx_url
 1277,installkernel,,,,cdx_url
-1278,bash-string-manipulations,,bash String Manipulations,,anchor_text|cdx_url
+1278,bash-string-manipulations,,bash String Manipulations,,anchor_text|cdx_url|per_command_block
 1279,computer,,,,cdx_url
 1280,type,,type,,anchor_text|cdx_url
 1281,vendor,,,,cdx_url
@@ -1272,7 +1272,7 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 1285,rows,,,,cdx_url
 1286,unset,,,,cdx_url
 1287,toprc,,,,cdx_url
-1288,command,,command,,anchor_text|cdx_url
+1288,command,,command,,anchor_text|cdx_url|per_command_block
 1289,iphone,,iphone,,anchor_text|cdx_url
 1290,libfacc,,,,cdx_url
 1291,nano,,nano,,anchor_text|cdx_url
@@ -1289,13 +1289,13 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 1302,showttf,,,,cdx_url
 1303,fontforge,,,,cdx_url
 1304,kludge,,,,cdx_url
-1305,gnu-grep,,GNU grep,,anchor_text|cdx_url
+1305,gnu-grep,,GNU grep,,anchor_text|cdx_url|per_command_block
 1306,fonts,,fonts,,anchor_text|cdx_url
 1309,os,,,,cdx_url
 1310,bugs,,,,cdx_url
 1311,bug-reporting,,,,cdx_url
 1312,kubuntu,,kubuntu,,anchor_text|cdx_url
-1313,gnu-find,,GNU find,,anchor_text|cdx_url
+1313,gnu-find,,GNU find,,anchor_text|cdx_url|per_command_block
 1317,flush,,flush,,anchor_text|cdx_url
 1318,groff,,,,cdx_url
 1320,s3,,s3,,anchor_text|cdx_url|per_command_block
@@ -1316,7 +1316,7 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 1341,dafont,,,,cdx_url
 1342,gst123,,,,cdx_url
 1343,chromium,,chromium,,anchor_text|cdx_url
-1344,chrome,,chrome,,anchor_text|cdx_url
+1344,chrome,,chrome,,anchor_text|cdx_url|per_command_block
 1345,mkfifo,,mkfifo,,anchor_text|cdx_url
 1346,fifo,,,,cdx_url
 1347,ccze,,ccze,,anchor_text|cdx_url
@@ -1337,13 +1337,13 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 1365,motd,,motd,,anchor_text|cdx_url
 1366,cowsay,,cowsay,,anchor_text|cdx_url|per_command_block
 1368,directory-sizedu,,"directory size,du",,anchor_text|cdx_url|per_command_block
-1369,notify,,notify,,anchor_text|cdx_url
+1369,notify,,notify,,anchor_text|cdx_url|per_command_block
 1370,inotify,,inotify,,anchor_text|cdx_url
 1371,thunderbird,,thunderbird,,anchor_text|cdx_url
 1372,fumanchu,,fumanchu,,anchor_text|cdx_url
 1373,mandriva,,,,cdx_url
 1374,urpmi,,,,cdx_url
-1375,rdp,,RDP,,anchor_text|cdx_url
+1375,rdp,,RDP,,anchor_text|cdx_url|per_command_block
 1376,unique,,unique,,anchor_text|cdx_url
 1377,buffer,,buffer,,anchor_text|cdx_url
 1378,shred,,shred,,anchor_text|cdx_url
@@ -1400,7 +1400,7 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 1430,link,,link,,anchor_text|cdx_url
 1431,executable,,executable,,anchor_text|cdx_url
 1432,socks,,,,cdx_url
-1433,shellcode,,shellcode,,anchor_text|cdx_url
+1433,shellcode,,shellcode,,anchor_text|cdx_url|per_command_block
 1434,objdump,,,,cdx_url
 1435,gunslinger_,,,,cdx_url
 1436,assembly,,assembly,,anchor_text|cdx_url
@@ -1415,7 +1415,7 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 1446,board,,,,cdx_url
 1447,forum,,,,cdx_url
 1448,posts,,,,cdx_url
-1449,user,,user,,anchor_text|cdx_url
+1449,user,,user,,anchor_text|cdx_url|per_command_block
 1450,uuid,,uuid,,anchor_text|cdx_url
 1451,vlock,,,,cdx_url
 1452,wav,,wav,,anchor_text|cdx_url
@@ -1471,8 +1471,8 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 1509,gtk2,,gtk2,,anchor_text|cdx_url
 1510,mussh,,,,cdx_url
 1511,linux-menu-application-menu-windows-key,,,,cdx_url
-1512,while-loop,,while loop,,anchor_text|cdx_url
-1513,for-loop,,for loop,,anchor_text|cdx_url
+1512,while-loop,,while loop,,anchor_text|cdx_url|per_command_block
+1513,for-loop,,for loop,,anchor_text|cdx_url|per_command_block
 1514,mpd,,mpd,,anchor_text|cdx_url
 1515,eol,,eol,,anchor_text|cdx_url
 1516,white-space,,white space,,anchor_text|cdx_url
@@ -1533,10 +1533,10 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 1572,png,,png,,anchor_text|cdx_url
 1573,trim,,trim,,anchor_text|cdx_url
 1574,inotifywait,,inotifywait,,anchor_text|cdx_url
-1575,umask,,,,cdx_url
-1576,env,,env,,anchor_text|cdx_url
+1575,umask,,umask,,anchor_text|cdx_url|per_command_block
+1576,env,,env,,anchor_text|cdx_url|per_command_block
 1577,environ,,environ,,anchor_text|cdx_url
-1578,environment,,environment,,anchor_text|cdx_url
+1578,environment,,environment,,anchor_text|cdx_url|per_command_block
 1579,cmdline,,cmdline,,anchor_text|cdx_url
 1580,7zr,,,,cdx_url
 1581,gamma,,,,cdx_url
@@ -1548,9 +1548,9 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 1587,sunrise,,sunrise,,anchor_text|cdx_url
 1590,get-website-ip,,get website ip,,anchor_text|cdx_url
 1591,hostname-to-ip,,hostname to ip,,anchor_text|cdx_url
-1592,printenv,,printenv,,anchor_text|cdx_url
-1593,done,,done,,anchor_text|cdx_url
-1594,zombie,,zombie,,anchor_text|cdx_url
+1592,printenv,,printenv,,anchor_text|cdx_url|per_command_block
+1593,done,,done,,anchor_text|cdx_url|per_command_block
+1594,zombie,,zombie,,anchor_text|cdx_url|per_command_block
 1595,style,,,,cdx_url
 1596,diction,,,,cdx_url
 1597,mid3iconv,,,,cdx_url
@@ -1579,7 +1579,7 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 1620,field-separator,,field separator,,anchor_text|cdx_url
 1622,ssh-tunneling,,ssh tunneling,,anchor_text|cdx_url
 1623,tunneling,,tunneling,,anchor_text|cdx_url
-1624,tunnel,,tunnel,,anchor_text|cdx_url
+1624,tunnel,,tunnel,,anchor_text|cdx_url|per_command_block
 1626,bash_history,,bash_history,,anchor_text|cdx_url
 1627,chmod-x,,,,cdx_url
 1628,deborphan,,,,cdx_url
@@ -1590,8 +1590,8 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 1633,logger,,,,cdx_url
 1634,syslog,,syslog,,anchor_text|cdx_url
 1635,transform,,,,cdx_url
-1636,pop3,,pop3,,anchor_text|cdx_url
-1637,authentication,,authentication,,anchor_text|cdx_url
+1636,pop3,,pop3,,anchor_text|cdx_url|per_command_block
+1637,authentication,,authentication,,anchor_text|cdx_url|per_command_block
 1638,ionice,,,,cdx_url
 1639,filenames,,filenames,,anchor_text|cdx_url|per_command_block
 1640,xterm,,xterm,,anchor_text|cdx_url
@@ -1631,11 +1631,11 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 1675,devfs,,devfs,,anchor_text|cdx_url
 1676,lso-cookies,,LSO cookies,,anchor_text|cdx_url
 1677,ssh-connect-back,,ssh connect back,,anchor_text|cdx_url
-1678,highlight,,highlight,,anchor_text|cdx_url
+1678,highlight,,highlight,,anchor_text|cdx_url|per_command_block
 1679,tab,,tab,,anchor_text|cdx_url
-1680,unicode,,unicode,,anchor_text|cdx_url
-1681,code-points,,code points,,anchor_text|cdx_url
-1682,gnu-coreutils,,GNU coreutils,,anchor_text|cdx_url
+1680,unicode,,unicode,,anchor_text|cdx_url|per_command_block
+1681,code-points,,code points,,anchor_text|cdx_url|per_command_block
+1682,gnu-coreutils,,GNU coreutils,,anchor_text|cdx_url|per_command_block
 1684,get_flash_videos,,,,cdx_url
 1685,namp,,namp,,anchor_text|cdx_url
 1686,winterbottom,,,,cdx_url
@@ -1667,7 +1667,7 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 1713,xslt,,XSLT,,anchor_text|cdx_url
 1714,powershell,,PowerShell,,anchor_text|cdx_url
 1715,youtube-dl,,,,cdx_url
-1716,mapping,,,,cdx_url
+1716,mapping,,mapping,,anchor_text|cdx_url|per_command_block
 1717,table,,,,cdx_url
 1718,openvz,,openvz,,anchor_text|cdx_url
 1719,vzlist,,,,cdx_url
@@ -1695,8 +1695,8 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 1741,cowfile,,,,cdx_url
 1742,toilet,,toilet,,anchor_text|cdx_url
 1743,ascii-art,,,,cdx_url
-1744,arp-scan,,arp-scan,,anchor_text|cdx_url
-1745,generate,,generate,,anchor_text|cdx_url
+1744,arp-scan,,arp-scan,,anchor_text|cdx_url|per_command_block
+1745,generate,,generate,,anchor_text|cdx_url|per_command_block
 1746,mac-os-x,,mac os x,,anchor_text|cdx_url|per_command_block
 1747,entities,,,,cdx_url
 1748,duplex,,,,cdx_url
@@ -1718,14 +1718,14 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 1766,pruning,,,,cdx_url
 1767,prune,,,,cdx_url
 1768,cleaning,,,,cdx_url
-1769,large,,,,cdx_url
+1769,large,,large,,anchor_text|cdx_url|per_command_block
 1770,memcache,,,,cdx_url
 1771,unixtime,,,,cdx_url
 1772,setxkbmap,,,,cdx_url
 1773,keyboardlayout,,,,cdx_url
 1774,translit,,,,cdx_url
 1775,phonetic,,,,cdx_url
-1776,dot,,dot,,anchor_text|cdx_url
+1776,dot,,dot,,anchor_text|cdx_url|per_command_block
 1777,fuser,,fuser,,anchor_text|cdx_url
 1778,rdiff,,,,cdx_url
 1779,rdiff-backup,,,,cdx_url
@@ -1751,7 +1751,7 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 1806,symbolic-link,,symbolic link,,anchor_text|cdx_url
 1807,format,,format,,anchor_text|cdx_url
 1808,unexpand,,,,cdx_url
-1809,tabs,,tabs,,anchor_text|cdx_url
+1809,tabs,,tabs,,anchor_text|cdx_url|per_command_block
 1810,whitespace,,whitespace,,anchor_text|cdx_url
 1811,mdb,,,,cdx_url
 1812,alpha,,alpha,,anchor_text|cdx_url
@@ -1779,9 +1779,9 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 1834,solaris10,,solaris10,,anchor_text|cdx_url
 1836,etc,,,,cdx_url
 1837,tar.bz2,,tar.bz2,,anchor_text|cdx_url
-1838,zeropad,,zeropad,,anchor_text|cdx_url
+1838,zeropad,,zeropad,,anchor_text|cdx_url|per_command_block
 1839,iss,,,,cdx_url
-1840,ex,,,,cdx_url
+1840,ex,,ex,,anchor_text|cdx_url|per_command_block
 1841,sloccount,,,,cdx_url
 1842,nameserver,,,,cdx_url
 1843,glue-record,,,,cdx_url
@@ -1872,7 +1872,7 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 1936,repository,,repository,,anchor_text|cdx_url
 1937,io,,io,,anchor_text|cdx_url
 1938,vps,,,,cdx_url
-1939,recently-changed,,,,cdx_url
+1939,recently-changed,,recently changed,,anchor_text|cdx_url|per_command_block
 1941,alltray,,,,cdx_url
 1942,emacs-vote,,,,cdx_url
 1943,brightbox,,brightbox,,anchor_text|cdx_url
@@ -1969,7 +1969,7 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 2040,tail-f,,tail -f,,anchor_text|cdx_url|per_command_block
 2041,evince-thumbnailer,,,,cdx_url
 2042,python3,,python3,,anchor_text|cdx_url
-2043,modules,,modules,,anchor_text|cdx_url
+2043,modules,,modules,,anchor_text|cdx_url|per_command_block
 2044,strip,,,,cdx_url
 2045,content,,,,cdx_url
 2046,identicon,,,,cdx_url
@@ -2022,10 +2022,10 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 2100,sshfs,,sshfs,,anchor_text|cdx_url
 2101,perlregrep,,,,cdx_url
 2102,known_hosts,,known_hosts,,anchor_text|cdx_url
-2103,head,,"head,",,anchor_text|cdx_url
+2103,head,,"head,",,anchor_text|cdx_url|per_command_block
 2104,switc,,,,cdx_url
 2105,dummy-file-null-file-test-file,,"dummy file, null file, test file",,anchor_text|cdx_url
-2106,file-size,,file size,,anchor_text|cdx_url
+2106,file-size,,file size,,anchor_text|cdx_url|per_command_block
 2107,fat,,FAT,,anchor_text|cdx_url
 2108,calculator,,,,cdx_url
 2109,pygments,,pygments,,anchor_text|cdx_url
@@ -2048,7 +2048,7 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 2127,shift,,,,cdx_url
 2128,until,,until,,anchor_text|cdx_url
 2129,unix2dos,,,,cdx_url
-2130,html2text,,html2text,,anchor_text|cdx_url
+2130,html2text,,html2text,,anchor_text|cdx_url|per_command_block
 2131,xml2,,xml2,,anchor_text|cdx_url
 2132,tmpfs,,,,cdx_url
 2136,embed,,embed,,anchor_text|cdx_url|per_command_block
@@ -2103,7 +2103,7 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 2195,doctrine,,,,cdx_url
 2196,pci,,,,cdx_url
 2197,pciutils,,,,cdx_url
-2198,icotool,,,,cdx_url
+2198,icotool,,icotool,,anchor_text|cdx_url|per_command_block
 2199,ps-grep,,,,cdx_url
 2200,tsv,,tsv,,anchor_text|cdx_url
 2201,rlwrap,,,,cdx_url
@@ -2120,8 +2120,8 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 2214,jp2a,,,,cdx_url
 2215,ms-dos,,,,cdx_url
 2216,friend,,friend,,anchor_text|cdx_url
-2217,disklabel,,,,cdx_url
-2218,bsdlabel,,,,cdx_url
+2217,disklabel,,disklabel,,anchor_text|cdx_url|per_command_block
+2218,bsdlabel,,bsdlabel,,anchor_text|cdx_url|per_command_block
 2219,xattr,,,,cdx_url
 2220,quarantine,,,,cdx_url
 2221,cloc,,,,cdx_url
@@ -2234,7 +2234,7 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 2340,shorten-url,,,,cdx_url
 2341,formatting,,,,cdx_url
 2342,reformatting,,,,cdx_url
-2343,automatic,,,,cdx_url
+2343,automatic,,automatic,,anchor_text|cdx_url|per_command_block
 2344,tc,,,,cdx_url
 2345,migrate,,,,cdx_url
 2346,newhost,,,,cdx_url
@@ -2326,7 +2326,7 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 2447,comments,,,,cdx_url
 2448,retina,,,,cdx_url
 2449,append-name-to-end-of-file,,,,cdx_url
-2450,macos,,,,cdx_url
+2450,macos,,macos,,anchor_text|cdx_url|per_command_block
 2451,ksuperkey,,,,cdx_url
 2453,sata,,sata,,anchor_text|cdx_url|per_command_block
 2456,sdparm,,,,cdx_url
@@ -2399,7 +2399,7 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 2544,rootkit,,,,cdx_url
 2545,rabbitmq,,,,cdx_url
 2546,rabbitmqctl,,,,cdx_url
-2548,bang-colon,,,,cdx_url
+2548,bang-colon,,bang-colon,,anchor_text|cdx_url|per_command_block
 2549,bytes,,,,cdx_url
 2550,sha256sum,,,,cdx_url
 2551,mainboard,,,,cdx_url
@@ -2439,9 +2439,9 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 2594,keys,,,,cdx_url
 2595,clush,,,,cdx_url
 2596,count-results,,,,cdx_url
-2597,drop,,,,cdx_url
-2598,cascade,,,,cdx_url
-2599,sequence,,,,cdx_url
+2597,drop,,drop,,anchor_text|cdx_url|per_command_block
+2598,cascade,,cascade,,anchor_text|cdx_url|per_command_block
+2599,sequence,,sequence,,anchor_text|cdx_url|per_command_block
 2600,page-cache,,,,cdx_url
 2601,lint,,,,cdx_url
 2602,fedora,,,,cdx_url
@@ -2469,7 +2469,7 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 2626,camera,,,,cdx_url
 2627,btc-wget-grep-cut,,,,cdx_url
 2628,unpack,,,,cdx_url
-2629,jq,,,,cdx_url
+2629,jq,,jq,,anchor_text|cdx_url|per_command_block
 2630,npm,,,,cdx_url
 2631,nodejs,,,,cdx_url
 2632,btc,,,,cdx_url
@@ -2488,7 +2488,7 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 2646,indicator,,,,cdx_url
 2647,docker,,,,cdx_url
 2648,catmandu,,,,cdx_url
-2649,orphan,,,,cdx_url
+2649,orphan,,orphan,,anchor_text|cdx_url|per_command_block
 2652,esx-5.1,,,,cdx_url
 2653,iso8601,,,,cdx_url
 2654,imovie,,,,cdx_url
@@ -2510,7 +2510,7 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 2677,add-apt-repository,,,,cdx_url
 2678,ppa,,,,cdx_url
 2679,process-tree,,,,cdx_url
-2680,psql,,,,cdx_url
+2680,psql,,psql,,anchor_text|cdx_url|per_command_block
 2681,underscore,,underscore,,anchor_text|cdx_url|per_command_block
 2682,preview,,,,cdx_url
 2683,squashfs,,squashfs,,anchor_text|per_command_block
@@ -2560,7 +2560,7 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 2746,losetup,,,,cdx_url
 2747,reflog,,,,cdx_url
 2748,multiple-pattern,,,,cdx_url
-2750,quassel,,,,cdx_url
+2750,quassel,,quassel,,anchor_text|cdx_url|per_command_block
 2751,harddisk-backup-,,,,cdx_url
 2752,disk-image,,,,cdx_url
 2753,gcloud,,,,cdx_url
@@ -2574,7 +2574,7 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 2761,colemak,,,,cdx_url
 2764,peak-memory,,,,cdx_url
 2765,java-install,,,,cdx_url
-2766,robocopy,,,,cdx_url
+2766,robocopy,,robocopy,,anchor_text|cdx_url|per_command_block
 2767,numberofpages,,,,cdx_url
 2768,font-name,,,,cdx_url
 2769,font,,,,cdx_url
@@ -2660,8 +2660,8 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 2887,aria2c,,,,cdx_url
 2888,speedtest,,,,cdx_url
 2889,rigol,,,,cdx_url
-2890,xmlindent,,,,cdx_url
-2891,pretty-print,,,,cdx_url
+2890,xmlindent,,xmlindent,,anchor_text|cdx_url|per_command_block
+2891,pretty-print,,pretty print,,anchor_text|cdx_url|per_command_block
 2892,sc,,,,cdx_url
 2893,psc,,,,cdx_url
 2894,no-match,,,,cdx_url
@@ -2679,7 +2679,7 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 2907,instance,,,,cdx_url
 2908,vpc,,,,cdx_url
 2910,virtualenv,,,,cdx_url
-2912,clfucontest,,,,cdx_url
+2912,clfucontest,,CLFUContest,,anchor_text|cdx_url|per_command_block
 2913,pidof,,,,cdx_url
 2914,lag,,,,cdx_url
 2915,latency,,,,cdx_url
@@ -2771,6 +2771,7 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 3056,realpath,,,,cdx_url
 3067,apt-get-command-not-found-suggest,,,,cdx_url
 3069,shellcheck,,,,cdx_url
+3071,flashystuff,,flashystuff,,anchor_text|per_command_block
 3072,pscoe,,,,cdx_url
 3074,xor,,,,cdx_url
 3075,docker-rm,,,,cdx_url
@@ -2819,11 +2820,11 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 3160,signing,,,,cdx_url
 3161,self-signed,,,,cdx_url
 3162,replacement-pattern,,,,cdx_url
-3163,symbolic,,,,cdx_url
-3164,access-control,,,,cdx_url
-3165,setuid,,,,cdx_url
-3166,setgid,,,,cdx_url
-3167,sticky,,,,cdx_url
+3163,symbolic,,symbolic,,anchor_text|cdx_url|per_command_block
+3164,access-control,,access-control,,anchor_text|cdx_url|per_command_block
+3165,setuid,,setuid,,anchor_text|cdx_url|per_command_block
+3166,setgid,,setgid,,anchor_text|cdx_url|per_command_block
+3167,sticky,,sticky,,anchor_text|cdx_url|per_command_block
 3169,nmcli,,,,cdx_url
 3170,keytool,,,,cdx_url
 3171,bouncycastle,,,,cdx_url
@@ -2909,8 +2910,8 @@ tag_id,slug,other_slugs,name,name_variants,evidence
 3602,ifconfig.co,,,,cdx_url
 3635,priority,,,,cdx_url
 3668,fzf,,,,cdx_url
-3682,air,,,,cdx_url
-3683,flight,,,,cdx_url
+3682,air,,air,,anchor_text|cdx_url|per_command_block
+3683,flight,,flight,,anchor_text|cdx_url|per_command_block
 3727,gid,,,,cdx_url
 3734,pamac,,,,cdx_url
 3735,manjaro,,,,cdx_url

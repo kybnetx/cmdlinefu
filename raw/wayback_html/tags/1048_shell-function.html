@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta name="author" content="" />
+    <meta name="description" content="Great UNIX/Bash commands tagged with shell function - see these and many other invaluable command-line nuggets at commandlinefu.com" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="" />
+    <meta name="verify-v1" content="hEPILeJT+vssH+kKHD8JrK8sqHYIg4GWIVV8P1I8gsY=" />
+    <meta name="google-site-verification" content="r2fSppde5Egt3_2qSPb6LEsT2BqWAM0wRlb00A8LLhg" />
+    <link rel="stylesheet" href="/css/browser_reset.css?2012-03-04-09-53" type="text/css" /> 
+    <link rel="stylesheet" href="/css/styles.css?2012-03-04-09-53" type="text/css" />
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Droid+Sans+Mono" type="text/css" >
+    
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+    
+    <link rel="search" type="application/opensearchdescription+xml" title="commandlinefu.com search plugin" href="/mozilla_search_plugin.xml" />
+    
+            <link href="/commands/tagged/1048/shell-function/rss" title="RSS" type="application/rss+xml" rel="alternate" />
+        
+    <title>Commands tagged shell function sorted by votes</title>
+    
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/prototype/1.6.0.3/prototype.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/scriptaculous/1.8.2/scriptaculous.js?load=effects,controls"></script>
+    <script type="text/javascript" src="/js/site-behaviour.js?2018-03-04-09-53"></script>
+    <script type="text/javascript" src="/js/Growler.js?2018-03-04-09-53"></script>
+    <script type="text/javascript" src="/js/prettify/prettify.js?2018-03-04-09-53"></script>
+    <link rel="stylesheet" href="/js/prettify/prettify.css?2018-03-04-09-53" type="text/css" />
+    
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/clf.min.css" type="text/css" />
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/agate.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<!--    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>-->
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-55581850-1', 'auto', {'allowLinker': true});
+	  ga('require', 'linker');
+	  ga('linker:autoLink', ['danstools.com','unixtimestamp.com','url-encode-decode.com','cssfontstack.com','hexcolortool.com','htaccessredirect.net','jspretty.com','jsmini.com','jsobfuscate.com','md5hashgenerator.com','regextester.com','cleancss.com','favicon-generator.org','website-performance.org','permissions-calculator.org','conversoes.org','convertissez.fr','convertitore.net','elconvertidor.com','files-conversion.com','henkan-muryo.com','konvertirung.org','konvertor.org','tahwil.net','zhuan-huan.com','bootsnipp.com','commandlinefu.com'] );
+	  ga('send', 'pageview');
+	</script>
+</head>
+
+<body>
+    <nav class="navbar navbar-fixed-top navbar-bootsnipp animate" role="navigation" style="z-index: 9999999">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="animbrand">
+        <a class="navbar-brand animate" href="//www.commandlinefu.com"><strong><span class="glyphicon glyphicon-console" style="padding:2px 4px 4px 4px;margin-right:5px;background:#333"></span><span style="color:black;">COMMANDLINEFU</span>.COM</strong></a>
+      </div>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/commands/edit" class="">+New</a></li>
+        <li class="dropdown dropdown-right">
+          <a href="#" class="dropdown-toggle " data-toggle="dropdown">Commands <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li class=""><a href="/" class="">Latest </a></li>
+            <li class=""><a href="/commands/browse/sort-by-votes" class="">All-time Greats </a></li>
+            <li class=""><a href="/commands/browse/last-month/sort-by-votes" class="">Hot this month </a></li>
+            <li class=""><a href="/commands/forthewicked" class="">The Wicked </a></li>
+            <li class=""><a href="/commands/random" class="">Random </a></li>
+<!--            <li class=""><a href="/" class="">Tags </a></li>
+            <li class=""><a href="/" class="">Functions </a></li>-->
+          </ul>
+        </li>
+        <li >
+          <a href="/users/signin">Login </a>
+        </li>
+      </ul>
+		<div id="search" style="display:inline;">
+          <form id="search-form" action="/search/handler" method="post">
+				<div id="search-container" style="margin-top:9px;">
+				  <img id="loading" src="/images/tag-loader.gif" style="display:none;float:right;margin: 5px 5px 0 0;" />
+	              <input id="search-query" type="text" class="inactive" autocomplete="off" name="q" placeholder="grep the archive">
+				</div>
+          </form>
+			<div id="search-options" style="display:none"></div>
+		</div>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container" style="padding-top:20px;">
+ <div class="row">
+  <div class="col-md-9 col-lg-8">
+		
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</p>
+<ins class="adsbygoogle"
+     style="display:block;"
+     data-ad-client="ca-pub-8815422507798180"
+     data-ad-slot="5700240528"
+    data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<p>
+        	<div class="panel panel-default">
+  <div class="panel-heading" style="background:white">
+    	<h3 class="panel-title">Commands tagged shell function (6)
+		        <form action="/commands/filter" method="post" class="pull-right form-inline">
+			<div class="hidden-xs hidden-sm form-group" style="margin-top:-14px">
+            <input type="hidden" name="base-url" value="/commands/tagged/1048/shell-function" />
+            <select class="form-control" name="time-period" onchange="javascript:this.form.submit();">
+                                    <option value="last-day" >the last day</option>
+                                    <option value="last-week" >the last week</option>
+                                    <option value="last-month" >the last month</option>
+                                    <option value="" selected>all time</option>
+                            </select>
+            sorted by
+            <select class="form-control" name="sort-by" onchange="javascript:this.form.submit();">
+                                    <option value="sort-by-date" >date</option>
+                                    <option value="sort-by-votes" selected>votes</option>
+                            </select>
+			</div>
+        </form>
+		
+		</h3>
+	  </div>
+	<ul class="list-group">
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/24156/display-all-shell-functions-set-in-the-current-shell-environment" title="Find out what others think of this command">Display all shell functions set in the current shell environment</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    Uses the shell builtin `declare` with the '-f' flag to output only functions to grep out only the function names.
+You can use it as an alias or function like so:
+alias shfunctions="builtin declare -f | command grep --color=never -E '^[a-zA-Z_]+\ \(\)'"
+shfunctions () { builtin declare -f | command grep --color=never -E '^[a-zA-Z_]+\ \(\)'; } 
+                                    <a class="text-muted" href="javascript:void(0)" onclick="Terminal.toggleSampleOutput($(this),$('sample-output-24156'))">Show Sample Output</a>
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-24156">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre>Newlines () 
+__expand_tilde_by_ref () 
+__get_cword_at_cursor_by_ref () 
+__load_completion () 
+__ltrim_colon_completions () 
+__parse_options () 
+__reassemble_comp_words_by_ref () 
+_adb () 
+_allowed_groups () 
+_allowed_users () 
+_android () 
+_arg_index () 
+_available_interfaces () 
+_before () 
+_branch_completion () 
+_cd () 
+_cd_devices () 
+_cdsitepackages_complete () 
+_cdvirtualenv_complete () 
+_cmp_opts () 
+_command () 
+_command_completion () 
+_command_offset () 
+_complete_as_root () 
+_completion_loader () 
+_configured_interfaces () 
+_count_args () 
+_dir_completion () 
+_dvd_devices () 
+_emulator () 
+_expand () 
+_expects_arg () 
+_fastboot () 
+_filedir () 
+_filedir_xspec () 
+_find_repo () 
+_fstypes () 
+_gen_comps () 
+_get_comp_words_by_ref () 
+_get_cword () 
+_get_first_arg () 
+_get_pword () 
+_gids () 
+_handle_options () 
+_have () 
+_included_ssh_config_files () 
+_init_completion () 
+_init_cur_prev () 
+_installed_modules () 
+_ip_addresses () 
+_is_known_longopt () 
+_is_known_shortopt () 
+_is_long_option () 
+_is_option () 
+_is_repo_dir () 
+_kernel_versions () 
+_known_hosts () 
+_known_hosts_real () 
+_longopt () 
+_lsvirtualenv_usage () 
+_mac_addresses () 
+_manifest_completion () 
+_minimal () 
+_modules () 
+_ncpus () 
+_no_completion () 
+_parse_help () 
+_parse_usage () 
+_path_cmd_completion () 
+_pci_ids () 
+_pgids () 
+_pids () 
+_pnames () 
+_project_completion () 
+_quote_readline_by_ref () 
+_rbenv () 
+_realcommand () 
+_repo () 
+_repo_abandon () 
+_repo_branch () 
+_repo_branches () 
+_repo_checkout () 
+_repo_cherry_pick () 
+_repo_diff () 
+_repo_download () 
+_repo_forall () 
+_repo_grep () 
+_repo_help () 
+_repo_init () 
+_repo_list () 
+_repo_prune () 
+_repo_rebase () 
+_repo_selfupdate () 
+_repo_smartsync () 
+_repo_stage () 
+_repo_start () 
+_repo_status () 
+_repo_sync () 
+_repo_upload () 
+_repo_version () 
+_rl_enabled () 
+_root_command () 
+_service () 
+_services () 
+_shells () 
+_signals () 
+_split_longopt () 
+_strip_colors () 
+_sysvdirs () 
+_terms () 
+_tilde () 
+_uids () 
+_upvar () 
+_upvars () 
+_usb_ids () 
+_user_at_host () 
+_usergroup () 
+_userland () 
+_variables () 
+_virtualenvs () 
+_when_even () 
+_when_first () 
+_when_ix () 
+_xfunc () 
+_xinetd_services () 
+allvirtualenv () 
+asksure () 
+boucle () 
+boucle_fin () 
+cdproject () 
+cdsitepackages () 
+cdvirtualenv () 
+coline () 
+confirme () 
+cpvirtualenv () 
+dequote () 
+die () 
+find () 
+findg () 
+findh () 
+findr () 
+forn () 
+funtest () 
+git () 
+hgrep () 
+htail () 
+isVariableSet () 
+iset () 
+j () 
+line () 
+logload () 
+lssitepackages () 
+lsvirtualenv () 
+lwl () 
+mkflatdir () 
+mkproject () 
+mktmpenv () 
+mkvirtualenv () 
+oath () 
+pac () 
+pacUsage () 
+pg () 
+pkglog () 
+proc () 
+psearch () 
+psg () 
+quote () 
+quote_readline () 
+rbenv () 
+redshift () 
+reverseFiles () 
+rmvirtualenv ()
+setvirtualenvproject ()
+showvirtualenv ()
+sp ()
+spacel ()
+spacen ()
+spacep ()
+spaces ()
+spacet ()
+stderr ()
+toggleglobalsitepackages ()
+tychnelastlog ()
+virtualenvwrapper ()
+virtualenvwrapper_absolutepath ()
+virtualenvwrapper_cd ()
+virtualenvwrapper_derive_workon_home ()
+virtualenvwrapper_expandpath ()
+virtualenvwrapper_get_python_version ()
+virtualenvwrapper_get_site_packages_dir ()
+virtualenvwrapper_initialize ()
+virtualenvwrapper_mkproject_help ()
+virtualenvwrapper_mktemp ()
+virtualenvwrapper_mkvirtualenv_help ()
+virtualenvwrapper_run_hook ()
+virtualenvwrapper_setup_tab_completion ()
+virtualenvwrapper_show_workon_options ()
+virtualenvwrapper_tempfile ()
+virtualenvwrapper_verify_active_environment ()
+virtualenvwrapper_verify_project_home ()
+virtualenvwrapper_verify_resource ()
+virtualenvwrapper_verify_virtualenv ()
+virtualenvwrapper_verify_virtualenv_clone ()
+virtualenvwrapper_verify_workon_environment ()
+virtualenvwrapper_verify_workon_home ()
+virtualenvwrapper_workon_help ()
+what ()
+wipeenv ()
+workon ()</pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-24156" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-24156" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-24156">2</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">builtin declare -f | command grep --color=never -E '^[a-zA-Z_]+\ \(\)'</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/sciro">sciro</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2018-07-23 05:24:04                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/24156/display-all-shell-functions-set-in-the-current-shell-environment#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						1182</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-24156" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/24156" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-24156" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/24156" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/command">command</a>
+                         
+                            <a href="/commands/using/grep">grep</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/6/shell-programming">Shell programming</a>
+                         
+                            <a href="/commands/tagged/34/bash">bash</a>
+                         
+                            <a href="/commands/tagged/64/linux">Linux</a>
+                         
+                            <a href="/commands/tagged/202/shell">shell</a>
+                         
+                            <a href="/commands/tagged/898/linux-unix">Linux UNIX</a>
+                         
+                            <a href="/commands/tagged/1048/shell-function">shell function</a>
+                         
+                            <a href="/commands/tagged/1184/posix">POSIX</a>
+                         
+                            <a href="/commands/tagged/1433/shellcode">shellcode</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/24497/command-shell-generate-random-strong-password" title="Find out what others think of this command">command shell generate random strong password</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    shell generate random strong password 
+                                    <a class="text-muted" href="javascript:void(0)" onclick="Terminal.toggleSampleOutput($(this),$('sample-output-24497'))">Show Sample Output</a>
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-24497">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre>NXuc2VjRcOhW7zyQDBhH</pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-24497" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-24497" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-24497">2</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">len=20; tr -dc A-Za-z0-9_ &lt; /dev/urandom | head -c ${len} | xargs</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/aysadk">aysadk</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2019-04-16 20:20:46                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/24497/command-shell-generate-random-strong-password#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						45</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-24497" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/24497" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-24497" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/24497" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/head">head</a>
+                         
+                            <a href="/commands/using/tr">tr</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/380/password">password</a>
+                         
+                            <a href="/commands/tagged/1048/shell-function">shell function</a>
+                         
+                            <a href="/commands/tagged/1288/command">command</a>
+                         
+                            <a href="/commands/tagged/1745/generate">generate</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/25791/extract-content-between-the-first-and-the-last-double-quotes" title="Find out what others think of this command">Extract content between the first &quot; and the last &quot; double quotes</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    Thanks to this user: https://stackoverflow.com/a/35636373/2394635 
+                                    <a class="text-muted" href="javascript:void(0)" onclick="Terminal.toggleSampleOutput($(this),$('sample-output-25791'))">Show Sample Output</a>
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-25791">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre>checkin_resumestorevisit \&quot;- &quot;Online_V2.mt</pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-25791" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-25791" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-25791">1</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">s='Test &quot;checkin_resumestorevisit \&quot;- &quot;Online_V2.mt&quot; Run'; s=${s#*'&quot;'}; s=${s%'&quot;'*}; echo &quot;$s&quot;</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/bugmenot">bugmenot</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2022-01-08 16:16:18                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/25791/extract-content-between-the-first-and-the-last-double-quotes#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						965</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-25791" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/25791" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-25791" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/25791" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/34/bash">bash</a>
+                         
+                            <a href="/commands/tagged/202/shell">shell</a>
+                         
+                            <a href="/commands/tagged/1048/shell-function">shell function</a>
+                         
+                            <a href="/commands/tagged/1278/bash-string-manipulations">bash String Manipulations</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/13956/..-go-up-in-directory-tree-func-to-long-please-refer-to-description" title="Find out what others think of this command">..(), go up in directory tree, func to long please refer to description</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    many have aliases like:
+alias ...="cd ../../"
+alias ....="cd ../../../"
+and so furth.
+..() mitigates to need for those aliases, see sample output for an example
+# ..    -> go up 1 directory
+# .. 4  -> go up 4 directories
+..()
+{
+    local DIR=''
+    declare -i NUM=0
+    if [[ ${1} =~ ^[1-9][0-9]*$ ]]
+    then
+        while (( ${NUM} < ${1:-1} ))
+        do
+            DIR="${DIR}../"
+            NUM=$(( ${NUM} + 1 ))
+        done
+    else
+        DIR=..
+    fi
+    cd "${DIR}"
+} 
+                                    <a class="text-muted" href="javascript:void(0)" onclick="Terminal.toggleSampleOutput($(this),$('sample-output-13956'))">Show Sample Output</a>
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-13956">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre>[ ~/temp/foo/bar/baz ] $ .. 3
+[ ~/temp ] $ </pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-13956" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-13956" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-13956">-4</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">[ ~/temp/foo/bar/baz ] $ .. 3</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/Xk2c">Xk2c</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2015-01-01 20:41:17                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/13956/..-go-up-in-directory-tree-func-to-long-please-refer-to-description#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						11</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-13956" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/13956" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-13956" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/13956" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/34/bash">bash</a>
+                         
+                            <a href="/commands/tagged/537/zsh">zsh</a>
+                         
+                            <a href="/commands/tagged/1048/shell-function">shell function</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/13954/check4progs-func-to-long-please-refer-to-description" title="Find out what others think of this command">check4progs(), func to long please refer to description</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    Thanks to the great grml team for this func!
+You really  should look at their shell configs for further usefull things!
+<a href="http://git.grml.org/?p=grml-etc-core.git;a=blob_plain;f=etc/grml/script-functions;h=4d6bcea8f9beae83abd08f44155d299ea54a4a9f;hb=HEAD" rel="nofollow">http://git.grml.org/?p=grml-etc-core.git;a=blob_plain;f=etc/grml/script-functions;h=4d6bcea8f9beae83abd08f44155d299ea54a4a9f;hb=HEAD</a>
+# {{{ check for availability of program(s)
+# usage example:
+#       check4progs [-s,-q,--quiet,--silent] arg [arg .... argn]
+#
+# with option given either of:
+#       -s,-q,--quiet,--silent
+#
+# check for available progs but produce no output
+check4progs() {
+    [ -n "${ZSH_VERSION}" ] && emulate -L sh
+    local RTN=0
+    local oldifs="${IFS}"
+    local ARG d found
+    local VERBOSE=1
+    case ${1} in
+        -q | -s | --quiet | --silent)
+            VERBOSE=0
+            shift 1
+            ;;
+        *)
+            ;;
+    esac
+    while [ $# -gt 0 ]
+    do
+        ARG="$1"
+        shift
+        found=0
+        IFS=:
+        for d in $PATH
+        do
+            if [ -x "${d}/${ARG}" ]
+            then
+                found=1
+                break
+            fi
+        done
+        IFS="${oldifs}"
+        # check for availability
+        if [ ${found} -eq 0 ]
+        then
+            if [ ${VERBOSE} -eq 1 ]
+            then
+                printf "%s: binary not found\n" "${ARG}" >&2
+            fi
+            RTN=1
+        fi
+    done
+    # return non zero, if at least one prog is missing!
+    return $RTN
+}
+# }}} 
+                                    <a class="text-muted" href="javascript:void(0)" onclick="Terminal.toggleSampleOutput($(this),$('sample-output-13954'))">Show Sample Output</a>
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-13954">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre>foo binary not found
+bar binary not found
+oh oh better abort now</pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-13954" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-13954" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-13954">-6</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">$ if check4progs cp foo mv bar rsync; then echo &quot;needed progs avail, lets do funky stuff&quot;; else echo &quot;oh oh better abort now&quot;; fi</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/Xk2c">Xk2c</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2015-01-01 16:16:00                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/13954/check4progs-func-to-long-please-refer-to-description#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						9</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-13954" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/13954" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-13954" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/13954" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/cp">cp</a>
+                         
+                            <a href="/commands/using/echo">echo</a>
+                         
+                            <a href="/commands/using/mv">mv</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/34/bash">bash</a>
+                         
+                            <a href="/commands/tagged/537/zsh">zsh</a>
+                         
+                            <a href="/commands/tagged/1048/shell-function">shell function</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/13957/cd-do-a-ls-or-whatever-you-can-imagine-after-a-cd-func-to-long-please-refer-to-description" title="Find out what others think of this command">cd(), do a ls (or whatever you can imagine) after a cd, func to long please refer to description</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    some people on the net already use a cd(), but most of them break 'cd -' functionality,
+that is "go back where you have been previosly", or 'cd' which is "go back home".
+This cd() copes with that. Also when given a file name, go to the directory where this file is in.
+cd()
+{
+    if [[ -n ${*} ]]
+    then
+        if [[ s${*}e == s-e ]]
+        then
+            builtin cd -
+        elif [[ ! -d ${*} ]]
+        then
+            builtin cd "${*%/*}"
+        else
+            builtin cd "${*}"
+        fi
+    else
+        builtin cd ~
+    fi
+    ls -la
+} 
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-13957">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre></pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-13957" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-13957" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-13957">-6</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">cd(), do a ls (or whatever you can imagine) after a cd, func to long please refer to description</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/Xk2c">Xk2c</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2015-01-01 20:50:19                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/13957/cd-do-a-ls-or-whatever-you-can-imagine-after-a-cd-func-to-long-please-refer-to-description#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						10</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-13957" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/13957" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-13957" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/13957" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/cd">cd</a>
+                         
+                            <a href="/commands/using/ls">ls</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/34/bash">bash</a>
+                         
+                            <a href="/commands/tagged/537/zsh">zsh</a>
+                         
+                            <a href="/commands/tagged/1048/shell-function">shell function</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                    	</ul>
+</div>
+
+
+  </div>
+  <div class="col-md-3 col-lg-4">
+
+            
+
+<div class="box-copy">
+    <h3 class="righthead">What's this?</h3>
+    <div class="toggleable">
+        <p><strong>commandlinefu.com</strong> is the place to record those command-line gems that you return to again and again.
+        That way others can gain from your <abbr title="Command-line interface">CLI</abbr> wisdom and you from theirs too.  All commands can be commented on, discussed and 
+        voted up or down. </p>
+		<p class="text-center"><a class="btn btn-warning" href="/commands/edit"><strong><i class="glyphicon glyphicon-plus"></i> Share Your Commands</strong></a></p>
+        <!-- <p>If you have a new feature suggestion or find a bug, please 
+        get in touch via <a href="http://commandlinefu.uservoice.com/"><strong>http://commandlinefu.uservoice.com/</strong></a><p>-->
+    </div>
+</div>
+<hr />
+<div class="box-copy">
+    <h3 class="righthead">Check These Out</h3>
+			<p>
+		<div style="font-weight:bold;overflow:hidden;white-space:nowrap;text-overflow:ellipsis"><a href="/commands/view/3090/view-processeses-like-a-fu-fu">View Processeses like a fu, fu</a></div>
+				<div style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis">I don't truly enjoy many commands more than this one, which I alias to be ps1..   Cool to be able to see the heirarchy and makes it clearer what need to be killed, and whats really going on.</div>
+				</p>
+			<p>
+		<div style="font-weight:bold;overflow:hidden;white-space:nowrap;text-overflow:ellipsis"><a href="/commands/view/25040/reapair-all-mysqlmariadb-databases">reapair all mySQL/mariaDB databases</a></div>
+				<div style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis">while dumping database if you see following error/warning than you have to repair broken tables/rows</div>
+				</p>
+			<p>
+		<div style="font-weight:bold;overflow:hidden;white-space:nowrap;text-overflow:ellipsis"><a href="/commands/view/9036/quickly-re-execute-a-recent-command-in-bash">Quickly re-execute a recent command in bash</a></div>
+				<div style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis">! will expand to the last time you ran , options and all. It's a nicer alternative to ^R for simple cases, and it's quite helpful for those long commands you run every now and then and haven't made aliases or functions for. It's similar to command 3966, in some sense.</div>
+				</p>
+			<p>
+		<div style="font-weight:bold;overflow:hidden;white-space:nowrap;text-overflow:ellipsis"><a href="/commands/view/5595/determine-next-available-uid">Determine next available UID</a></div>
+				<div style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis">Typical usage would be in a script that would want the next open UID in a range (in this case 500-600)</div>
+				</p>
+			<p>
+		<div style="font-weight:bold;overflow:hidden;white-space:nowrap;text-overflow:ellipsis"><a href="/commands/view/3147/cleanup-firefoxs-database.">Cleanup firefox's database.</a></div>
+				<div style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis">Sqlite database keeps collecting cruft as time passes, which can be cleaned by the 'vacuum;' command. This command cleans up the cruft in all sqlite files relating to the user you have logged in as. This command has to be run when firefox is not running, or it will exit displaying the pid of the firefox running.</div>
+				</p>
+			<p>
+		<div style="font-weight:bold;overflow:hidden;white-space:nowrap;text-overflow:ellipsis"><a href="/commands/view/788/display-command-lines-visible-on-commandlinefu.com-homepage">Display command lines visible on commandlinefu.com homepage</a></div>
+				<div style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis">Uses the fabulous Hpricot library to parse HTML from Ruby. Extracts all elements of "command' class and displays unescaped text from inside these elements. The following command can help install dependencies (apart from Ruby itself)
+
+$ gem sources -a http://gems.github.com && sudo gem install why-hpricot</div>
+				</p>
+			<p>
+		<div style="font-weight:bold;overflow:hidden;white-space:nowrap;text-overflow:ellipsis"><a href="/commands/view/12815/vim-clear-trailing-whitespace-in-file">[vim] Clear trailing whitespace in file</a></div>
+				<div style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis">% acts on every line in the file.
+\s matches spaces.
+\+ matches one or more occurrences of what's right behind it.
+Character '$' matches end-of-line.</div>
+				</p>
+			<p>
+		<div style="font-weight:bold;overflow:hidden;white-space:nowrap;text-overflow:ellipsis"><a href="/commands/view/11176/post-data-with-a-http-request">post data with a http request</a></div>
+				</p>
+			<p>
+		<div style="font-weight:bold;overflow:hidden;white-space:nowrap;text-overflow:ellipsis"><a href="/commands/view/12024/generate-password">Generate password</a></div>
+				</p>
+			<p>
+		<div style="font-weight:bold;overflow:hidden;white-space:nowrap;text-overflow:ellipsis"><a href="/commands/view/4393/show-database-sql-schema-from-remote-or-local-database">Show database sql schema from Remote or Local database</a></div>
+				<div style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis">After ssh into server, run this command to show all the table structure and schema.</div>
+				</p>
+	</div>
+<hr>
+<div class="box-copy">
+    <h3 class="righthead">Stay in the loop&hellip;</h3>
+    <div class="toggleable">
+        <dl>
+            <dt>Follow the Tweets.</dt>  
+            <dd>
+                <a href="http://twitter.com/commandlinefu"><img class="link-img" src="/images/twitter.jpg" /></a>
+                <p>Every new command is wrapped in a tweet and posted
+                to <a href="http://twitter.com">Twitter</a>. Following the stream is a great way of staying abreast of the latest commands.  For the more discerning, 
+                there are Twitter accounts for commands that get a minimum of 3 and 10 votes - that way only the great commands get tweeted.</p>
+                <p>
+                &raquo; <a style="font-weight:bold;" href="http://twitter.com/commandlinefu">http://twitter.com/commandlinefu</a><br/>
+                &raquo; <a style="font-weight:bold;" href="http://twitter.com/commandlinefu3">http://twitter.com/commandlinefu3</a><br/>
+                &raquo; <a style="font-weight:bold;" href="http://twitter.com/commandlinefu10">http://twitter.com/commandlinefu10</a>
+                </p>
+            </dd>
+            <dt>Subscribe to the feeds.</dt>
+            <dd>
+                <a style="font-weight:bold;" href="http://feeds2.feedburner.com/Command-line-fu"><img class="link-img" src="/images/rss.gif" /></a>
+                <p>Use your favourite RSS aggregator to stay in touch with the latest commands.  There are feeds mirroring the 3 Twitter streams
+                as well as for virtually every other subset (users, tags, functions,&hellip;):</p>
+                <p>Subscribe to the feed for:</p>
+                <ul id="feed-links">
+                <li>&raquo; <a style="font-weight:bold;" href="http://feeds2.feedburner.com/Command-line-fu">all commands</a></li>
+                <li>&raquo; <a style="font-weight:bold;" href="/feed/threeup">commands with 3 up-votes</a> (commandlinefu3)</li>
+                <li>&raquo; <a style="font-weight:bold;" href="/feed/tenup">commands with 10 up-votes</a> (commandlinefu10)</li>
+                                <li>&raquo; <a style="font-weight:bold;" href="/commands/tagged/1048/shell-function/rss">commands tagged shell function</a></li>
+                                </ul>
+            </dd>
+        </dl>
+    </div>
+</div>
+
+<!--
+<div class="box-copy">
+    <a class="visibility-toggle" id="box-copy-tags">Hide</a>
+    <h3>Top Tags</h3>
+    <div class="toggleable"><br>
+        <a href="/commands/tagged/112/awk">awk</a>, <a href="/commands/tagged/34/bash">bash</a></li>, 
+	<a href="/commands/tagged/235/curl">curl</a>, 
+	<a href="/commands/tagged/123/find">find</a>, 
+	<a href="/commands/tagged/163/grep">grep</a>, 
+	<a href="/commands/tagged/64/linux">Linux</a>, <a href="/commands/tagged/110/sed">sed</a></li>
+	</ul>
+    </div>
+</div>
+
+<div class="box-copy">
+    <a class="visibility-toggle" id="box-copy-functions">Hide</a>
+    <h3>Functions</h3>
+    <div class="toggleable">
+            </div>
+</div>
+-->
+
+  </div>
+ </div>
+</div>
+
+<footer class="bs-footer" role="contentinfo" style="background-color:#F5F5F5;">
+  <div class="container">
+    <p style="padding-top:20px;">commandlinefu.com &copy; 2018 <a href="https://www.danstools.com" target="_blank">Dan's Tools</a> | <a href="/site/faq">FAQs</a> | <a href="/site/api">API</a> | <a href="/site/widget">Widget</a>  | <a href="/site/privacy">Privacy</a></p>
+  </div>
+
+</footer>
+
+
+<!--    <div id="wrapper">
+        
+        <div id="right-block">
+        </div>
+        
+        <div id="header">
+            <h4><a href="/commands/browse" title="commandlinefu.com - the greatest commands on the web"><img src="/images/header-logo.jpg" alt="commandlinefu.com" /></a></h4>
+            <div id="nav">
+                <strong><a href="/commands/random" title="Lucky dip">Random</a></strong> |
+                <strong><a href="/commands/browse/last-week/sort-by-votes" title="Piping host commands from the last 7 days">Hot this week</a></strong> |
+                <strong><a href="/commands/browse/sort-by-votes" title="See the all-time greatest commands">All-time greats</a></strong> &bull;
+                <strong><a href="/site/faq"><abbr title="Frequently asked questions">FAQ</abbr></a></strong> |
+                <strong><a href="/site/api"><abbr title="API documentation">API</abbr></a></strong> |
+                <strong><a href="/site/widget"><abbr title="Javascript widget">Widget</abbr></a></strong>
+            </div>    
+            <div id="search">
+                <form id="search-form" action="/search/handler" method="post" >
+                    <div id="search-container">
+                        <img id="loading" src="/images/tag-loader.gif" style="display:none;float:right;margin: 5px 5px 0 0;" />
+                        <input type="text" id="search-query" class="inactive" name="q" autocomplete="off" value="" placeholder="type here to grep the archive..." />
+                    </div>
+                </form>
+                <div style="display:none" id="search-options"></div>
+            </div>
+        </div>
+        
+        
+        <div id="left-block">
+        </div>
+        
+        <div id="footer">
+        
+            <div class="advertising">
+                            </div>
+        </div>
+    </div>
+-->    
+    
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script>
+    $.noConflict();
+
+    if (typeof Prototype !== "undefined" && Prototype.BrowserFeatures.ElementExtensions)
+    {
+        var disablePrototypeJS = function (method, pluginsToDisable)
+        {
+            var handler = function (event)
+            {
+                event.target[method] = undefined;
+                setTimeout(function ()
+                {
+                    delete event.target[method];
+                }, 0);
+            };
+
+            pluginsToDisable.each(function (plugin)
+            {
+                jQuery(window).on(method + '.bs.' + plugin, handler);
+            });
+        },
+
+        pluginsToDisable = ['collapse', 'dropdown', 'modal', 'tooltip', 'popover', 'tab','collect'];
+        disablePrototypeJS('show', pluginsToDisable);
+        disablePrototypeJS('hide', pluginsToDisable);
+    }
+	</script>
+	<script>
+jQuery( document ).ready(function() {
+
+	hljs.initHighlightingOnLoad();
+	hljs.configure({useBR: true});
+
+	jQuery('span.code').each(function(i, block) {
+	  hljs.highlightBlock(block);
+	});
+
+    if (1==0 && window.canRunAds === true) {
+        jQuery('#blocker').hide();
+    } else { jQuery('#blocker').show(); }
+});
+
+	</script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <script src="/js/ads.js"></script>
+
+    </body>
+</html>

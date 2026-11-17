@@ -98,8 +98,15 @@ def parse_view(path, url_id):
     if cmd_el is None:
         return None, 'missing_command_element'
     rec['code'] = html.unescape(text_of(cmd_el)).strip('\n')
+    # 2009 layout: <h1> is the site banner ("Command-line-fu" + "Alpha"); the command title is h2#terminal-summary.
+    ts = main.find(id='terminal-summary')
     h1 = main.find('h1')
-    t = norm_ws(h1.get_text()) if h1 else ''
+    if ts is not None and norm_ws(ts.get_text()):
+        t = norm_ws(ts.get_text())
+    elif h1 is not None and not h1.find('a', href=re.compile(r'/commands/browse/?$')):
+        t = norm_ws(h1.get_text())
+    else:
+        t = ''
     if not t:
         t = re.sub(r'\s*\|\s*(Command-line Fu|commandlinefu\.com)\s*$', '', title_tag).strip()
     rec['title'] = t or None
