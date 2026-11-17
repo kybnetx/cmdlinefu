@@ -407,6 +407,148 @@ for f in sorted(glob.glob(os.path.join(fc_dir, '*.html'))):
                            author=None, date=None, sources=['flatcap'], tag_status='unknown', tags=[], completeness='supplement_title_code_only')
         S('added_from_flatcap')
 
+# ---------------- 6. third-party GROK mirror site (lowest precedence) ----------------
+# raw/grok/grok_commands.jsonl is the read-only extract (tools/grok/parse_grok.py) of a Grok-generated static
+# site that has no raw captures. It only FILLS gaps; it never overwrites a value from an evidence-backed source.
+# Every value it supplies is marked: sources += 'grok_mirror', third_party_fields, *_source = 'grok_mirror',
+# tag evidence_kind = 'third_party_grok_mirror', tag_status = 'third_party_unverified'.
+GROK = 'grok_mirror'
+GROK_RAW = 'raw/grok/grok_commands.jsonl'
+GROK_BAD_TITLE = re.compile(r'^Comments \(\d+\)$')
+alnum = lambda s: re.sub(r'[^a-z0-9]', '', re.sub(r'<[^>]*>', '', html.unescape(html.unescape(s or ''))).lower())
+def slug_title_check(title, slugs):
+    """'match' | 'title_truncated' (title is a strict prefix of the URL slug) | 'differs' | None (nothing to compare)."""
+    slugs = [x for x in slugs if alnum(x)]
+    if not title or not slugs: return None
+    t = alnum(title)
+    if any(alnum(x) == t for x in slugs): return 'match'
+    if t and any(alnum(x).startswith(t) for x in slugs): return 'title_truncated'
+    return 'differs'
+cdx_slugs = collections.defaultdict(set)
+for line in open(os.path.join(RAW, 'cdx', 'views.txt'), encoding='utf-8', errors='replace'):
+    m = re.search(r'/commands/view/(\d+)(?:/([^/\s?#]+))?', line)
+    if m:
+        cdx_slugs[int(m.group(1))].add(m.group(2) or '')
+own_view_code = {u: norm_ws(rs[-1]['code']) for u, rs in wb_view_records.items()}
+tg_excluded_code = {}
+for x in exclusions:
+    if x['source'] == 'tg123' and x.get('raw_path'):
+        try:
+            y = yaml.safe_load(open(os.path.join(ROOT, x['raw_path']), encoding='utf-8'))
+            if isinstance(y, dict) and isinstance(y.get('commandlinefu_id'), int):
+                tg_excluded_code.setdefault(y['commandlinefu_id'], str(y.get('command') or ''))
+        except Exception:
+            pass
+
+def grok_checks(cid, g, title):
+    """Independent checks of a GROK record against evidence we hold ourselves."""
+    slugs = cdx_slugs.get(cid, set())
+    ck = dict(id_in_wayback_cdx=cid in cdx_slugs)
+    ck['title_vs_wayback_url_slug'] = slug_title_check(title, slugs)
+    ck['code_matches_our_wayback_capture'] = (own_view_code[cid] == norm_ws(g['code'])) if cid in own_view_code else None
+    ck['code_matches_tg123_excluded_copy'] = code_eq(tg_excluded_code[cid], g['code']) if cid in tg_excluded_code else None
+    return ck
+
+grok = {r['id']: r for r in map(json.loads, open(os.path.join(ROOT, GROK_RAW), encoding='utf-8'))} if os.path.exists(os.path.join(ROOT, GROK_RAW)) else {}
+S('grok_pages', len(grok))
+# GROK command pages link tags by slug only. Some slugs belong to several tag IDs (e.g. bash = 34, 2379, 3226).
+# Resolution: the candidate already in the command's own tag block; else the candidate with the most own evidence
+# rows; tie -> lowest ID. Ambiguous resolutions are recorded in the evidence row's source_url.
+slug2tids = collections.defaultdict(set)
+for tid, t in tags.items():
+    for s in t['slugs']:
+        slug2tids[s].add(tid)
+own_tag_use = collections.Counter(tid for (_, tid) in assoc)
+JUNK_SLUG = re.compile(r'%|=|\.js$|^javascript', re.I)
+def resolve_slug(s, own):
+    cands = slug2tids.get(s)
+    if not cands: return None, None
+    if len(cands) == 1: return next(iter(cands)), None
+    hit = cands & own
+    pick = next(iter(hit)) if len(hit) == 1 else sorted(cands, key=lambda t: (-own_tag_use[t], t))[0]
+    return pick, '|'.join(map(str, sorted(cands)))
+
+def grok_mark(c, field):
+    c.setdefault('third_party_fields', [])
+    if field not in c['third_party_fields']: c['third_party_fields'].append(field)
+
+for cid, g in sorted(grok.items()):
+    title = None if GROK_BAD_TITLE.match(g['title'] or '') else (g['title'] or None)
+    title_issue = 'third_party_title_was_comment_heading' if (title is None and g['title']) else None
+    if title_issue: S('grok_title_comment_heading_ignored')
+    if slug_title_check(title, cdx_slugs.get(cid, ())) == 'title_truncated':
+        # e.g. "Create a new self" for /view/1063/create-a-new-self-signed-certificate: truncated or garbled title
+        g = dict(g, title_rejected=title); title = None; title_issue = 'third_party_title_truncated_vs_wayback_url_slug'
+        S('grok_title_rejected_truncated')
+    if cid in corpus:
+        c = corpus[cid]; S('grok_overlap')
+        if not code_eq(c['code'], g['code']):
+            S('grok_code_differs'); conflicts.append(dict(id=cid, kind='code_differs', base_source=c['sources'][0], base=c['code'], other_source=GROK, other=g['code']))
+            continue  # different command text: take nothing else from this page
+        S('grok_code_matches')
+        for f, gv in (('title', title), ('author', g['author']), ('date', g['date'])):
+            if not gv: continue
+            if c.get(f):
+                if norm_ws(str(c[f])) == norm_ws(str(gv)): S('grok_%s_matches' % f)
+                else: S('grok_%s_differs' % f); conflicts.append(dict(id=cid, kind=f + '_differs', base=c[f], other=gv, other_source=GROK))
+            else:
+                c[f] = gv; grok_mark(c, f); S('grok_filled_' + f)
+        if g['votes'] is not None and c.get('votes') is None:
+            c['votes'] = g['votes']; c['votes_source'] = GROK; grok_mark(c, 'votes'); S('grok_filled_votes')
+        if g['desc'] and not c.get('description_original'):
+            c['description_original'] = g['desc']; c['description_original_source'] = GROK; grok_mark(c, 'description_original'); S('grok_filled_description_original')
+        if 'title' in c.get('third_party_fields', []):
+            c['third_party_checks'] = grok_checks(cid, g, title)
+        elif title_issue and not c.get('title'):
+            c['title_issue'] = title_issue
+        if GROK not in c['sources']: c['sources'].append(GROK)
+    else:
+        verdict, hits = spam_eval(g['code'], title, g['desc'])
+        if verdict != 'ok':
+            S('grok_only_' + verdict); EXC(GROK, cid, ('spam:' if verdict == 'spam' else 'possible_spam:') + ','.join(hits),
+                                          'quarantined_spam_raw_preserved' if verdict == 'spam' else 'review_not_in_clean', raw_path=GROK_RAW); continue
+        ck = grok_checks(cid, g, title)
+        if ck['code_matches_our_wayback_capture'] is False:
+            S('grok_only_conflicts_own_capture'); EXC(GROK, cid, 'code_conflicts_with_our_wayback_capture', 'quarantined_raw_preserved', raw_path=GROK_RAW); continue
+        corpus[cid] = dict(id=cid, url=g['original_url'] or 'http://www.commandlinefu.com/commands/view/%d' % cid, title=title, code=g['code'],
+                           description_original=g['desc'], description_original_source=GROK if g['desc'] else None, description_ai=None,
+                           votes=g['votes'], votes_source=GROK if g['votes'] is not None else None, author=g['author'], date=g['date'],
+                           sources=[GROK], tag_status='unknown', tags=[], completeness='third_party_only',
+                           third_party_fields=[f for f, v in (('title', title), ('code', g['code']), ('description_original', g['desc']), ('votes', g['votes']),
+                                                              ('author', g['author']), ('date', g['date'])) if v is not None],
+                           third_party_checks=ck)
+        if title_issue: corpus[cid]['title_issue'] = title_issue
+        S('added_from_grok')
+    # tags: only real, complete slugs from our taxonomy; never the site's "derived" (inferred) tags
+    c = corpus[cid]; gt = list(dict.fromkeys(g['tags'])); add = []; amb = {}
+    own = set(c.get('tags') or [])
+    for s in gt:
+        tid, ambiguous = resolve_slug(s, own)
+        if JUNK_SLUG.search(s):
+            S('grok_tag_rejected_junk_slug'); EXC(GROK, '%d:%s' % (cid, s), 'tag_junk_slug', 'rejected', raw_path=GROK_RAW); continue
+        if any(o != s and o.startswith(s) for o in gt) or (len(s) <= 2 and tid is None):
+            S('grok_tag_rejected_truncated_slug'); EXC(GROK, '%d:%s' % (cid, s), 'tag_truncated_slug', 'rejected', raw_path=GROK_RAW); continue
+        if tid is None:
+            S('grok_tag_rejected_not_in_taxonomy'); EXC(GROK, '%d:%s' % (cid, s), 'tag_slug_not_in_taxonomy', 'rejected', raw_path=GROK_RAW); continue
+        add.append(tid)
+        if ambiguous: amb[tid] = (s, ambiguous); S('grok_tag_slug_ambiguous_resolved')
+    add = list(dict.fromkeys(add))  # several slugs can name the same tag_id
+    if not add: continue
+    if c['tag_status'] in ('observed_full_block', 'observed_no_tags'):
+        extra = sorted(set(add) - own)
+        if extra:
+            S('grok_tag_pairs_contradict_own_block', len(extra))
+            conflicts.append(dict(id=cid, kind='tags_differ', base=sorted(own), base_source='own_wayback_tag_block', other=sorted(set(add)), other_source=GROK))
+        add = [t for t in add if t in own]
+    for tid in add:
+        assoc.setdefault((cid, tid), []).append(dict(kind='third_party_grok_mirror', capture_ts=None,
+                                                    source_url='grok:/commands/view/%d/' % cid + (' slug=%s ambiguous_tag_ids=%s' % amb[tid] if tid in amb else ''), raw_path=GROK_RAW))
+        S('grok_tag_pairs_confirmed_by_own_evidence' if tid in own else 'grok_tag_pairs_added_unverified')
+    if c['tag_status'] == 'unknown':
+        c['tags'] = sorted(set(add)); c['tag_status'] = 'third_party_unverified'
+    elif c['tag_status'] == 'partial_listing_membership':
+        c['tags'] = sorted(own | set(add)); c['tag_status'] = 'partial_listing_plus_third_party'
+
 # ---------------- spam + required-content validation on corpus ----------------
 clean = {}
 for cid, c in sorted(corpus.items()):
@@ -430,6 +572,12 @@ missing_fk = sorted({tid for (cid, tid) in assoc if tid not in tags})
 S('assoc_tag_fk_missing', len(missing_fk))
 S('clean_commands', len(clean))
 S('clean_with_any_tag_evidence', sum(1 for c in clean.values() if c['tag_status'] != 'unknown'))
+S('clean_with_own_tag_evidence', sum(1 for c in clean.values() if c['tag_status'] in ('observed_full_block', 'observed_no_tags', 'partial_listing_membership', 'partial_listing_plus_third_party')))
+S('clean_tag_status_third_party_unverified', sum(1 for c in clean.values() if c['tag_status'] == 'third_party_unverified'))
+S('clean_third_party_only_records', sum(1 for c in clean.values() if c.get('completeness') == 'third_party_only'))
+S('clean_records_with_any_third_party_field', sum(1 for c in clean.values() if c.get('third_party_fields')))
+S('associations_own_evidence', sum(1 for evs in assoc.values() if any(e['kind'] != 'third_party_grok_mirror' for e in evs)))
+S('associations_third_party_only', sum(1 for evs in assoc.values() if all(e['kind'] == 'third_party_grok_mirror' for e in evs)))
 S('clean_tag_status_unknown', sum(1 for c in clean.values() if c['tag_status'] == 'unknown'))
 S('clean_ai_description_only', sum(1 for c in clean.values() if c.get('description_ai') and not c.get('description_original')))
 S('clean_original_description', sum(1 for c in clean.values() if c.get('description_original')))
@@ -468,7 +616,8 @@ cu.executescript('''
 PRAGMA foreign_keys=ON;
 CREATE TABLE tags(tag_id INTEGER PRIMARY KEY, slug TEXT, other_slugs TEXT, name TEXT, evidence TEXT);
 CREATE TABLE commands(id INTEGER PRIMARY KEY, url TEXT, title TEXT, code TEXT NOT NULL, description_original TEXT, description_original_source TEXT,
-  description_ai TEXT, votes INTEGER, votes_source TEXT, author TEXT, date TEXT, sources TEXT, tag_status TEXT, completeness TEXT, review_flag TEXT);
+  description_ai TEXT, votes INTEGER, votes_source TEXT, author TEXT, date TEXT, sources TEXT, tag_status TEXT, completeness TEXT, review_flag TEXT,
+  third_party_fields TEXT, third_party_checks TEXT, title_issue TEXT);
 CREATE TABLE command_tags(command_id INTEGER, tag_id INTEGER REFERENCES tags(tag_id), evidence_kind TEXT, capture_ts TEXT, source_url TEXT, raw_path TEXT);
 CREATE TABLE conflicts(id INTEGER, kind TEXT, json TEXT);
 CREATE TABLE exclusions(source TEXT, key TEXT, reason TEXT, disposition TEXT, raw_path TEXT);
@@ -477,8 +626,9 @@ for tid, t in sorted(tags.items()):
     sl = sorted(t['slugs'])
     cu.execute('INSERT INTO tags VALUES(?,?,?,?,?)', (tid, sl[0] if sl else None, '|'.join(sl[1:]), t['names'].most_common(1)[0][0] if t['names'] else None, '|'.join(sorted(t['evidence']))))
 for cid, c in sorted(clean.items()):
-    cu.execute('INSERT INTO commands VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)', (cid, c['url'], c.get('title'), c['code'], c.get('description_original'), c.get('description_original_source'),
-               c.get('description_ai'), c.get('votes'), c.get('votes_source'), c.get('author'), c.get('date'), ','.join(c['sources']), c['tag_status'], c.get('completeness'), c.get('review_flag')))
+    cu.execute('INSERT INTO commands VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)', (cid, c['url'], c.get('title'), c['code'], c.get('description_original'), c.get('description_original_source'),
+               c.get('description_ai'), c.get('votes'), c.get('votes_source'), c.get('author'), c.get('date'), ','.join(c['sources']), c['tag_status'], c.get('completeness'), c.get('review_flag'),
+               ','.join(c.get('third_party_fields') or []) or None, json.dumps(c['third_party_checks']) if c.get('third_party_checks') else None, c.get('title_issue')))
 for (cid, tid), evs in sorted(assoc.items()):
     for e in evs: cu.execute('INSERT INTO command_tags VALUES(?,?,?,?,?,?)', (cid, tid, e['kind'], e['capture_ts'], e['source_url'], e['raw_path']))
 for x in conflicts: cu.execute('INSERT INTO conflicts VALUES(?,?,?)', (x['id'], x['kind'], json.dumps(x, ensure_ascii=False)))

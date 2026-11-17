@@ -133,12 +133,15 @@
    "sha256": "1a20b214014688fbe5550984721c64747370957f0ce8803ca593f2950c22a548",
    "counts": {
     "command_pages_parsed": 14953,
-    "gap_commands_usable": 582,
-    "descriptions_usable": 113,
-    "tag_pairs_usable": 17921
+    "new_records_third_party_only": 582,
+    "records_with_filled_fields": 212,
+    "titles_filled": 197,
+    "descriptions_filled": 113,
+    "tag_pairs_added_unverified": 16838,
+    "tag_pairs_confirming_own": 1079
    },
-   "used_for": "thirdparty/grok/ only (layer=third_party_unverified). Never merged into clean/. No raw captures behind it; AI descriptions and inferred \"derived\" tags on its pages were not extracted."
+   "used_for": "Merged into clean/ at lowest precedence (fills empty fields only; code must be identical). Every value marked: sources \"grok_mirror\", third_party_fields, *_source \"grok_mirror\", tag evidence_kind \"third_party_grok_mirror\", tag_status \"third_party_unverified\". No raw captures behind it; AI descriptions and inferred \"derived\" tags not extracted."
   }
  ],
- "updated": "2026-11-17 (rev 2)"
+ "updated": "2026-11-17 (rev 3, unified corpus)"
 }

@@ -22,6 +22,4 @@
 *.tar.gz binary
 *.gz binary
 *.ico binary
-/thirdparty/** -text
-/thirdparty/** linguist-generated
 *.xz binary

@@ -140,3 +140,16 @@
 {"id": 1218, "kind": "code_differs", "base_source": "hf", "base": "^Z then bg", "other_source": "tg123", "other": "CTRL+Z then bg"}
 {"id": 9700, "kind": "code_differs", "base_source": "hf", "base": "sort -g -o list.txt{,}", "other_source": "flatcap(reformatted html)", "other": "sort -g list.txt -o $_"}
 {"id": 11905, "kind": "code_differs", "base_source": "hf", "base": "curl -s 'http://xkcd.com/rss.xml' | xpath '//item[1]/description/text()' 2>&1 | sed -n 's/.*title=\"\\([^\"]*\\)\".*/\\1/p' | fold -s", "other_source": "flatcap(reformatted html)", "other": "curl -s 'http://xkcd.com/rss.xml' | xpath '//item[1]/description/text()' 2>&1 | sed -n 's/.*]*\\)\".*/\\1/p' | fold -s"}
+{"id": 164, "kind": "code_differs", "base_source": "tg123", "base": "watch -d -n 2 'df; ls -FlAt;'", "other_source": "grok_mirror", "other": "watch --differences -n 5 'df; ls -FlAt;'"}
+{"id": 1423, "kind": "code_differs", "base_source": "tg123", "base": "sudo find / -iname \"*.lproj\" -and \\! -iname \"en*\" -print0 | tee /dev/stderr | sudo xargs -0 rm -rfv", "other_source": "grok_mirror", "other": "sudo find / -iname \"*.lproj\" -and \\! -iname \"en*\" -print0 | tee /dev/stderr | xargs -0 rm -rfv"}
+{"id": 2336, "kind": "tags_differ", "base": [10, 64, 123, 332], "base_source": "own_wayback_tag_block", "other": [10, 64, 104, 123, 332, 376], "other_source": "grok_mirror"}
+{"id": 2825, "kind": "tags_differ", "base": [11, 104, 108, 130], "base_source": "own_wayback_tag_block", "other": [11, 64, 104, 108, 130], "other_source": "grok_mirror"}
+{"id": 3996, "kind": "tags_differ", "base": [10, 64, 104, 106, 201, 304, 354, 374, 537, 675], "base_source": "own_wayback_tag_block", "other": [10, 34, 64, 104, 106, 201, 354, 374, 537, 675], "other_source": "grok_mirror"}
+{"id": 4204, "kind": "tags_differ", "base": [28, 380, 1009], "base_source": "own_wayback_tag_block", "other": [28, 380, 514, 1009, 1745, 1746], "other_source": "grok_mirror"}
+{"id": 9702, "kind": "tags_differ", "base": [102, 124, 1891], "base_source": "own_wayback_tag_block", "other": [96, 101, 102, 124, 241, 1891], "other_source": "grok_mirror"}
+{"id": 11010, "kind": "date_differs", "base": "2012-07-18 18:20:13", "other": "2012-07-18 18:19:37", "other_source": "grok_mirror"}
+{"id": 11723, "kind": "code_differs", "base_source": "tg123", "base": "x=`<cmd1>`; <cmd2> arg0, ... $x, argN, ...", "other_source": "grok_mirror", "other": "x=` <cmd1> `; <cmd2> arg0, ... $x, argN, ..."}
+{"id": 11729, "kind": "tags_differ", "base": [105, 233, 640, 680, 1594], "base_source": "own_wayback_tag_block", "other": [32, 34, 53, 64, 105, 141, 233, 479, 640, 680, 1594], "other_source": "grok_mirror"}
+{"id": 11887, "kind": "tags_differ", "base": [267, 636, 748, 899, 1046], "base_source": "own_wayback_tag_block", "other": [267, 748, 899, 1046, 1197], "other_source": "grok_mirror"}
+{"id": 14265, "kind": "tags_differ", "base": [110, 123, 143, 465, 1007], "base_source": "own_wayback_tag_block", "other": [110, 123, 143, 351, 465, 1007, 1008], "other_source": "grok_mirror"}
+{"id": 17362, "kind": "tags_differ", "base": [59, 235, 1006], "base_source": "own_wayback_tag_block", "other": [34, 59, 163, 235, 296, 301, 911, 1006], "other_source": "grok_mirror"}
