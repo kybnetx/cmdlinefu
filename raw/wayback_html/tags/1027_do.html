@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta name="author" content="" />
+    <meta name="description" content="Great UNIX/Bash commands tagged with do - see these and many other invaluable command-line nuggets at commandlinefu.com" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="" />
+    <meta name="verify-v1" content="hEPILeJT+vssH+kKHD8JrK8sqHYIg4GWIVV8P1I8gsY=" />
+    <meta name="google-site-verification" content="r2fSppde5Egt3_2qSPb6LEsT2BqWAM0wRlb00A8LLhg" />
+    <link rel="stylesheet" href="/css/browser_reset.css?2012-03-04-09-53" type="text/css" /> 
+    <link rel="stylesheet" href="/css/styles.css?2012-03-04-09-53" type="text/css" />
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Droid+Sans+Mono" type="text/css" >
+    
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+    
+    <link rel="search" type="application/opensearchdescription+xml" title="commandlinefu.com search plugin" href="/mozilla_search_plugin.xml" />
+    
+            <link href="/commands/tagged/1027/do/rss" title="RSS" type="application/rss+xml" rel="alternate" />
+        
+    <title>Commands tagged do sorted by votes</title>
+    
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/prototype/1.6.0.3/prototype.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/scriptaculous/1.8.2/scriptaculous.js?load=effects,controls"></script>
+    <script type="text/javascript" src="/js/site-behaviour.js?2018-03-04-09-53"></script>
+    <script type="text/javascript" src="/js/Growler.js?2018-03-04-09-53"></script>
+    <script type="text/javascript" src="/js/prettify/prettify.js?2018-03-04-09-53"></script>
+    <link rel="stylesheet" href="/js/prettify/prettify.css?2018-03-04-09-53" type="text/css" />
+    
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/clf.min.css" type="text/css" />
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/agate.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<!--    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>-->
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-55581850-1', 'auto', {'allowLinker': true});
+	  ga('require', 'linker');
+	  ga('linker:autoLink', ['danstools.com','unixtimestamp.com','url-encode-decode.com','cssfontstack.com','hexcolortool.com','htaccessredirect.net','jspretty.com','jsmini.com','jsobfuscate.com','md5hashgenerator.com','regextester.com','cleancss.com','favicon-generator.org','website-performance.org','permissions-calculator.org','conversoes.org','convertissez.fr','convertitore.net','elconvertidor.com','files-conversion.com','henkan-muryo.com','konvertirung.org','konvertor.org','tahwil.net','zhuan-huan.com','bootsnipp.com','commandlinefu.com'] );
+	  ga('send', 'pageview');
+	</script>
+</head>
+
+<body>
+    <nav class="navbar navbar-fixed-top navbar-bootsnipp animate" role="navigation" style="z-index: 9999999">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="animbrand">
+        <a class="navbar-brand animate" href="//www.commandlinefu.com"><strong><span class="glyphicon glyphicon-console" style="padding:2px 4px 4px 4px;margin-right:5px;background:#333"></span><span style="color:black;">COMMANDLINEFU</span>.COM</strong></a>
+      </div>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/commands/edit" class="">+New</a></li>
+        <li class="dropdown dropdown-right">
+          <a href="#" class="dropdown-toggle " data-toggle="dropdown">Commands <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li class=""><a href="/" class="">Latest </a></li>
+            <li class=""><a href="/commands/browse/sort-by-votes" class="">All-time Greats </a></li>
+            <li class=""><a href="/commands/browse/last-month/sort-by-votes" class="">Hot this month </a></li>
+            <li class=""><a href="/commands/forthewicked" class="">The Wicked </a></li>
+            <li class=""><a href="/commands/random" class="">Random </a></li>
+<!--            <li class=""><a href="/" class="">Tags </a></li>
+            <li class=""><a href="/" class="">Functions </a></li>-->
+          </ul>
+        </li>
+        <li >
+          <a href="/users/signin">Login </a>
+        </li>
+      </ul>
+		<div id="search" style="display:inline;">
+          <form id="search-form" action="/search/handler" method="post">
+				<div id="search-container" style="margin-top:9px;">
+				  <img id="loading" src="/images/tag-loader.gif" style="display:none;float:right;margin: 5px 5px 0 0;" />
+	              <input id="search-query" type="text" class="inactive" autocomplete="off" name="q" placeholder="grep the archive">
+				</div>
+          </form>
+			<div id="search-options" style="display:none"></div>
+		</div>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container" style="padding-top:20px;">
+ <div class="row">
+  <div class="col-md-9 col-lg-8">
+		
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</p>
+<ins class="adsbygoogle"
+     style="display:block;"
+     data-ad-client="ca-pub-8815422507798180"
+     data-ad-slot="5700240528"
+    data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<p>
+        	<div class="panel panel-default">
+  <div class="panel-heading" style="background:white">
+    	<h3 class="panel-title">Commands tagged do (2)
+		        <form action="/commands/filter" method="post" class="pull-right form-inline">
+			<div class="hidden-xs hidden-sm form-group" style="margin-top:-14px">
+            <input type="hidden" name="base-url" value="/commands/tagged/1027/do" />
+            <select class="form-control" name="time-period" onchange="javascript:this.form.submit();">
+                                    <option value="last-day" >the last day</option>
+                                    <option value="last-week" >the last week</option>
+                                    <option value="last-month" >the last month</option>
+                                    <option value="" selected>all time</option>
+                            </select>
+            sorted by
+            <select class="form-control" name="sort-by" onchange="javascript:this.form.submit();">
+                                    <option value="sort-by-date" >date</option>
+                                    <option value="sort-by-votes" selected>votes</option>
+                            </select>
+			</div>
+        </form>
+		
+		</h3>
+	  </div>
+	<ul class="list-group">
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/6899/print-all-environment-variables-including-hidden-ones" title="Find out what others think of this command">Print all environment variables, including hidden ones</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    This uses some tricks I found while reading the bash man page to enumerate and display all the current environment variables, including those not listed by the 'env' command which according to the bash docs are more for internal use by BASH. The main trick is the way bash will list all environment variable names when performing expansion on ${!A*}.  Then the eval builtin makes it work in a loop.
+I created a function for this and use it instead of env.  (by aliasing env).
+This is the function that given any parameters lists the variables that start with it.  So 'aae B' would list all env variables starting wit B.  And 'aae {A..Z} {a..z}' would list all variables starting with any letter of the alphabet.  And 'aae TERM' would list all variables starting with TERM.
+<code>aae(){ local __a __i __z;for __a in &quot;$@&quot;;do __z=\${!${__a}*};for __i in `eval echo &quot;${__z}&quot;`;do echo -e &quot;$__i: ${!__i}&quot;;done;done; }</code>
+And my printenv replacement is:
+<code>alias env='aae {A..Z} {a..z} &quot;_&quot;|sort|cat -v 2&gt;&amp;1 | sed &quot;s/\\^\\[/\\\\033/g&quot;'</code>
+From: <a href="http://www.askapache.com/linux-unix/bash_profile-functions-advanced-shell.html" rel="nofollow">http://www.askapache.com/linux-unix/bash_profile-functions-advanced-shell.html</a> 
+                                    <a class="text-muted" href="javascript:void(0)" onclick="Terminal.toggleSampleOutput($(this),$('sample-output-6899'))">Show Sample Output</a>
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-6899">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre>BASH: /bin/bash
+BASH_ARGC: 
+BASH_ARGV: 
+BASH_COMMAND: echo -e &quot;$_i: ${!_i}&quot;
+BASH_LINENO: 
+BASH_SOURCE: 
+BASH_SUBSHELL: 1
+BASH_VERSINFO: 3
+BASH_VERSION: 3.2.25(1)-release
+COLUMNS: 239
+COMP_WORDBREAKS:  ^I&quot;'@&gt;&lt;=;|&amp;(:
+LINENO: 4
+LINES: 69
+OPTERR: 1
+OPTIND: 1
+OSTYPE: linux-gnu
+PIPESTATUS: 0
+PKG_CONFIG_PATH: /usr/lib/pkgconfig:/usr/local/lib/pkgconfig
+PPID: 22202
+</pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-6899" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-6899" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-6899">2</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">for _a in {A..Z} {a..z};do _z=\${!${_a}*};for _i in `eval echo &quot;${_z}&quot;`;do echo -e &quot;$_i: ${!_i}&quot;;done;done|cat -Tsv</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/AskApache">AskApache</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2010-10-27 07:16:54                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/6899/print-all-environment-variables-including-hidden-ones#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						0</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-6899" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/6899" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-6899" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/6899" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/cat">cat</a>
+                         
+                            <a href="/commands/using/echo">echo</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/31/cat">cat</a>
+                         
+                            <a href="/commands/tagged/34/bash">bash</a>
+                         
+                            <a href="/commands/tagged/102/sort">sort</a>
+                         
+                            <a href="/commands/tagged/110/sed">sed</a>
+                         
+                            <a href="/commands/tagged/121/echo">echo</a>
+                         
+                            <a href="/commands/tagged/126/alias">alias</a>
+                         
+                            <a href="/commands/tagged/354/function">function</a>
+                         
+                            <a href="/commands/tagged/386/print">print</a>
+                         
+                            <a href="/commands/tagged/545/for">for</a>
+                         
+                            <a href="/commands/tagged/845/builtin">builtin</a>
+                         
+                            <a href="/commands/tagged/847/askapache">askapache</a>
+                         
+                            <a href="/commands/tagged/1027/do">do</a>
+                         
+                            <a href="/commands/tagged/1255/variable">variable</a>
+                         
+                            <a href="/commands/tagged/1513/for-loop">for loop</a>
+                         
+                            <a href="/commands/tagged/1576/env">env</a>
+                         
+                            <a href="/commands/tagged/1578/environment">environment</a>
+                         
+                            <a href="/commands/tagged/1592/printenv">printenv</a>
+                         
+                            <a href="/commands/tagged/1593/done">done</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/9679/open-multiple-tabs-in-firefox-from-a-file-containing-urls" title="Find out what others think of this command">Open multiple tabs in Firefox from a file containing urls</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    this will open a new tab in firefox for every line in a file
+the sleep is removable but i found that if you have a large list of urls 50+, and no sleep, it will try to open all the urls at once and this will cause them all to load a lot slower, also depending on the ram of your system sleep gives you a chance to close the tabs before they overload your ram, removing & >2/dev/null will yield unpredictable results. 
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-9679">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre></pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-9679" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-9679" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-9679">2</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">for line in `cat $file`; do firefox -new-tab &quot;$line&quot; &amp; 2&gt;/dev/null; sleep 1; done</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/hamsolo474">hamsolo474</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2011-11-12 13:47:24                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/9679/open-multiple-tabs-in-firefox-from-a-file-containing-urls#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						0</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-9679" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/9679" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-9679" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/9679" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/sleep">sleep</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/31/cat">cat</a>
+                         
+                            <a href="/commands/tagged/44/ubuntu">Ubuntu</a>
+                         
+                            <a href="/commands/tagged/64/linux">Linux</a>
+                         
+                            <a href="/commands/tagged/296/firefox">firefox</a>
+                         
+                            <a href="/commands/tagged/479/sleep">sleep</a>
+                         
+                            <a href="/commands/tagged/545/for">for</a>
+                         
+                            <a href="/commands/tagged/922/devnull">/dev/null</a>
+                         
+                            <a href="/commands/tagged/1027/do">do</a>
+                         
+                            <a href="/commands/tagged/1593/done">done</a>
+                         
+                            <a href="/commands/tagged/1809/tabs">tabs</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                    	</ul>
+</div>
+
+
+  </div>
+  <div class="col-md-3 col-lg-4">
+
+            
+
+<div class="box-copy">
+    <h3 class="righthead">What's this?</h3>
+    <div class="toggleable">
+        <p><strong>commandlinefu.com</strong> is the place to record those command-line gems that you return to again and again.
+        That way others can gain from your <abbr title="Command-line interface">CLI</abbr> wisdom and you from theirs too.  All commands can be commented on, discussed and 
+        voted up or down. </p>
+		<p class="text-center"><a class="btn btn-warning" href="/commands/edit"><strong><i class="glyphicon glyphicon-plus"></i> Share Your Commands</strong></a></p>
+        <!-- <p>If you have a new feature suggestion or find a bug, please 
+        get in touch via <a href="http://commandlinefu.uservoice.com/"><strong>http://commandlinefu.uservoice.com/</strong></a><p>-->
+    </div>
+</div>
+<hr />
+<div class="box-copy">
+    <h3 class="righthead">Check These Out</h3>
+			<p>
+		<div style="font-weight:bold;overflow:hidden;white-space:nowrap;text-overflow:ellipsis"><a href="/commands/view/14221/display-spinner-while-waiting-for-some-process-to-finish">Display Spinner while waiting for some process to finish</a></div>
+				<div style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis">alternatively, run the spinner for 5 seconds:
+  timeout 5 bash -c 'spinner=( Ooooo oOooo ooOoo oooOo ooooO oooOo ooOoo oOooo); while true; do for i in ${spinner[@]}; do for j in seq 0 ${#i}; do echo -en "\b\b"; done; echo -ne "${i}"; sleep 0.2; done; done'</div>
+				</p>
+			<p>
+		<div style="font-weight:bold;overflow:hidden;white-space:nowrap;text-overflow:ellipsis"><a href="/commands/view/15313/check-open-ports-without-netstat-or-lsof">check open ports without netstat or lsof</a></div>
+				</p>
+			<p>
+		<div style="font-weight:bold;overflow:hidden;white-space:nowrap;text-overflow:ellipsis"><a href="/commands/view/20528/convert-csv-to-json">Convert CSV to JSON</a></div>
+				<div style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis">Replace 'csv_file.csv' with your filename.</div>
+				</p>
+			<p>
+		<div style="font-weight:bold;overflow:hidden;white-space:nowrap;text-overflow:ellipsis"><a href="/commands/view/14003/get-elasticsearch-configuration-and-version-details">Get ElasticSearch configuration and version details</a></div>
+				<div style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis">Replace localhost:9200 with your server location and port. This is the ElasticSearch's default setup for local instances.</div>
+				</p>
+			<p>
+		<div style="font-weight:bold;overflow:hidden;white-space:nowrap;text-overflow:ellipsis"><a href="/commands/view/6034/replace-multiple-file-extensions-with-a-single-extension">Replace multiple file extensions with a single extension</a></div>
+				<div style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis">The above is just a prove of concept based around the nested bash substitution. This could be useful in situations where you're in a directory with many filetypes but you only want to convert a few.
+
+$ for f in *.bmp *.jpg *.tga; do convert $f ${f%.*}.png; done
+
+or you can use ls | egrep to get more specific... but be warned, files with spaces will cause a ruckus with expansion but the bash for loop uses a space delimited list.
+
+$ for f in $(ls | egrep "bmp$|jpg$|tga$"); do convert $f ${f%.*}.png; done
+
+I'm guessing some people will still prefer doing it the sed way but I thought the concept of this one was pretty neat.  It will help me remember bash substitutions a little better :-P</div>
+				</p>
+			<p>
+		<div style="font-weight:bold;overflow:hidden;white-space:nowrap;text-overflow:ellipsis"><a href="/commands/view/7344/list-just-the-executable-files-or-directories-in-current-directory">List just the executable files (or directories) in current directory</a></div>
+				<div style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis">A bit shorter ;)</div>
+				</p>
+			<p>
+		<div style="font-weight:bold;overflow:hidden;white-space:nowrap;text-overflow:ellipsis"><a href="/commands/view/4773/dump-a-web-page">Dump a web page</a></div>
+				<div style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis">Useful to browse dangerous web sites.</div>
+				</p>
+			<p>
+		<div style="font-weight:bold;overflow:hidden;white-space:nowrap;text-overflow:ellipsis"><a href="/commands/view/3971/geoip-information">geoip information</a></div>
+				<div style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis">Not my script. Belongs to mathewbauer. Used without his permission.
+This script gives a single line as shown in the sample output.
+NOTE: I have blanked out the IP address for obvious security reasons. But you will get whatever is your IP if you run the script.
+Tested working in bash.</div>
+				</p>
+			<p>
+		<div style="font-weight:bold;overflow:hidden;white-space:nowrap;text-overflow:ellipsis"><a href="/commands/view/262/rsync-with-progress-bar.">rsync with progress bar.</a></div>
+				<div style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis">transfer files from localhost to a remotehost.</div>
+				</p>
+			<p>
+		<div style="font-weight:bold;overflow:hidden;white-space:nowrap;text-overflow:ellipsis"><a href="/commands/view/1094/find-the-processes-that-are-on-the-runqueue.-processes-with-a-status-of">Find the processes that are on the runqueue.  Processes with a status of</a></div>
+				<div style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis">Want to know why your load average is so high?  Run this command to see what processes are on the run queue.  Runnable processes have a status of "R", and commands waiting on I/O have a status of "D".
+
+On some older versions of Linux may require -emo instead of -eo.
+
+On Solaris: ps -aefL -o s -o user -o comm | egrep "^O|^R|COMMAND"</div>
+				</p>
+	</div>
+<hr>
+<div class="box-copy">
+    <h3 class="righthead">Stay in the loop&hellip;</h3>
+    <div class="toggleable">
+        <dl>
+            <dt>Follow the Tweets.</dt>  
+            <dd>
+                <a href="http://twitter.com/commandlinefu"><img class="link-img" src="/images/twitter.jpg" /></a>
+                <p>Every new command is wrapped in a tweet and posted
+                to <a href="http://twitter.com">Twitter</a>. Following the stream is a great way of staying abreast of the latest commands.  For the more discerning, 
+                there are Twitter accounts for commands that get a minimum of 3 and 10 votes - that way only the great commands get tweeted.</p>
+                <p>
+                &raquo; <a style="font-weight:bold;" href="http://twitter.com/commandlinefu">http://twitter.com/commandlinefu</a><br/>
+                &raquo; <a style="font-weight:bold;" href="http://twitter.com/commandlinefu3">http://twitter.com/commandlinefu3</a><br/>
+                &raquo; <a style="font-weight:bold;" href="http://twitter.com/commandlinefu10">http://twitter.com/commandlinefu10</a>
+                </p>
+            </dd>
+            <dt>Subscribe to the feeds.</dt>
+            <dd>
+                <a style="font-weight:bold;" href="http://feeds2.feedburner.com/Command-line-fu"><img class="link-img" src="/images/rss.gif" /></a>
+                <p>Use your favourite RSS aggregator to stay in touch with the latest commands.  There are feeds mirroring the 3 Twitter streams
+                as well as for virtually every other subset (users, tags, functions,&hellip;):</p>
+                <p>Subscribe to the feed for:</p>
+                <ul id="feed-links">
+                <li>&raquo; <a style="font-weight:bold;" href="http://feeds2.feedburner.com/Command-line-fu">all commands</a></li>
+                <li>&raquo; <a style="font-weight:bold;" href="/feed/threeup">commands with 3 up-votes</a> (commandlinefu3)</li>
+                <li>&raquo; <a style="font-weight:bold;" href="/feed/tenup">commands with 10 up-votes</a> (commandlinefu10)</li>
+                                <li>&raquo; <a style="font-weight:bold;" href="/commands/tagged/1027/do/rss">commands tagged do</a></li>
+                                </ul>
+            </dd>
+        </dl>
+    </div>
+</div>
+
+<!--
+<div class="box-copy">
+    <a class="visibility-toggle" id="box-copy-tags">Hide</a>
+    <h3>Top Tags</h3>
+    <div class="toggleable"><br>
+        <a href="/commands/tagged/112/awk">awk</a>, <a href="/commands/tagged/34/bash">bash</a></li>, 
+	<a href="/commands/tagged/235/curl">curl</a>, 
+	<a href="/commands/tagged/123/find">find</a>, 
+	<a href="/commands/tagged/163/grep">grep</a>, 
+	<a href="/commands/tagged/64/linux">Linux</a>, <a href="/commands/tagged/110/sed">sed</a></li>
+	</ul>
+    </div>
+</div>
+
+<div class="box-copy">
+    <a class="visibility-toggle" id="box-copy-functions">Hide</a>
+    <h3>Functions</h3>
+    <div class="toggleable">
+            </div>
+</div>
+-->
+
+  </div>
+ </div>
+</div>
+
+<footer class="bs-footer" role="contentinfo" style="background-color:#F5F5F5;">
+  <div class="container">
+    <p style="padding-top:20px;">commandlinefu.com &copy; 2018 <a href="https://www.danstools.com" target="_blank">Dan's Tools</a> | <a href="/site/faq">FAQs</a> | <a href="/site/api">API</a> | <a href="/site/widget">Widget</a>  | <a href="/site/privacy">Privacy</a></p>
+  </div>
+
+</footer>
+
+
+<!--    <div id="wrapper">
+        
+        <div id="right-block">
+        </div>
+        
+        <div id="header">
+            <h4><a href="/commands/browse" title="commandlinefu.com - the greatest commands on the web"><img src="/images/header-logo.jpg" alt="commandlinefu.com" /></a></h4>
+            <div id="nav">
+                <strong><a href="/commands/random" title="Lucky dip">Random</a></strong> |
+                <strong><a href="/commands/browse/last-week/sort-by-votes" title="Piping host commands from the last 7 days">Hot this week</a></strong> |
+                <strong><a href="/commands/browse/sort-by-votes" title="See the all-time greatest commands">All-time greats</a></strong> &bull;
+                <strong><a href="/site/faq"><abbr title="Frequently asked questions">FAQ</abbr></a></strong> |
+                <strong><a href="/site/api"><abbr title="API documentation">API</abbr></a></strong> |
+                <strong><a href="/site/widget"><abbr title="Javascript widget">Widget</abbr></a></strong>
+            </div>    
+            <div id="search">
+                <form id="search-form" action="/search/handler" method="post" >
+                    <div id="search-container">
+                        <img id="loading" src="/images/tag-loader.gif" style="display:none;float:right;margin: 5px 5px 0 0;" />
+                        <input type="text" id="search-query" class="inactive" name="q" autocomplete="off" value="" placeholder="type here to grep the archive..." />
+                    </div>
+                </form>
+                <div style="display:none" id="search-options"></div>
+            </div>
+        </div>
+        
+        
+        <div id="left-block">
+        </div>
+        
+        <div id="footer">
+        
+            <div class="advertising">
+                            </div>
+        </div>
+    </div>
+-->    
+    
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script>
+    $.noConflict();
+
+    if (typeof Prototype !== "undefined" && Prototype.BrowserFeatures.ElementExtensions)
+    {
+        var disablePrototypeJS = function (method, pluginsToDisable)
+        {
+            var handler = function (event)
+            {
+                event.target[method] = undefined;
+                setTimeout(function ()
+                {
+                    delete event.target[method];
+                }, 0);
+            };
+
+            pluginsToDisable.each(function (plugin)
+            {
+                jQuery(window).on(method + '.bs.' + plugin, handler);
+            });
+        },
+
+        pluginsToDisable = ['collapse', 'dropdown', 'modal', 'tooltip', 'popover', 'tab','collect'];
+        disablePrototypeJS('show', pluginsToDisable);
+        disablePrototypeJS('hide', pluginsToDisable);
+    }
+	</script>
+	<script>
+jQuery( document ).ready(function() {
+
+	hljs.initHighlightingOnLoad();
+	hljs.configure({useBR: true});
+
+	jQuery('span.code').each(function(i, block) {
+	  hljs.highlightBlock(block);
+	});
+
+    if (1==0 && window.canRunAds === true) {
+        jQuery('#blocker').hide();
+    } else { jQuery('#blocker').show(); }
+});
+
+	</script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <script src="/js/ads.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,7 @@
+commandlinefu_id: 9257
+translator:
+  weibo: tgic
+command: |-
+  bsdiff <oldfile> <newfile> <patchfile>
+summary: |-
+  二进制diff

@@ -1,0 +1,2888 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta name="author" content="" />
+    <meta name="description" content="Great UNIX/Bash commands tagged with size - see these and many other invaluable command-line nuggets at commandlinefu.com" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="" />
+    <meta name="verify-v1" content="hEPILeJT+vssH+kKHD8JrK8sqHYIg4GWIVV8P1I8gsY=" />
+    <meta name="google-site-verification" content="r2fSppde5Egt3_2qSPb6LEsT2BqWAM0wRlb00A8LLhg" />
+    <link rel="stylesheet" href="/css/browser_reset.css?2012-03-04-09-53" type="text/css" /> 
+    <link rel="stylesheet" href="/css/styles.css?2012-03-04-09-53" type="text/css" />
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Droid+Sans+Mono" type="text/css" >
+    
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+    
+    <link rel="search" type="application/opensearchdescription+xml" title="commandlinefu.com search plugin" href="/mozilla_search_plugin.xml" />
+    
+            <link href="/commands/tagged/101/size/rss" title="RSS" type="application/rss+xml" rel="alternate" />
+        
+    <title>Commands tagged size sorted by votes</title>
+    
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/prototype/1.6.0.3/prototype.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/scriptaculous/1.8.2/scriptaculous.js?load=effects,controls"></script>
+    <script type="text/javascript" src="/js/site-behaviour.js?2018-03-04-09-53"></script>
+    <script type="text/javascript" src="/js/Growler.js?2018-03-04-09-53"></script>
+    <script type="text/javascript" src="/js/prettify/prettify.js?2018-03-04-09-53"></script>
+    <link rel="stylesheet" href="/js/prettify/prettify.css?2018-03-04-09-53" type="text/css" />
+    
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/clf.min.css" type="text/css" />
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/agate.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<!--    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>-->
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-55581850-1', 'auto', {'allowLinker': true});
+	  ga('require', 'linker');
+	  ga('linker:autoLink', ['danstools.com','unixtimestamp.com','url-encode-decode.com','cssfontstack.com','hexcolortool.com','htaccessredirect.net','jspretty.com','jsmini.com','jsobfuscate.com','md5hashgenerator.com','regextester.com','cleancss.com','favicon-generator.org','website-performance.org','permissions-calculator.org','conversoes.org','convertissez.fr','convertitore.net','elconvertidor.com','files-conversion.com','henkan-muryo.com','konvertirung.org','konvertor.org','tahwil.net','zhuan-huan.com','bootsnipp.com','commandlinefu.com'] );
+	  ga('send', 'pageview');
+	</script>
+</head>
+
+<body>
+    <nav class="navbar navbar-fixed-top navbar-bootsnipp animate" role="navigation" style="z-index: 9999999">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="animbrand">
+        <a class="navbar-brand animate" href="//www.commandlinefu.com"><strong><span class="glyphicon glyphicon-console" style="padding:2px 4px 4px 4px;margin-right:5px;background:#333"></span><span style="color:black;">COMMANDLINEFU</span>.COM</strong></a>
+      </div>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/commands/edit" class="">+New</a></li>
+        <li class="dropdown dropdown-right">
+          <a href="#" class="dropdown-toggle " data-toggle="dropdown">Commands <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li class=""><a href="/" class="">Latest </a></li>
+            <li class=""><a href="/commands/browse/sort-by-votes" class="">All-time Greats </a></li>
+            <li class=""><a href="/commands/browse/last-month/sort-by-votes" class="">Hot this month </a></li>
+            <li class=""><a href="/commands/forthewicked" class="">The Wicked </a></li>
+            <li class=""><a href="/commands/random" class="">Random </a></li>
+<!--            <li class=""><a href="/" class="">Tags </a></li>
+            <li class=""><a href="/" class="">Functions </a></li>-->
+          </ul>
+        </li>
+        <li >
+          <a href="/users/signin">Login </a>
+        </li>
+      </ul>
+		<div id="search" style="display:inline;">
+          <form id="search-form" action="/search/handler" method="post">
+				<div id="search-container" style="margin-top:9px;">
+				  <img id="loading" src="/images/tag-loader.gif" style="display:none;float:right;margin: 5px 5px 0 0;" />
+	              <input id="search-query" type="text" class="inactive" autocomplete="off" name="q" placeholder="grep the archive">
+				</div>
+          </form>
+			<div id="search-options" style="display:none"></div>
+		</div>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container" style="padding-top:20px;">
+ <div class="row">
+  <div class="col-md-9 col-lg-8">
+		
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</p>
+<ins class="adsbygoogle"
+     style="display:block;"
+     data-ad-client="ca-pub-8815422507798180"
+     data-ad-slot="5700240528"
+    data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<p>
+        	<div class="panel panel-default">
+  <div class="panel-heading" style="background:white">
+    	<h3 class="panel-title">Commands tagged size (62)
+		        <form action="/commands/filter" method="post" class="pull-right form-inline">
+			<div class="hidden-xs hidden-sm form-group" style="margin-top:-14px">
+            <input type="hidden" name="base-url" value="/commands/tagged/101/size" />
+            <select class="form-control" name="time-period" onchange="javascript:this.form.submit();">
+                                    <option value="last-day" >the last day</option>
+                                    <option value="last-week" >the last week</option>
+                                    <option value="last-month" >the last month</option>
+                                    <option value="" selected>all time</option>
+                            </select>
+            sorted by
+            <select class="form-control" name="sort-by" onchange="javascript:this.form.submit();">
+                                    <option value="sort-by-date" >date</option>
+                                    <option value="sort-by-votes" selected>votes</option>
+                            </select>
+			</div>
+        </form>
+		
+		</h3>
+	  </div>
+	<ul class="list-group">
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/6984/find-all-file-larger-than-500m" title="Find out what others think of this command">find all file larger than 500M</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                     
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-6984">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre></pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-6984" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-6984" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-6984">28</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">find / -type f -size +500M</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/flxndn">flxndn</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2010-11-09 10:09:33                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/6984/find-all-file-larger-than-500m#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						0</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-6984" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/6984" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-6984" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/6984" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/find">find</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/101/size">size</a>
+                         
+                            <a href="/commands/tagged/123/find">find</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/9177/list-by-size-all-of-the-directories-in-a-given-tree." title="Find out what others think of this command">List by size all of the directories in a given tree.</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                     
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-9177">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre></pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-9177" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-9177" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-9177">17</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">du -h /path | sort -h</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/moogmusic">moogmusic</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2011-09-02 13:26:23                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/9177/list-by-size-all-of-the-directories-in-a-given-tree.#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						5</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-9177" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/9177" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-9177" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/9177" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/du">du</a>
+                         
+                            <a href="/commands/using/sort">sort</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/101/size">size</a>
+                         
+                            <a href="/commands/tagged/242/directory">directory</a>
+                         
+                            <a href="/commands/tagged/1368/directory-sizedu">directory size,du</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/1314/shows-size-of-dirs-and-files-hidden-or-not-sorted." title="Find out what others think of this command">Shows size of dirs and files, hidden or not, sorted.</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    Very useful when you need disk space. It calculates the disk usage of all files and dirs (descending them) located at the current directory (including hidden ones). Then sort puts them in order. 
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-1314">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre></pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-1314" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-1314" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-1314">11</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">du -cs * .[^\.]* | sort -n</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/cemsbr">cemsbr</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2009-03-02 18:43:48                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/1314/shows-size-of-dirs-and-files-hidden-or-not-sorted.#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						2</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-1314" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/1314" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-1314" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/1314" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/du">du</a>
+                         
+                            <a href="/commands/using/sort">sort</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/96/disk-usage">disk usage</a>
+                         
+                            <a href="/commands/tagged/101/size">size</a>
+                         
+                            <a href="/commands/tagged/102/sort">sort</a>
+                         
+                            <a href="/commands/tagged/103/hidden">hidden</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/8759/retrieve-the-size-of-a-file-on-a-server" title="Find out what others think of this command">Retrieve the size of a file on a server</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    - Where $URL is the URL of the file. 
+ - Replace the $2 by $3 at the end to get a human-readable size.
+Credits to svanberg @ ArchLinux forums for original idea.
+Edit: Replaced command with better version by FRUiT. (removed unnecessary grep) 
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-8759">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre></pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-8759" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-8759" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-8759">5</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">wget --spider $URL 2&gt;&amp;1 | awk '/Length/ {print $2}'</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/d3Xt3r">d3Xt3r</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2011-07-03 00:14:58                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/8759/retrieve-the-size-of-a-file-on-a-server#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						6</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-8759" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/8759" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-8759" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/8759" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/awk">awk</a>
+                         
+                            <a href="/commands/using/wget">wget</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/101/size">size</a>
+                         
+                            <a href="/commands/tagged/152/wget">wget</a>
+                         
+                            <a href="/commands/tagged/182/file">file</a>
+                         
+                            <a href="/commands/tagged/271/remote">remote</a>
+                         
+                            <a href="/commands/tagged/896/server">server</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/2013/list-and-sort-files-by-size-in-reverse-order-file-size-in-human-readable-output" title="Find out what others think of this command">list and sort files by size in reverse order (file size in human readable output)</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    This command list and sort files by size and in reverse order, the reverse order is very helpful when you have a very long list and wish to have the biggest files at the bottom so you don't have scrool up.
+The file size info is in human readable output, so ex. 1K..234M...3G
+Tested with Linux (Red Hat Enterprise Edition) 
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-2013">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre></pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-2013" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-2013" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-2013">4</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">ls -S -lhr</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/rez0r">rez0r</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2009-04-28 01:28:57                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/2013/list-and-sort-files-by-size-in-reverse-order-file-size-in-human-readable-output#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						0</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-2013" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/2013" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-2013" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/2013" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/ls">ls</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/34/bash">bash</a>
+                         
+                            <a href="/commands/tagged/101/size">size</a>
+                         
+                            <a href="/commands/tagged/102/sort">sort</a>
+                         
+                            <a href="/commands/tagged/182/file">file</a>
+                         
+                            <a href="/commands/tagged/309/sorting">sorting</a>
+                         
+                            <a href="/commands/tagged/338/output">output</a>
+                         
+                            <a href="/commands/tagged/395/list">list</a>
+                         
+                            <a href="/commands/tagged/396/reverse">reverse</a>
+                         
+                            <a href="/commands/tagged/397/order">order</a>
+                         
+                            <a href="/commands/tagged/398/human">human</a>
+                         
+                            <a href="/commands/tagged/399/readable">readable</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/2565/find-files-larger-than-1-gb-everywhere" title="Find out what others think of this command">find files larger than 1 GB, everywhere</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                     
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-2565">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre></pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-2565" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-2565" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-2565">4</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">find / -type f -size +1000000000c</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/folengo">folengo</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2009-07-05 08:16:16                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/2565/find-files-larger-than-1-gb-everywhere#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						4</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-2565" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/2565" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-2565" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/2565" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/find">find</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/101/size">size</a>
+                         
+                            <a href="/commands/tagged/123/find">find</a>
+                         
+                            <a href="/commands/tagged/266/files">files</a>
+                         
+                            <a href="/commands/tagged/543/filesize">filesize</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/7543/find-the-biggest-files" title="Find out what others think of this command">Find the biggest files</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    Also:
+* find . -type f -exec ls -s {} \; | sort -n -r | head -5
+* find . -type f -exec ls -l {} \; | awk '{print $5 "\t" $9}' | sort -n -r | head -5 
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-7543">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre></pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-7543" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-7543" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-7543">4</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">du -sk * | sort -rn | head</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/ebah80">ebah80</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2011-01-03 10:49:40                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/7543/find-the-biggest-files#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						1</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-7543" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/7543" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-7543" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/7543" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/du">du</a>
+                         
+                            <a href="/commands/using/sort">sort</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/101/size">size</a>
+                         
+                            <a href="/commands/tagged/123/find">find</a>
+                         
+                            <a href="/commands/tagged/543/filesize">filesize</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/13057/find-files-and-calculate-size-of-result-in-shell" title="Find out what others think of this command">Find files and calculate size of result in shell</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    Use find's internal stat to get the file size then let the shell add up the numbers. 
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-13057">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre></pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-13057" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-13057" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-13057">3</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">echo $(($(find . -name &quot;pattern&quot; -type f -printf &quot;+%s&quot;)))</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/flatcap">flatcap</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2014-01-16 03:14:36                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/13057/find-files-and-calculate-size-of-result-in-shell#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						1</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-13057" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/13057" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-13057" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/13057" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/echo">echo</a>
+                         
+                            <a href="/commands/using/find">find</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/101/size">size</a>
+                         
+                            <a href="/commands/tagged/123/find">find</a>
+                         
+                            <a href="/commands/tagged/2616/calculate">calculate</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/4445/find-out-how-much-space-are-occuipied-by-files-smaller-than-1024k-sic-improved" title="Find out what others think of this command">find out how much space are occuipied by files smaller than 1024K (sic) - improved</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    The original didn't use -print0 which fails on weird file names eg with spaces.
+The original parsed the output of 'ls -l' which is always a bad idea. 
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-4445">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre></pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-4445" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-4445" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-4445">2</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">find dir -size -1024k -type f -print0 | du --files0-from - -bc</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/bhepple">bhepple</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2009-12-29 01:33:55                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/4445/find-out-how-much-space-are-occuipied-by-files-smaller-than-1024k-sic-improved#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						0</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-4445" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/4445" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-4445" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/4445" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/dir">dir</a>
+                         
+                            <a href="/commands/using/du">du</a>
+                         
+                            <a href="/commands/using/find">find</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/101/size">size</a>
+                         
+                            <a href="/commands/tagged/562/sum">sum</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/8801/list-top-10-files-in-filesystem-or-mount-point-bigger-than-200mb" title="Find out what others think of this command">List top 10 files in filesystem or mount point bigger than 200MB</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    Specify the size in bytes using the 'c' option for the -size flag. The + sign reads as "bigger than". Then execute  du on the list; sort in reverse mode and show the first 10 occurrences. 
+                                    <a class="text-muted" href="javascript:void(0)" onclick="Terminal.toggleSampleOutput($(this),$('sample-output-8801'))">Show Sample Output</a>
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-8801">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre>675.07  /myfs/sop/infranc/med/20110201/det_med_MOS.txt
+393.57  /myfs/sop/inffin/part/20110407/fact_par_201103.accdb
+338.03  /myfs/20110501/det_med_MOS.txt
+338.02  /myfs/AC/SGE/20110501/EVID.txt
+338.00  /myfs/infranc/med/20110601/det_med_EOV.txt
+337.96  /myfs/AC/SGE/20110601/EVID.txt
+</pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-8801" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-8801" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-8801">2</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">find /myfs -size +209715200c -exec du -m {} \; |sort -nr |head -10</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/arlequin">arlequin</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2011-07-07 21:12:46                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/8801/list-top-10-files-in-filesystem-or-mount-point-bigger-than-200mb#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						0</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-8801" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/8801" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-8801" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/8801" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/du">du</a>
+                         
+                            <a href="/commands/using/find">find</a>
+                         
+                            <a href="/commands/using/head">head</a>
+                         
+                            <a href="/commands/using/sort">sort</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/64/linux">Linux</a>
+                         
+                            <a href="/commands/tagged/101/size">size</a>
+                         
+                            <a href="/commands/tagged/123/find">find</a>
+                         
+                            <a href="/commands/tagged/201/unix">unix</a>
+                         
+                            <a href="/commands/tagged/459/ksh">ksh</a>
+                         
+                            <a href="/commands/tagged/728/aix">aix</a>
+                         
+                            <a href="/commands/tagged/729/korn-shell">korn shell</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/8860/retrieve-the-size-of-a-file-on-a-server" title="Find out what others think of this command">Retrieve the size of a file on a server</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    Downloads the entire file, but http servers don't always provide the optional 'Content-Length:' header, and ftp/gopher/dict/etc servers don't provide a filesize header at all. 
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-8860">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre></pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-8860" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-8860" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-8860">2</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">curl -s &quot;$URL&quot; |wc -c</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/Mozai">Mozai</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2011-07-18 15:47:57                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/8860/retrieve-the-size-of-a-file-on-a-server#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						0</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-8860" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/8860" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-8860" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/8860" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/wc">wc</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/101/size">size</a>
+                         
+                            <a href="/commands/tagged/235/curl">curl</a>
+                         
+                            <a href="/commands/tagged/265/http">http</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/8930/compute-the-average-number-of-kb-per-file-for-each-dir" title="Find out what others think of this command">Compute the average number of KB per file for each dir</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    Use this to find identify if dirs mostly contain large or small files. 
+                                    <a class="text-muted" href="javascript:void(0)" onclick="Terminal.toggleSampleOutput($(this),$('sample-output-8930'))">Show Sample Output</a>
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-8930">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre>yeslab.org 300.32786885245901639344
+theyesmen.org 679.16801687505732016752
+</pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-8930" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-8930" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-8930">2</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">parallel  echo -n {}&quot;\ &quot;\;echo '$(du -s {} | awk  &quot;{print \$1}&quot;) /  $(find {} | wc -l)' \| bc -l ::: *</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/unixmonkey8046">unixmonkey8046</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2011-07-28 12:21:34                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/8930/compute-the-average-number-of-kb-per-file-for-each-dir#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						1</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-8930" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/8930" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-8930" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/8930" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/awk">awk</a>
+                         
+                            <a href="/commands/using/bc">bc</a>
+                         
+                            <a href="/commands/using/du">du</a>
+                         
+                            <a href="/commands/using/echo">echo</a>
+                         
+                            <a href="/commands/using/find">find</a>
+                         
+                            <a href="/commands/using/wc">wc</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/34/bash">bash</a>
+                         
+                            <a href="/commands/tagged/101/size">size</a>
+                         
+                            <a href="/commands/tagged/696/parallel">parallel</a>
+                         
+                            <a href="/commands/tagged/1368/directory-sizedu">directory size,du</a>
+                         
+                            <a href="/commands/tagged/1912/average">average</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/11863/shows-size-of-dirs-and-files-hidden-or-not-sorted." title="Find out what others think of this command">Shows size of dirs and files, hidden or not, sorted.</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                     
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-11863">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre></pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-11863" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-11863" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-11863">2</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">du --max-depth=1 -h * |sort -n -k 1 |egrep 'M|G'</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/leonteale">leonteale</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2013-02-07 18:52:29                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/11863/shows-size-of-dirs-and-files-hidden-or-not-sorted.#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						0</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-11863" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/11863" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-11863" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/11863" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/du">du</a>
+                         
+                            <a href="/commands/using/egrep">egrep</a>
+                         
+                            <a href="/commands/using/sort">sort</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/96/disk-usage">disk usage</a>
+                         
+                            <a href="/commands/tagged/101/size">size</a>
+                         
+                            <a href="/commands/tagged/102/sort">sort</a>
+                         
+                            <a href="/commands/tagged/103/hidden">hidden</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/13056/find-files-and-calculate-size-of-result-in-shell" title="Find out what others think of this command">Find files and calculate size of result in shell</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    Using find's internal stat to get the file size is about 50 times faster than using -exec stat. 
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-13056">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre></pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-13056" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-13056" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-13056">2</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">find . -name &quot;pattern&quot; -type f -printf &quot;%s\n&quot; | awk '{total += $1} END {print total}'</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/pdxdoughnut">pdxdoughnut</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2014-01-16 01:16:18                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/13056/find-files-and-calculate-size-of-result-in-shell#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						0</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-13056" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/13056" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-13056" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/13056" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/awk">awk</a>
+                         
+                            <a href="/commands/using/find">find</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/101/size">size</a>
+                         
+                            <a href="/commands/tagged/123/find">find</a>
+                         
+                            <a href="/commands/tagged/2616/calculate">calculate</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/13725/insert-commas-to-make-reading-numbers-easier-in-the-output-of-ls" title="Find out what others think of this command">Insert commas to make reading numbers easier in the output of ls</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    This modifies the output of ls so that the file size has commas every three digits. It makes room for the commas by destructively eating any characters to the left of the size, which is probably okay since that's just the "group".
+&#8194;
+Note that I did not write this, I merely cleaned it up and shortened it with extended regular expressions. The original shell script, entitled "sl", came with this description:
+&#8194;
+&#8195;: '
+&#8195;: For tired eyes (sigh), do an ls -lF plus whatever other flags you give
+&#8195;: but expand the file size with commas every 3 digits.  Really helps me
+&#8195;: distinguish megabytes from hundreds of kbytes...
+&#8195;:
+&#8195;: Corey Satten, corey@cac.washington.edu, 11/8/89
+&#8195;: '
+&#8194;
+Of course, some may suggest that fancy new "human friendly" options, like "ls -Shrl", have made Corey's script obsolete. They are probably right. Yet, at times, still I find it handy. The new-fangled "human-readable" numbers can be annoying when I have to glance at the letter at the end to figure out what order of magnitude is even being talked about. (There's a big difference between 386M and 386P!).  But with this nifty script, the number itself acts like a histogram, a quick visual indicator of "bigness" for tired eyes. :-) 
+                                    <a class="text-muted" href="javascript:void(0)" onclick="Terminal.toggleSampleOutput($(this),$('sample-output-13725'))">Show Sample Output</a>
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-13725">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre># Note that this command is designed to be kept in a script called &quot;sl&quot;
+hardy%  sl /var/log/apache2/ 
+total 436376
+-rw-r--r-- 1 root ro 420,341,429 Sep 29 07:03 access.log
+-rw-r--r-- 1 root roo 22,671,391 Sep 29 06:49 error.log
+-rw-r--r-- 1 root root 3,272,040 Jan 20  2013 gallery_access.log
+-rw-r--r-- 1 root root    99,837 Jan 20  2013 gallery_error_log
+</pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-13725" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-13725" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-13725">2</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">/bin/ls -lF &quot;$@&quot; |  sed -r ': top; s/. ([0-9]+)([0-9]{3}[,0-9]* \w{3} )/ \1,\2/ ; t top'</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/hackerb9">hackerb9</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2014-09-29 14:33:23                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/13725/insert-commas-to-make-reading-numbers-easier-in-the-output-of-ls#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						0</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-13725" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/13725" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-13725" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/13725" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/sed">sed</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/101/size">size</a>
+                         
+                            <a href="/commands/tagged/110/sed">sed</a>
+                         
+                            <a href="/commands/tagged/125/ls">ls</a>
+                         
+                            <a href="/commands/tagged/567/numbers">numbers</a>
+                         
+                            <a href="/commands/tagged/1172/histogram">histogram</a>
+                         
+                            <a href="/commands/tagged/1891/human-readable">human-readable</a>
+                         
+                            <a href="/commands/tagged/2744/commas">commas</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/2441/create-a-random-file-of-a-specific-size" title="Find out what others think of this command">Create a random file of a specific size</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    This will create a 10 MB file named testfile.txt.  Change the count parameter to change the size of the file.
+As one commenter pointed out, yes /dev/random can be used, but the content doesn't matter if you just need a file of a specific size for testing purposes, which is why I used /dev/zero.  The file size is what matters, not the content.  It's 10 MB either way. "Random" just referred to "any file - content not specific" 
+                                    <a class="text-muted" href="javascript:void(0)" onclick="Terminal.toggleSampleOutput($(this),$('sample-output-2441'))">Show Sample Output</a>
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-2441">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre>10+0 records in
+10+0 records out
+10485760 bytes (10 MB) copied, 0.038701 s, 271 MB/s</pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-2441" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-2441" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-2441">1</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">dd if=/dev/zero of=testfile.txt bs=1M count=10</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/mstoecker">mstoecker</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2009-06-17 17:06:16                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/2441/create-a-random-file-of-a-specific-size#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						7</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-2441" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/2441" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-2441" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/2441" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/dd">dd</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/75/dd">dd</a>
+                         
+                            <a href="/commands/tagged/101/size">size</a>
+                         
+                            <a href="/commands/tagged/574/test-file">test file</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/2807/gentoo-get-the-size-of-all-installed-packets-sorted" title="Find out what others think of this command">Gentoo: Get the size of all installed packets, sorted</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    On a Gentoo system, this command will tell you which packets you have installed and sort them by how much space they consume. Good for finding out space-hogs when tidying up disk space. 
+                                    <a class="text-muted" href="javascript:void(0)" onclick="Terminal.toggleSampleOutput($(this),$('sample-output-2807'))">Show Sample Output</a>
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-2807">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre>alanceil@kvirasim:03:06:2:0:~&gt; equery s | sed 's/(\|)/ /g' | sort -n -k 9 | gawk '{print $1&quot; &quot;$9/1048576&quot;m&quot;}'
+app-text/scrollkeeper-9999-r1: 0m
+gnome-base/gail-1000: 0m
+--- *snip* ---
+dev-java/sun-jdk-1.6.0.13: 158.84m
+games-puzzle/neverball-1.5.0: 174.607m
+app-office/openoffice-bin-3.0.0: 380.035m</pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-2807" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-2807" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-2807">1</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">equery s | sed 's/(\|)/ /g' | sort -n -k 9 | gawk '{print $1&quot; &quot;$9/1048576&quot;m&quot;}'</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/Alanceil">Alanceil</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2009-07-30 01:12:10                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/2807/gentoo-get-the-size-of-all-installed-packets-sorted#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						0</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-2807" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/2807" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-2807" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/2807" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/gawk">gawk</a>
+                         
+                            <a href="/commands/using/sed">sed</a>
+                         
+                            <a href="/commands/using/sort">sort</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/101/size">size</a>
+                         
+                            <a href="/commands/tagged/369/gentoo">Gentoo</a>
+                         
+                            <a href="/commands/tagged/662/packets">packets</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/4435/find-out-how-much-space-are-occuipied-by-files-smaller-than-1024k" title="Find out what others think of this command">find out how much space are occuipied by files smaller than 1024K</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    The command gives size of all files smaller than 1024k, this information, together with disk usage, can help determin file system parameter (e.g. block size) or storage device (e.g. SSD v.s. HDD).
+Note if you use awk instead of "cut| dc", you easily breach maximum allowed number of records in awk. 
+                                    <a class="text-muted" href="javascript:void(0)" onclick="Terminal.toggleSampleOutput($(this),$('sample-output-4435'))">Show Sample Output</a>
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-4435">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre>290545766</pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-4435" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-4435" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-4435">1</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">find dir -size -1024k -type f | xargs -d $'\n' -n1 ls -l | cut -d ' ' -f 5  | sed -e '2,$s/$/+/' -e '$ap' | dc</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/zhangweiwu">zhangweiwu</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2009-12-28 04:23:01                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/4435/find-out-how-much-space-are-occuipied-by-files-smaller-than-1024k#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						1</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-4435" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/4435" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-4435" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/4435" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/cut">cut</a>
+                         
+                            <a href="/commands/using/dir">dir</a>
+                         
+                            <a href="/commands/using/find">find</a>
+                         
+                            <a href="/commands/using/ls">ls</a>
+                         
+                            <a href="/commands/using/sed">sed</a>
+                         
+                            <a href="/commands/using/xargs">xargs</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/101/size">size</a>
+                         
+                            <a href="/commands/tagged/562/sum">sum</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/6574/summarize-size-of-all-files-of-given-type-in-all-subdirectories-in-bytes" title="Find out what others think of this command">Summarize size of all files of given type in all subdirectories (in bytes)</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    This deals nicely with filenames containing special characters and can deal with more files than can fit on a commandline. It also avoids spawning du. 
+                                    <a class="text-muted" href="javascript:void(0)" onclick="Terminal.toggleSampleOutput($(this),$('sample-output-6574'))">Show Sample Output</a>
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-6574">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre>26715066695</pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-6574" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-6574" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-6574">1</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">find . -iname '*.jpg' -type f -print0 |perl -0 -ne '$a+=-s $_;END{print &quot;$a\n&quot;}'</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/unixmonkey10455">unixmonkey10455</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2010-09-12 13:14:12                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/6574/summarize-size-of-all-files-of-given-type-in-all-subdirectories-in-bytes#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						0</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-6574" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/6574" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-6574" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/6574" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/find">find</a>
+                         
+                            <a href="/commands/using/perl">perl</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/101/size">size</a>
+                         
+                            <a href="/commands/tagged/104/perl">perl</a>
+                         
+                            <a href="/commands/tagged/123/find">find</a>
+                         
+                            <a href="/commands/tagged/124/du">du</a>
+                         
+                            <a href="/commands/tagged/543/filesize">filesize</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/6879/easy-to-extend-one-liner-for-cron-scripts-that-automate-filesystem-checking" title="Find out what others think of this command">Easy to extend one-liner for cron scripts that automate filesystem checking</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    This one-liner is for cron jobs that need to provide some basic information about a filesystem and the time it takes to complete the operation.  You can swap out the di command for df or du if that's your thing.  The |& redirections the stderr and stdout to the mail command.
+How to configure the variables.
+TOFSCK=/path/to/mount
+FSCKDEV=/dev/path/device
+or
+FSCKDEV=`grep $TOFSCK /proc/mounts | cut -f1 -d" "`
+MAILSUB="weekly file system check $TOFSCK " 
+                                    <a class="text-muted" href="javascript:void(0)" onclick="Terminal.toggleSampleOutput($(this),$('sample-output-6879'))">Show Sample Output</a>
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-6879">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre>Filesystem         Mount               Size     Used    Avail %Used fs Type
+/dev/mapper/Archiv /srv/Music        108.3G    83.2G    21.8G  80%  ext3   
+e2fsck 1.41.12 (17-May-2010)
+Pass 1: Checking inodes, blocks, and sizes
+Pass 2: Checking directory structure
+Pass 3: Checking directory connectivity
+Pass 4: Checking reference counts
+Pass 5: Checking group summary information
+
+   24809 inodes used (0.34%)
+    1835 non-contiguous files (7.4%)
+      15 non-contiguous directories (0.1%)
+         # of inodes with ind/dind/tind blocks: 9273/5718/0
+22256269 blocks used (77.18%)
+       0 bad blocks
+       1 large file
+
+   20110 regular files
+    4690 directories
+       0 character device files
+       0 block device files
+       0 fifos
+       0 links
+       0 symbolic links (0 fast symbolic links)
+       0 sockets
+--------
+   24800 files
+
+real	3m31.842s
+user	0m13.897s
+sys	0m8.977s
+</pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-6879" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-6879" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-6879">1</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">( di $TOFSCK -h ; /bin/umount $TOFSCK ; time /sbin/e2fsck -y -f -v $FSCKDEV ; /bin/mount $TOFSCK ) |&amp; /bin/mail $MAILTO -s &quot;$MAILSUB&quot;</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/px">px</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2010-10-24 00:35:23                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/6879/easy-to-extend-one-liner-for-cron-scripts-that-automate-filesystem-checking#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						1</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-6879" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/6879" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-6879" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/6879" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/time">time</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/5/filesystem">Filesystem</a>
+                         
+                            <a href="/commands/tagged/88/mount">mount</a>
+                         
+                            <a href="/commands/tagged/95/mount-point">mount point</a>
+                         
+                            <a href="/commands/tagged/101/size">size</a>
+                         
+                            <a href="/commands/tagged/182/file">file</a>
+                         
+                            <a href="/commands/tagged/187/cronjob">cronjob</a>
+                         
+                            <a href="/commands/tagged/218/automation">automation</a>
+                         
+                            <a href="/commands/tagged/620/check">check</a>
+                         
+                            <a href="/commands/tagged/1099/automatically">automatically</a>
+                         
+                            <a href="/commands/tagged/1465/crontab">crontab</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/6957/display-the-size-of-all-your-homes-directories" title="Find out what others think of this command">Display the size of all your home's directories</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    Display the size (human reading) of all the directories in your home path (~). 
+                                    <a class="text-muted" href="javascript:void(0)" onclick="Terminal.toggleSampleOutput($(this),$('sample-output-6957'))">Show Sample Output</a>
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-6957">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre>896K	/home/labo/bin
+4,0K	/home/labo/Bureau
+197M	/home/labo/dev
+710M	/home/labo/Documents
+381M	/home/labo/Dropbox
+24K	/home/labo/flumotion
+964M	/home/labo/Images
+4,0K	/home/labo/Mod?les
+4,0K	/home/labo/Musique
+4,0K	/home/labo/Public
+2,4G	/home/labo/qemu
+19M	/home/labo/src
+355M	/home/labo/T?l?chargements
+243M	/home/labo/tmp
+203M	/home/labo/Vid?os
+</pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-6957" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-6957" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-6957">1</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">du -sh ~/*</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/unixmonkey13748">unixmonkey13748</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2010-11-05 10:20:16                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/6957/display-the-size-of-all-your-homes-directories#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						2</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-6957" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/6957" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-6957" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/6957" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/du">du</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/101/size">size</a>
+                         
+                            <a href="/commands/tagged/241/directories">directories</a>
+                         
+                            <a href="/commands/tagged/593/df">df</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/6989/find-all-file-larger-than-500m" title="Find out what others think of this command">find all file larger than 500M</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    Greater than 500M and sorted by size. 
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-6989">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre></pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-6989" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-6989" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-6989">1</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">find . -type f -size +500M -exec du {} \; | sort -n</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/PhillipNordwall">PhillipNordwall</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2010-11-09 18:15:44                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/6989/find-all-file-larger-than-500m#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						0</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-6989" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/6989" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-6989" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/6989" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/du">du</a>
+                         
+                            <a href="/commands/using/find">find</a>
+                         
+                            <a href="/commands/using/sort">sort</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/101/size">size</a>
+                         
+                            <a href="/commands/tagged/123/find">find</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/7548/find-the-biggest-files" title="Find out what others think of this command">Find the biggest files</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    Show the top 10 file size 
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-7548">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre></pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-7548" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-7548" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-7548">1</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">find -type f | xargs -I{} du -sk &quot;{}&quot; | sort -rn | head</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/glaudiston">glaudiston</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2011-01-04 11:10:02                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/7548/find-the-biggest-files#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						0</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-7548" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/7548" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-7548" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/7548" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/du">du</a>
+                         
+                            <a href="/commands/using/find">find</a>
+                         
+                            <a href="/commands/using/sort">sort</a>
+                         
+                            <a href="/commands/using/xargs">xargs</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/101/size">size</a>
+                         
+                            <a href="/commands/tagged/123/find">find</a>
+                         
+                            <a href="/commands/tagged/543/filesize">filesize</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/9646/get-the-size-of-all-the-directories-in-current-directory-sorted-human-readable" title="Find out what others think of this command">Get the size of all the directories in current directory (Sorted Human Readable)</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    as per eightmillion's comment.
+Simply economical :) 
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-9646">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre></pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-9646" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-9646" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-9646">1</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">du -h | sort -hr</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/mooselimb">mooselimb</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2011-11-06 23:15:36                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/9646/get-the-size-of-all-the-directories-in-current-directory-sorted-human-readable#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						0</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-9646" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/9646" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-9646" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/9646" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/du">du</a>
+                         
+                            <a href="/commands/using/sort">sort</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/96/disk-usage">disk usage</a>
+                         
+                            <a href="/commands/tagged/101/size">size</a>
+                         
+                            <a href="/commands/tagged/102/sort">sort</a>
+                         
+                            <a href="/commands/tagged/124/du">du</a>
+                         
+                            <a href="/commands/tagged/241/directories">directories</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/10711/list-all-files-in-current-dir-and-subdirs-sorted-by-size" title="Find out what others think of this command">List all files in current dir and subdirs sorted by size</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    or
+<code>tree -ifsF --noreport .|sort -n  -k2|grep -v '/$'</code>
+(rows presenting directory names become hidden) 
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-10711">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre></pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-10711" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-10711" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-10711">1</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">tree -ifs --noreport .|sort -n -k2</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/knoppix5">knoppix5</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2012-05-04 09:18:39                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/10711/list-all-files-in-current-dir-and-subdirs-sorted-by-size#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						0</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-10711" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/10711" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-10711" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/10711" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/sort">sort</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/101/size">size</a>
+                         
+                            <a href="/commands/tagged/125/ls">ls</a>
+                         
+                            <a href="/commands/tagged/165/tree">tree</a>
+                         
+                            <a href="/commands/tagged/242/directory">directory</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                        <li class="list-group-item">
+            &nbsp;<b>1</b>&nbsp;<a href="/commands/tagged/101/size/25">2</a>&nbsp;<a href="/commands/tagged/101/size/50">3</a>&nbsp;<a href="/commands/tagged/101/size/25">&gt;</a>&nbsp;        </li>
+    	    	</ul>
+</div>
+
+
+  </div>
+  <div class="col-md-3 col-lg-4">
+
+            
+
+<div class="box-copy">
+    <h3 class="righthead">What's this?</h3>
+    <div class="toggleable">
+        <p><strong>commandlinefu.com</strong> is the place to record those command-line gems that you return to again and again.
+        That way others can gain from your <abbr title="Command-line interface">CLI</abbr> wisdom and you from theirs too.  All commands can be commented on, discussed and 
+        voted up or down. </p>
+		<p class="text-center"><a class="btn btn-warning" href="/commands/edit"><strong><i class="glyphicon glyphicon-plus"></i> Share Your Commands</strong></a></p>
+        <!-- <p>If you have a new feature suggestion or find a bug, please 
+        get in touch via <a href="http://commandlinefu.uservoice.com/"><strong>http://commandlinefu.uservoice.com/</strong></a><p>-->
+    </div>
+</div>
+<hr />
+<div class="box-copy">
+    <h3 class="righthead">Check These Out</h3>
+			<p>
+		<div style="font-weight:bold;overflow:hidden;white-space:nowrap;text-overflow:ellipsis"><a href="/commands/view/5025/fetch-the-gateway-ip-address">Fetch the Gateway Ip Address</a></div>
+				<div style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis">This is to fetch the Gateway Ip Address of a machine. Use the below format to put the value in a variable if you wish to find the gateway ip in a script
+
+$GATEWAY=$(netstat -nr | awk 'BEGIN {while ($3!="0.0.0.0") getline; print $2}')</div>
+				</p>
+			<p>
+		<div style="font-weight:bold;overflow:hidden;white-space:nowrap;text-overflow:ellipsis"><a href="/commands/view/19964/convert-seconds-to-ddhhmmss">Convert seconds to [DD:][HH:]MM:SS</a></div>
+				<div style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis">Converts any number of seconds into days, hours, minutes and seconds.
+
+sec2dhms() {
+ declare -i SS="$1"
+ D=$(( SS / 86400 )) 
+ H=$(( SS % 86400 / 3600 ))
+ M=$(( SS % 3600 / 60 )) 
+ S=$(( SS % 60 )) 
+ [ "$D" -gt 0 ] && echo -n "${D}:"
+ [ "$H" -gt 0 ] && printf "%02g:" "$H"
+ printf "%02g:%02g\n" "$M" "$S"
+}</div>
+				</p>
+			<p>
+		<div style="font-weight:bold;overflow:hidden;white-space:nowrap;text-overflow:ellipsis"><a href="/commands/view/7971/remove-trailing-space-in-vi">Remove trailing space in vi</a></div>
+				</p>
+			<p>
+		<div style="font-weight:bold;overflow:hidden;white-space:nowrap;text-overflow:ellipsis"><a href="/commands/view/9034/check-if-the-files-in-current-directory-has-the-rpath-variable-defined">Check if the files in current directory has the RPATH variable defined</a></div>
+				<div style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis">Using gentoo prefix portage I got in a situation where some packages did not contain the needed RPATH variable. This command helped me to find out which ones I should recompile</div>
+				</p>
+			<p>
+		<div style="font-weight:bold;overflow:hidden;white-space:nowrap;text-overflow:ellipsis"><a href="/commands/view/23879/list-block-devices">list block devices</a></div>
+				<div style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis">Shows all block devices in a tree with descruptions of what they are.</div>
+				</p>
+			<p>
+		<div style="font-weight:bold;overflow:hidden;white-space:nowrap;text-overflow:ellipsis"><a href="/commands/view/11085/release-memory-used-by-the-linux-kernel-on-caches">Release memory used by the Linux kernel on caches</a></div>
+				<div style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis">=1 --> to free pagecache
+=2 --> to free dentries and inodes
+=3 --> to free pagecache, dentries and inodes</div>
+				</p>
+			<p>
+		<div style="font-weight:bold;overflow:hidden;white-space:nowrap;text-overflow:ellipsis"><a href="/commands/view/4844/turn-shell-tracing-and-verbosity-set-xv-onoff-with-1-command">Turn shell tracing and verbosity (set -xv) on/off with 1 command!</a></div>
+				<div style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis">Running this command turns shell tracing and shell verbose debugging on or off.  Not only does it do that, it also uses your terminals builtin method of setting colors to make debugging much easier.
+
+It looks at the current shell options contained in the $- special bash variable and that lets this function set the opposite of the current value.  So from the shell you could do a: 
+$ setx; echo "y" | ( cat -t ) | echo "d"; setx
+
+and it will turn on debbuggin.
+This is an amazingly useful function that is perfect to add system-wide by adding it to /etc/profile or /etc/bashrc..   You can run it from the shell, and you can also use it in your shell scripts like my .bash_profile - http://www.askapache.com/linux-unix/bash_profile-functions-advanced-shell.html</div>
+				</p>
+			<p>
+		<div style="font-weight:bold;overflow:hidden;white-space:nowrap;text-overflow:ellipsis"><a href="/commands/view/6513/gvim-in-full-screen-execute-again-to-toggle-full-screen-onoff">gvim in full screen (execute again to toggle full screen on/off)</a></div>
+				<div style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis">Only under linux. 
+Requires Gvim compiled with "clientserver" functionality and 
+wmctrl command installed on system.
+Instead of servername can be used the current edited file name.
+
+Put it in a function and map it for get rid of "Press a key" after execution.</div>
+				</p>
+			<p>
+		<div style="font-weight:bold;overflow:hidden;white-space:nowrap;text-overflow:ellipsis"><a href="/commands/view/4949/rips-cds-playstation-etc.-and-names-the-files-the-same-as-the-volume-name">Rips CDs (Playstation, etc.) and names the files the same as the volume name</a></div>
+				</p>
+			<p>
+		<div style="font-weight:bold;overflow:hidden;white-space:nowrap;text-overflow:ellipsis"><a href="/commands/view/6788/broadcast-your-shell-thru-ports-5000-5001-5002-...">Broadcast your shell thru ports 5000, 5001, 5002 ...</a></div>
+				<div style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis">run 'nc yourip 5000', 'nc yourip 5001' or 'nc yourip 5002' elsewhere will produce an exact same mirror of your shell. This is handy when you want to show someone else some amazing stuff in your shell without giving them control over it.</div>
+				</p>
+	</div>
+<hr>
+<div class="box-copy">
+    <h3 class="righthead">Stay in the loop&hellip;</h3>
+    <div class="toggleable">
+        <dl>
+            <dt>Follow the Tweets.</dt>  
+            <dd>
+                <a href="http://twitter.com/commandlinefu"><img class="link-img" src="/images/twitter.jpg" /></a>
+                <p>Every new command is wrapped in a tweet and posted
+                to <a href="http://twitter.com">Twitter</a>. Following the stream is a great way of staying abreast of the latest commands.  For the more discerning, 
+                there are Twitter accounts for commands that get a minimum of 3 and 10 votes - that way only the great commands get tweeted.</p>
+                <p>
+                &raquo; <a style="font-weight:bold;" href="http://twitter.com/commandlinefu">http://twitter.com/commandlinefu</a><br/>
+                &raquo; <a style="font-weight:bold;" href="http://twitter.com/commandlinefu3">http://twitter.com/commandlinefu3</a><br/>
+                &raquo; <a style="font-weight:bold;" href="http://twitter.com/commandlinefu10">http://twitter.com/commandlinefu10</a>
+                </p>
+            </dd>
+            <dt>Subscribe to the feeds.</dt>
+            <dd>
+                <a style="font-weight:bold;" href="http://feeds2.feedburner.com/Command-line-fu"><img class="link-img" src="/images/rss.gif" /></a>
+                <p>Use your favourite RSS aggregator to stay in touch with the latest commands.  There are feeds mirroring the 3 Twitter streams
+                as well as for virtually every other subset (users, tags, functions,&hellip;):</p>
+                <p>Subscribe to the feed for:</p>
+                <ul id="feed-links">
+                <li>&raquo; <a style="font-weight:bold;" href="http://feeds2.feedburner.com/Command-line-fu">all commands</a></li>
+                <li>&raquo; <a style="font-weight:bold;" href="/feed/threeup">commands with 3 up-votes</a> (commandlinefu3)</li>
+                <li>&raquo; <a style="font-weight:bold;" href="/feed/tenup">commands with 10 up-votes</a> (commandlinefu10)</li>
+                                <li>&raquo; <a style="font-weight:bold;" href="/commands/tagged/101/size/rss">commands tagged size</a></li>
+                                </ul>
+            </dd>
+        </dl>
+    </div>
+</div>
+
+<!--
+<div class="box-copy">
+    <a class="visibility-toggle" id="box-copy-tags">Hide</a>
+    <h3>Top Tags</h3>
+    <div class="toggleable"><br>
+        <a href="/commands/tagged/112/awk">awk</a>, <a href="/commands/tagged/34/bash">bash</a></li>, 
+	<a href="/commands/tagged/235/curl">curl</a>, 
+	<a href="/commands/tagged/123/find">find</a>, 
+	<a href="/commands/tagged/163/grep">grep</a>, 
+	<a href="/commands/tagged/64/linux">Linux</a>, <a href="/commands/tagged/110/sed">sed</a></li>
+	</ul>
+    </div>
+</div>
+
+<div class="box-copy">
+    <a class="visibility-toggle" id="box-copy-functions">Hide</a>
+    <h3>Functions</h3>
+    <div class="toggleable">
+            </div>
+</div>
+-->
+
+  </div>
+ </div>
+</div>
+
+<footer class="bs-footer" role="contentinfo" style="background-color:#F5F5F5;">
+  <div class="container">
+    <p style="padding-top:20px;">commandlinefu.com &copy; 2018 <a href="https://www.danstools.com" target="_blank">Dan's Tools</a> | <a href="/site/faq">FAQs</a> | <a href="/site/api">API</a> | <a href="/site/widget">Widget</a>  | <a href="/site/privacy">Privacy</a></p>
+  </div>
+
+</footer>
+
+
+<!--    <div id="wrapper">
+        
+        <div id="right-block">
+        </div>
+        
+        <div id="header">
+            <h4><a href="/commands/browse" title="commandlinefu.com - the greatest commands on the web"><img src="/images/header-logo.jpg" alt="commandlinefu.com" /></a></h4>
+            <div id="nav">
+                <strong><a href="/commands/random" title="Lucky dip">Random</a></strong> |
+                <strong><a href="/commands/browse/last-week/sort-by-votes" title="Piping host commands from the last 7 days">Hot this week</a></strong> |
+                <strong><a href="/commands/browse/sort-by-votes" title="See the all-time greatest commands">All-time greats</a></strong> &bull;
+                <strong><a href="/site/faq"><abbr title="Frequently asked questions">FAQ</abbr></a></strong> |
+                <strong><a href="/site/api"><abbr title="API documentation">API</abbr></a></strong> |
+                <strong><a href="/site/widget"><abbr title="Javascript widget">Widget</abbr></a></strong>
+            </div>    
+            <div id="search">
+                <form id="search-form" action="/search/handler" method="post" >
+                    <div id="search-container">
+                        <img id="loading" src="/images/tag-loader.gif" style="display:none;float:right;margin: 5px 5px 0 0;" />
+                        <input type="text" id="search-query" class="inactive" name="q" autocomplete="off" value="" placeholder="type here to grep the archive..." />
+                    </div>
+                </form>
+                <div style="display:none" id="search-options"></div>
+            </div>
+        </div>
+        
+        
+        <div id="left-block">
+        </div>
+        
+        <div id="footer">
+        
+            <div class="advertising">
+                            </div>
+        </div>
+    </div>
+-->    
+    
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script>
+    $.noConflict();
+
+    if (typeof Prototype !== "undefined" && Prototype.BrowserFeatures.ElementExtensions)
+    {
+        var disablePrototypeJS = function (method, pluginsToDisable)
+        {
+            var handler = function (event)
+            {
+                event.target[method] = undefined;
+                setTimeout(function ()
+                {
+                    delete event.target[method];
+                }, 0);
+            };
+
+            pluginsToDisable.each(function (plugin)
+            {
+                jQuery(window).on(method + '.bs.' + plugin, handler);
+            });
+        },
+
+        pluginsToDisable = ['collapse', 'dropdown', 'modal', 'tooltip', 'popover', 'tab','collect'];
+        disablePrototypeJS('show', pluginsToDisable);
+        disablePrototypeJS('hide', pluginsToDisable);
+    }
+	</script>
+	<script>
+jQuery( document ).ready(function() {
+
+	hljs.initHighlightingOnLoad();
+	hljs.configure({useBR: true});
+
+	jQuery('span.code').each(function(i, block) {
+	  hljs.highlightBlock(block);
+	});
+
+    if (1==0 && window.canRunAds === true) {
+        jQuery('#blocker').hide();
+    } else { jQuery('#blocker').show(); }
+});
+
+	</script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <script src="/js/ads.js"></script>
+
+    </body>
+</html>

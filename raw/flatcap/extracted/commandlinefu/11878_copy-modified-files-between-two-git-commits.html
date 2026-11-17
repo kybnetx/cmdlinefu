@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<title>
+			Copy modified files between two Git commits
+		</title>
+		<link rel='stylesheet' href='style.css' type='text/css' />
+	</head>
+	<body>
+		<div id="terminal-header">
+			<h1>
+				Copy modified files between two Git commits
+			</h1>
+		</div>
+		<div class="terminal-display one-liner" id="terminal-display-main">
+			<div class="line command">
+				git diff --name-only --diff-filter=AMXTCR HEAD~2 HEAD | xargs -l -I{} cp --parents --verbose "{}" target_dir
+			</div>
+			<div class="sample-output c5 output">
+				<pre>
+db -&gt; target_dir/db
+`db/db.sql' -&gt; `target_dir/db/db.sql'
+site -&gt; target_dir/site
+site/images -&gt; target_dir/site/images
+`site/images/facebook_button.jpg' -&gt; `target_dir/site/images/facebook_button.jpg'
+`site/images/facebook_button.png' -&gt; `target_dir/site/images/facebook_button.png'
+site/images/stories -&gt; target_dir/site/images/stories
+`site/images/stories/footer.jpg' -&gt; `target_dir/site/images/stories/footer.jpg'
+site/images/theme -&gt; target_dir/site/images/theme
+`site/images/theme/top_banner.jpg' -&gt; `target_dir/site/images/theme/top_banner.jpg'
+site/templates -&gt; target_dir/site/templates
+site/templates/my_template -&gt; target_dir/site/templates/my_template
+site/templates/my_template/css -&gt; target_dir/site/templates/my_template/css
+`site/templates/my_template/css/extensions.css' -&gt; `target_dir/site/templates/my_template/css/extensions.css'
+`site/templates/my_template/css/layout.css' -&gt; `target_dir/site/templates/my_template/css/layout.css'
+site/templates/my_template/html -&gt; target_dir/site/templates/my_template/html
+site/templates/my_template/html/mod_latestnews -&gt; target_dir/site/templates/my_template/html/mod_latestnews
+`site/templates/my_template/html/mod_latestnews/default.php' -&gt; `target_dir/site/templates/my_template/html/mod_latestnews/default.php'
+`site/templates/my_template/index.php' -&gt; `target_dir/site/templates/my_template/index.php'
+</pre>
+			</div>
+			<div class="details"></div>
+		</div>
+		<h3>
+			Alternatives
+		</h3>
+	</body>
+</html>

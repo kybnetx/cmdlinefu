@@ -1,0 +1,7 @@
+commandlinefu_id: 9481
+translator:
+  weibo: tgic
+command: |-
+  aptitude search ~i -F %p
+summary: |-
+  生成已经安装了了包列表

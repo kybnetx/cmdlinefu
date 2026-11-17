@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta name="author" content="" />
+    <meta name="description" content="Great UNIX/Bash commands tagged with pwgen - see these and many other invaluable command-line nuggets at commandlinefu.com" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="" />
+    <meta name="verify-v1" content="hEPILeJT+vssH+kKHD8JrK8sqHYIg4GWIVV8P1I8gsY=" />
+    <meta name="google-site-verification" content="r2fSppde5Egt3_2qSPb6LEsT2BqWAM0wRlb00A8LLhg" />
+    <link rel="stylesheet" href="/css/browser_reset.css?2012-03-04-09-53" type="text/css" /> 
+    <link rel="stylesheet" href="/css/styles.css?2012-03-04-09-53" type="text/css" />
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Droid+Sans+Mono" type="text/css" >
+    
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+    
+    <link rel="search" type="application/opensearchdescription+xml" title="commandlinefu.com search plugin" href="/mozilla_search_plugin.xml" />
+    
+            <link href="/commands/tagged/1009/pwgen/rss" title="RSS" type="application/rss+xml" rel="alternate" />
+        
+    <title>Commands tagged pwgen sorted by votes</title>
+    
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/prototype/1.6.0.3/prototype.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/scriptaculous/1.8.2/scriptaculous.js?load=effects,controls"></script>
+    <script type="text/javascript" src="/js/site-behaviour.js?2018-03-04-09-53"></script>
+    <script type="text/javascript" src="/js/Growler.js?2018-03-04-09-53"></script>
+    <script type="text/javascript" src="/js/prettify/prettify.js?2018-03-04-09-53"></script>
+    <link rel="stylesheet" href="/js/prettify/prettify.css?2018-03-04-09-53" type="text/css" />
+    
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/clf.min.css" type="text/css" />
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/agate.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<!--    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>-->
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-55581850-1', 'auto', {'allowLinker': true});
+	  ga('require', 'linker');
+	  ga('linker:autoLink', ['danstools.com','unixtimestamp.com','url-encode-decode.com','cssfontstack.com','hexcolortool.com','htaccessredirect.net','jspretty.com','jsmini.com','jsobfuscate.com','md5hashgenerator.com','regextester.com','cleancss.com','favicon-generator.org','website-performance.org','permissions-calculator.org','conversoes.org','convertissez.fr','convertitore.net','elconvertidor.com','files-conversion.com','henkan-muryo.com','konvertirung.org','konvertor.org','tahwil.net','zhuan-huan.com','bootsnipp.com','commandlinefu.com'] );
+	  ga('send', 'pageview');
+	</script>
+</head>
+
+<body>
+    <nav class="navbar navbar-fixed-top navbar-bootsnipp animate" role="navigation" style="z-index: 9999999">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="animbrand">
+        <a class="navbar-brand animate" href="//www.commandlinefu.com"><strong><span class="glyphicon glyphicon-console" style="padding:2px 4px 4px 4px;margin-right:5px;background:#333"></span><span style="color:black;">COMMANDLINEFU</span>.COM</strong></a>
+      </div>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/commands/edit" class="">+New</a></li>
+        <li class="dropdown dropdown-right">
+          <a href="#" class="dropdown-toggle " data-toggle="dropdown">Commands <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li class=""><a href="/" class="">Latest </a></li>
+            <li class=""><a href="/commands/browse/sort-by-votes" class="">All-time Greats </a></li>
+            <li class=""><a href="/commands/browse/last-month/sort-by-votes" class="">Hot this month </a></li>
+            <li class=""><a href="/commands/forthewicked" class="">The Wicked </a></li>
+            <li class=""><a href="/commands/random" class="">Random </a></li>
+<!--            <li class=""><a href="/" class="">Tags </a></li>
+            <li class=""><a href="/" class="">Functions </a></li>-->
+          </ul>
+        </li>
+        <li >
+          <a href="/users/signin">Login </a>
+        </li>
+      </ul>
+		<div id="search" style="display:inline;">
+          <form id="search-form" action="/search/handler" method="post">
+				<div id="search-container" style="margin-top:9px;">
+				  <img id="loading" src="/images/tag-loader.gif" style="display:none;float:right;margin: 5px 5px 0 0;" />
+	              <input id="search-query" type="text" class="inactive" autocomplete="off" name="q" placeholder="grep the archive">
+				</div>
+          </form>
+			<div id="search-options" style="display:none"></div>
+		</div>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container" style="padding-top:20px;">
+ <div class="row">
+  <div class="col-md-9 col-lg-8">
+		
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</p>
+<ins class="adsbygoogle"
+     style="display:block;"
+     data-ad-client="ca-pub-8815422507798180"
+     data-ad-slot="5700240528"
+    data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<p>
+        	<div class="panel panel-default">
+  <div class="panel-heading" style="background:white">
+    	<h3 class="panel-title">Commands tagged pwgen (3)
+		        <form action="/commands/filter" method="post" class="pull-right form-inline">
+			<div class="hidden-xs hidden-sm form-group" style="margin-top:-14px">
+            <input type="hidden" name="base-url" value="/commands/tagged/1009/pwgen" />
+            <select class="form-control" name="time-period" onchange="javascript:this.form.submit();">
+                                    <option value="last-day" >the last day</option>
+                                    <option value="last-week" >the last week</option>
+                                    <option value="last-month" >the last month</option>
+                                    <option value="" selected>all time</option>
+                            </select>
+            sorted by
+            <select class="form-control" name="sort-by" onchange="javascript:this.form.submit();">
+                                    <option value="sort-by-date" >date</option>
+                                    <option value="sort-by-votes" selected>votes</option>
+                            </select>
+			</div>
+        </form>
+		
+		</h3>
+	  </div>
+	<ul class="list-group">
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/4190/generate-random-password" title="Find out what others think of this command">generate random password</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    -B flag = don't include characters that can be confused for other characters (this helps when you give someone their password for the first time so they don't cause a lockout with, for example, denyhosts or fail2ban)
+-s flag = make a "secure", or hard-to-crack password
+-y flag = include special characters (not used in the example because so many people hate it -- however I recommend it)
+"1 10" = output 1 password, make it 10 characters in length
+For even more secure passwords please use the -y flag to include special characters like so:
+<code>pwgen -Bsy 10 1</code>
+output>> }&^Y?.>7Wu 
+                                    <a class="text-muted" href="javascript:void(0)" onclick="Terminal.toggleSampleOutput($(this),$('sample-output-4190'))">Show Sample Output</a>
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-4190">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre>WdUMhnv4JH</pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-4190" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-4190" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-4190">15</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">pwgen -Bs 10 1</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/linuxrawkstar">linuxrawkstar</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2009-12-01 14:33:51                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/4190/generate-random-password#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						1</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-4190" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/4190" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-4190" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/4190" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/28/security">Security</a>
+                         
+                            <a href="/commands/tagged/380/password">password</a>
+                         
+                            <a href="/commands/tagged/1009/pwgen">pwgen</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/4204/generate-random-password" title="Find out what others think of this command">generate random password</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    for Mac OS X 
+                                    <a class="text-muted" href="javascript:void(0)" onclick="Terminal.toggleSampleOutput($(this),$('sample-output-4204'))">Show Sample Output</a>
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-4204">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre>rUYIwxq4
+
+
+</pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-4204" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-4204" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-4204">9</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">openssl rand -base64 6</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/gikku">gikku</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2009-12-02 10:10:58                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/4204/generate-random-password#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						1</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-4204" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/4204" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-4204" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/4204" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/28/security">Security</a>
+                         
+                            <a href="/commands/tagged/380/password">password</a>
+                         
+                            <a href="/commands/tagged/1009/pwgen">pwgen</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/8686/rename-a-file-with-a-random-name" title="Find out what others think of this command">Rename a file with a random name</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    Give files a random name (don't ask why :-)
+The function will rename files but maintain their extensions.
+BUG: If a file doesn't have an extension it will end up with a dot at the end of the name.
+The parameter '8' for pwgen controls the length of filenames - eight random characters. 
+                                    <a class="text-muted" href="javascript:void(0)" onclick="Terminal.toggleSampleOutput($(this),$('sample-output-8686'))">Show Sample Output</a>
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-8686">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre>~$ ls
+apple.png  banana.jpg  cherry.gif
+~/p$ rf *
+~/p$ ls
+necuzora.png  seeheoye.gif  veefeiwa.jpg
+</pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-8686" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-8686" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-8686">1</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">rf() { for i in &quot;$@&quot;; do mv &quot;$i&quot; &quot;$(pwgen 8 1).${i##*.}&quot;; done }</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/flatcap">flatcap</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2011-06-22 07:45:23                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/8686/rename-a-file-with-a-random-name#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						0</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-8686" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/8686" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-8686" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/8686" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/mv">mv</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/148/mv">mv</a>
+                         
+                            <a href="/commands/tagged/182/file">file</a>
+                         
+                            <a href="/commands/tagged/404/rename">rename</a>
+                         
+                            <a href="/commands/tagged/514/random">random</a>
+                         
+                            <a href="/commands/tagged/545/for">for</a>
+                         
+                            <a href="/commands/tagged/1009/pwgen">pwgen</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                    	</ul>
+</div>
+
+
+  </div>
+  <div class="col-md-3 col-lg-4">
+
+            
+
+<div class="box-copy">
+    <h3 class="righthead">What's this?</h3>
+    <div class="toggleable">
+        <p><strong>commandlinefu.com</strong> is the place to record those command-line gems that you return to again and again.
+        That way others can gain from your <abbr title="Command-line interface">CLI</abbr> wisdom and you from theirs too.  All commands can be commented on, discussed and 
+        voted up or down. </p>
+		<p class="text-center"><a class="btn btn-warning" href="/commands/edit"><strong><i class="glyphicon glyphicon-plus"></i> Share Your Commands</strong></a></p>
+        <!-- <p>If you have a new feature suggestion or find a bug, please 
+        get in touch via <a href="http://commandlinefu.uservoice.com/"><strong>http://commandlinefu.uservoice.com/</strong></a><p>-->
+    </div>
+</div>
+<hr />
+<div class="box-copy">
+    <h3 class="righthead">Check These Out</h3>
+			<p>
+		<div style="font-weight:bold;overflow:hidden;white-space:nowrap;text-overflow:ellipsis"><a href="/commands/view/2209/send-a-binary-file-as-an-attachment-to-an-email">Send a binary file as an attachment to an email</a></div>
+				<div style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis">The uuencode utility will encode your file so that it can be sent as an attachment to an email. It is part of the sharutils package in RHEL/CentOS/Fedora.</div>
+				</p>
+			<p>
+		<div style="font-weight:bold;overflow:hidden;white-space:nowrap;text-overflow:ellipsis"><a href="/commands/view/15313/check-open-ports-without-netstat-or-lsof">check open ports without netstat or lsof</a></div>
+				</p>
+			<p>
+		<div style="font-weight:bold;overflow:hidden;white-space:nowrap;text-overflow:ellipsis"><a href="/commands/view/7976/quickly-formats-a-fat-partition.-usefull-for-flash-drives">quickly formats a fat partition. usefull for flash drives</a></div>
+				</p>
+			<p>
+		<div style="font-weight:bold;overflow:hidden;white-space:nowrap;text-overflow:ellipsis"><a href="/commands/view/9363/clear-the-terminal-screen">Clear the terminal screen</a></div>
+				<div style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis">works in /bin/bash</div>
+				</p>
+			<p>
+		<div style="font-weight:bold;overflow:hidden;white-space:nowrap;text-overflow:ellipsis"><a href="/commands/view/2209/send-a-binary-file-as-an-attachment-to-an-email">Send a binary file as an attachment to an email</a></div>
+				<div style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis">The uuencode utility will encode your file so that it can be sent as an attachment to an email. It is part of the sharutils package in RHEL/CentOS/Fedora.</div>
+				</p>
+			<p>
+		<div style="font-weight:bold;overflow:hidden;white-space:nowrap;text-overflow:ellipsis"><a href="/commands/view/4358/check-general-system-error-on-aix">Check general system error on AIX</a></div>
+				<div style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis">Check general system error on AIX</div>
+				</p>
+			<p>
+		<div style="font-weight:bold;overflow:hidden;white-space:nowrap;text-overflow:ellipsis"><a href="/commands/view/10287/vi-change-only-whole-words-exactly-matching-http-to-git-ask-for-confirmation.">vi - Change only whole words exactly matching 'http' to 'git'; ask for confirmation.</a></div>
+				<div style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis">http://vim.wikia.com/wiki/Search_and_replace
+
+github anda limando feo ....: https://groups.google.com/forum/?fromgroups#!topic/symfony2/YL1mo_cz4Ms</div>
+				</p>
+			<p>
+		<div style="font-weight:bold;overflow:hidden;white-space:nowrap;text-overflow:ellipsis"><a href="/commands/view/5973/find-the-annual-salary-of-any-white-house-staffer.">Find the annual salary of any White House staffer.</a></div>
+				<div style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis">Query the Socrata Open Data API being used by the White House to find any employee's salary using curl, grep and awk.
+
+Change the value of the search parameter (example uses Axelrod) to the name of any White House staffer to see their annual salary.</div>
+				</p>
+			<p>
+		<div style="font-weight:bold;overflow:hidden;white-space:nowrap;text-overflow:ellipsis"><a href="/commands/view/3234/download-apple-movie-trailers">Download Apple movie trailers</a></div>
+				<div style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis">Copy the link to an HD movie trailer in to this command. It's more eleganant if it's put in a to a script, taking the URL as input.</div>
+				</p>
+			<p>
+		<div style="font-weight:bold;overflow:hidden;white-space:nowrap;text-overflow:ellipsis"><a href="/commands/view/5373/quickly-analyse-an-apache-error-log">Quickly analyse an Apache error log</a></div>
+				<div style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis">This searches the Apache error_log for each of the 5 most significant Apache error levels, if any are found the date is then cut from the output in order to sort then print the most common occurrence of each error.</div>
+				</p>
+	</div>
+<hr>
+<div class="box-copy">
+    <h3 class="righthead">Stay in the loop&hellip;</h3>
+    <div class="toggleable">
+        <dl>
+            <dt>Follow the Tweets.</dt>  
+            <dd>
+                <a href="http://twitter.com/commandlinefu"><img class="link-img" src="/images/twitter.jpg" /></a>
+                <p>Every new command is wrapped in a tweet and posted
+                to <a href="http://twitter.com">Twitter</a>. Following the stream is a great way of staying abreast of the latest commands.  For the more discerning, 
+                there are Twitter accounts for commands that get a minimum of 3 and 10 votes - that way only the great commands get tweeted.</p>
+                <p>
+                &raquo; <a style="font-weight:bold;" href="http://twitter.com/commandlinefu">http://twitter.com/commandlinefu</a><br/>
+                &raquo; <a style="font-weight:bold;" href="http://twitter.com/commandlinefu3">http://twitter.com/commandlinefu3</a><br/>
+                &raquo; <a style="font-weight:bold;" href="http://twitter.com/commandlinefu10">http://twitter.com/commandlinefu10</a>
+                </p>
+            </dd>
+            <dt>Subscribe to the feeds.</dt>
+            <dd>
+                <a style="font-weight:bold;" href="http://feeds2.feedburner.com/Command-line-fu"><img class="link-img" src="/images/rss.gif" /></a>
+                <p>Use your favourite RSS aggregator to stay in touch with the latest commands.  There are feeds mirroring the 3 Twitter streams
+                as well as for virtually every other subset (users, tags, functions,&hellip;):</p>
+                <p>Subscribe to the feed for:</p>
+                <ul id="feed-links">
+                <li>&raquo; <a style="font-weight:bold;" href="http://feeds2.feedburner.com/Command-line-fu">all commands</a></li>
+                <li>&raquo; <a style="font-weight:bold;" href="/feed/threeup">commands with 3 up-votes</a> (commandlinefu3)</li>
+                <li>&raquo; <a style="font-weight:bold;" href="/feed/tenup">commands with 10 up-votes</a> (commandlinefu10)</li>
+                                <li>&raquo; <a style="font-weight:bold;" href="/commands/tagged/1009/pwgen/rss">commands tagged pwgen</a></li>
+                                </ul>
+            </dd>
+        </dl>
+    </div>
+</div>
+
+<!--
+<div class="box-copy">
+    <a class="visibility-toggle" id="box-copy-tags">Hide</a>
+    <h3>Top Tags</h3>
+    <div class="toggleable"><br>
+        <a href="/commands/tagged/112/awk">awk</a>, <a href="/commands/tagged/34/bash">bash</a></li>, 
+	<a href="/commands/tagged/235/curl">curl</a>, 
+	<a href="/commands/tagged/123/find">find</a>, 
+	<a href="/commands/tagged/163/grep">grep</a>, 
+	<a href="/commands/tagged/64/linux">Linux</a>, <a href="/commands/tagged/110/sed">sed</a></li>
+	</ul>
+    </div>
+</div>
+
+<div class="box-copy">
+    <a class="visibility-toggle" id="box-copy-functions">Hide</a>
+    <h3>Functions</h3>
+    <div class="toggleable">
+            </div>
+</div>
+-->
+
+  </div>
+ </div>
+</div>
+
+<footer class="bs-footer" role="contentinfo" style="background-color:#F5F5F5;">
+  <div class="container">
+    <p style="padding-top:20px;">commandlinefu.com &copy; 2018 <a href="https://www.danstools.com" target="_blank">Dan's Tools</a> | <a href="/site/faq">FAQs</a> | <a href="/site/api">API</a> | <a href="/site/widget">Widget</a>  | <a href="/site/privacy">Privacy</a></p>
+  </div>
+
+</footer>
+
+
+<!--    <div id="wrapper">
+        
+        <div id="right-block">
+        </div>
+        
+        <div id="header">
+            <h4><a href="/commands/browse" title="commandlinefu.com - the greatest commands on the web"><img src="/images/header-logo.jpg" alt="commandlinefu.com" /></a></h4>
+            <div id="nav">
+                <strong><a href="/commands/random" title="Lucky dip">Random</a></strong> |
+                <strong><a href="/commands/browse/last-week/sort-by-votes" title="Piping host commands from the last 7 days">Hot this week</a></strong> |
+                <strong><a href="/commands/browse/sort-by-votes" title="See the all-time greatest commands">All-time greats</a></strong> &bull;
+                <strong><a href="/site/faq"><abbr title="Frequently asked questions">FAQ</abbr></a></strong> |
+                <strong><a href="/site/api"><abbr title="API documentation">API</abbr></a></strong> |
+                <strong><a href="/site/widget"><abbr title="Javascript widget">Widget</abbr></a></strong>
+            </div>    
+            <div id="search">
+                <form id="search-form" action="/search/handler" method="post" >
+                    <div id="search-container">
+                        <img id="loading" src="/images/tag-loader.gif" style="display:none;float:right;margin: 5px 5px 0 0;" />
+                        <input type="text" id="search-query" class="inactive" name="q" autocomplete="off" value="" placeholder="type here to grep the archive..." />
+                    </div>
+                </form>
+                <div style="display:none" id="search-options"></div>
+            </div>
+        </div>
+        
+        
+        <div id="left-block">
+        </div>
+        
+        <div id="footer">
+        
+            <div class="advertising">
+                            </div>
+        </div>
+    </div>
+-->    
+    
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script>
+    $.noConflict();
+
+    if (typeof Prototype !== "undefined" && Prototype.BrowserFeatures.ElementExtensions)
+    {
+        var disablePrototypeJS = function (method, pluginsToDisable)
+        {
+            var handler = function (event)
+            {
+                event.target[method] = undefined;
+                setTimeout(function ()
+                {
+                    delete event.target[method];
+                }, 0);
+            };
+
+            pluginsToDisable.each(function (plugin)
+            {
+                jQuery(window).on(method + '.bs.' + plugin, handler);
+            });
+        },
+
+        pluginsToDisable = ['collapse', 'dropdown', 'modal', 'tooltip', 'popover', 'tab','collect'];
+        disablePrototypeJS('show', pluginsToDisable);
+        disablePrototypeJS('hide', pluginsToDisable);
+    }
+	</script>
+	<script>
+jQuery( document ).ready(function() {
+
+	hljs.initHighlightingOnLoad();
+	hljs.configure({useBR: true});
+
+	jQuery('span.code').each(function(i, block) {
+	  hljs.highlightBlock(block);
+	});
+
+    if (1==0 && window.canRunAds === true) {
+        jQuery('#blocker').hide();
+    } else { jQuery('#blocker').show(); }
+});
+
+	</script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <script src="/js/ads.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,2865 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta name="author" content="" />
+    <meta name="description" content="Great UNIX/Bash commands tagged with perl - see these and many other invaluable command-line nuggets at commandlinefu.com" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="" />
+    <meta name="verify-v1" content="hEPILeJT+vssH+kKHD8JrK8sqHYIg4GWIVV8P1I8gsY=" />
+    <meta name="google-site-verification" content="r2fSppde5Egt3_2qSPb6LEsT2BqWAM0wRlb00A8LLhg" />
+    <link rel="stylesheet" href="/css/browser_reset.css?2012-03-04-09-53" type="text/css" /> 
+    <link rel="stylesheet" href="/css/styles.css?2012-03-04-09-53" type="text/css" />
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Droid+Sans+Mono" type="text/css" >
+    
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+    
+    <link rel="search" type="application/opensearchdescription+xml" title="commandlinefu.com search plugin" href="/mozilla_search_plugin.xml" />
+    
+            <link href="/commands/tagged/104/perl/rss" title="RSS" type="application/rss+xml" rel="alternate" />
+        
+    <title>Commands tagged perl sorted by votes</title>
+    
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/prototype/1.6.0.3/prototype.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/scriptaculous/1.8.2/scriptaculous.js?load=effects,controls"></script>
+    <script type="text/javascript" src="/js/site-behaviour.js?2018-03-04-09-53"></script>
+    <script type="text/javascript" src="/js/Growler.js?2018-03-04-09-53"></script>
+    <script type="text/javascript" src="/js/prettify/prettify.js?2018-03-04-09-53"></script>
+    <link rel="stylesheet" href="/js/prettify/prettify.css?2018-03-04-09-53" type="text/css" />
+    
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/clf.min.css" type="text/css" />
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/agate.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<!--    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>-->
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-55581850-1', 'auto', {'allowLinker': true});
+	  ga('require', 'linker');
+	  ga('linker:autoLink', ['danstools.com','unixtimestamp.com','url-encode-decode.com','cssfontstack.com','hexcolortool.com','htaccessredirect.net','jspretty.com','jsmini.com','jsobfuscate.com','md5hashgenerator.com','regextester.com','cleancss.com','favicon-generator.org','website-performance.org','permissions-calculator.org','conversoes.org','convertissez.fr','convertitore.net','elconvertidor.com','files-conversion.com','henkan-muryo.com','konvertirung.org','konvertor.org','tahwil.net','zhuan-huan.com','bootsnipp.com','commandlinefu.com'] );
+	  ga('send', 'pageview');
+	</script>
+</head>
+
+<body>
+    <nav class="navbar navbar-fixed-top navbar-bootsnipp animate" role="navigation" style="z-index: 9999999">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="animbrand">
+        <a class="navbar-brand animate" href="//www.commandlinefu.com"><strong><span class="glyphicon glyphicon-console" style="padding:2px 4px 4px 4px;margin-right:5px;background:#333"></span><span style="color:black;">COMMANDLINEFU</span>.COM</strong></a>
+      </div>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/commands/edit" class="">+New</a></li>
+        <li class="dropdown dropdown-right">
+          <a href="#" class="dropdown-toggle " data-toggle="dropdown">Commands <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li class=""><a href="/" class="">Latest </a></li>
+            <li class=""><a href="/commands/browse/sort-by-votes" class="">All-time Greats </a></li>
+            <li class=""><a href="/commands/browse/last-month/sort-by-votes" class="">Hot this month </a></li>
+            <li class=""><a href="/commands/forthewicked" class="">The Wicked </a></li>
+            <li class=""><a href="/commands/random" class="">Random </a></li>
+<!--            <li class=""><a href="/" class="">Tags </a></li>
+            <li class=""><a href="/" class="">Functions </a></li>-->
+          </ul>
+        </li>
+        <li >
+          <a href="/users/signin">Login </a>
+        </li>
+      </ul>
+		<div id="search" style="display:inline;">
+          <form id="search-form" action="/search/handler" method="post">
+				<div id="search-container" style="margin-top:9px;">
+				  <img id="loading" src="/images/tag-loader.gif" style="display:none;float:right;margin: 5px 5px 0 0;" />
+	              <input id="search-query" type="text" class="inactive" autocomplete="off" name="q" placeholder="grep the archive">
+				</div>
+          </form>
+			<div id="search-options" style="display:none"></div>
+		</div>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container" style="padding-top:20px;">
+ <div class="row">
+  <div class="col-md-9 col-lg-8">
+		
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</p>
+<ins class="adsbygoogle"
+     style="display:block;"
+     data-ad-client="ca-pub-8815422507798180"
+     data-ad-slot="5700240528"
+    data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<p>
+        	<div class="panel panel-default">
+  <div class="panel-heading" style="background:white">
+    	<h3 class="panel-title">Commands tagged perl (190)
+		        <form action="/commands/filter" method="post" class="pull-right form-inline">
+			<div class="hidden-xs hidden-sm form-group" style="margin-top:-14px">
+            <input type="hidden" name="base-url" value="/commands/tagged/104/perl" />
+            <select class="form-control" name="time-period" onchange="javascript:this.form.submit();">
+                                    <option value="last-day" >the last day</option>
+                                    <option value="last-week" >the last week</option>
+                                    <option value="last-month" >the last month</option>
+                                    <option value="" selected>all time</option>
+                            </select>
+            sorted by
+            <select class="form-control" name="sort-by" onchange="javascript:this.form.submit();">
+                                    <option value="sort-by-date" >date</option>
+                                    <option value="sort-by-votes" selected>votes</option>
+                            </select>
+			</div>
+        </form>
+		
+		</h3>
+	  </div>
+	<ul class="list-group">
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/3380/check-your-unread-gmail-from-the-command-line" title="Find out what others think of this command">Check your unread Gmail from the command line</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    Checks the Gmail ATOM feed for your account, parses it and outputs a list of unread messages.
+For some reason sed gets stuck on OS X, so here's a Perl version for the Mac:
+<code>curl -u username:password --silent &quot;https://mail.google.com/mail/feed/atom&quot; | tr -d '\n' | awk -F '&lt;entry&gt;' '{for (i=2; i&lt;=NF; i++) {print $i}}' | perl -pe 's/^&lt;title&gt;(.*)&lt;\/title&gt;.*&lt;name&gt;(.*)&lt;\/name&gt;.*$/$2 - $1/'</code>
+If you want to see the name of the last person, who added a message to the conversation, change the greediness of the operators like this:
+<code>curl -u username:password --silent &quot;https://mail.google.com/mail/feed/atom&quot; | tr -d '\n' | awk -F '&lt;entry&gt;' '{for (i=2; i&lt;=NF; i++) {print $i}}' | perl -pe 's/^&lt;title&gt;(.*)&lt;\/title&gt;.*?&lt;name&gt;(.*?)&lt;\/name&gt;.*$/$2 - $1/'</code> 
+                                    <a class="text-muted" href="javascript:void(0)" onclick="Terminal.toggleSampleOutput($(this),$('sample-output-3380'))">Show Sample Output</a>
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-3380">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre>Contact Name - Email Subject
+Contact Name2 - Email Subject2
+(...)</pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-3380" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-3380" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-3380">47</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">curl -u username:password --silent &quot;https://mail.google.com/mail/feed/atom&quot; | tr -d '\n' | awk -F '&lt;entry&gt;' '{for (i=2; i&lt;=NF; i++) {print $i}}' | sed -n &quot;s/&lt;title&gt;\(.*\)&lt;\/title.*name&gt;\(.*\)&lt;\/name&gt;.*/\2 - \1/p&quot;</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/postrational">postrational</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2009-09-07 21:56:40                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/3380/check-your-unread-gmail-from-the-command-line#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						6</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-3380" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/3380" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-3380" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/3380" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/awk">awk</a>
+                         
+                            <a href="/commands/using/sed">sed</a>
+                         
+                            <a href="/commands/using/tr">tr</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/64/linux">Linux</a>
+                         
+                            <a href="/commands/tagged/104/perl">perl</a>
+                         
+                            <a href="/commands/tagged/110/sed">sed</a>
+                         
+                            <a href="/commands/tagged/112/awk">awk</a>
+                         
+                            <a href="/commands/tagged/127/macosx">macosx</a>
+                         
+                            <a href="/commands/tagged/235/curl">curl</a>
+                         
+                            <a href="/commands/tagged/737/rss">rss</a>
+                         
+                            <a href="/commands/tagged/818/gmail">gmail</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/9775/draw-kernel-module-dependancy-graph." title="Find out what others think of this command">Draw kernel module dependancy graph.</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    parse `lsmod' output and pass to `dot' drawing utility then finally pass it to an image viewer 
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-9775">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre></pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-9775" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-9775" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-9775">35</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">lsmod | perl -e 'print &quot;digraph \&quot;lsmod\&quot; {&quot;;&lt;&gt;;while(&lt;&gt;){@_=split/\s+/; print &quot;\&quot;$_[0]\&quot; -&gt; \&quot;$_\&quot;\n&quot; for split/,/,$_[3]}print &quot;}&quot;' | dot -Tpng | display -</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/bandie91">bandie91</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2011-11-27 14:02:35                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/9775/draw-kernel-module-dependancy-graph.#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						10</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-9775" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/9775" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-9775" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/9775" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/dot">dot</a>
+                         
+                            <a href="/commands/using/lsmod">lsmod</a>
+                         
+                            <a href="/commands/using/perl">perl</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/104/perl">perl</a>
+                         
+                            <a href="/commands/tagged/981/lsmod">lsmod</a>
+                         
+                            <a href="/commands/tagged/1776/dot">dot</a>
+                         
+                            <a href="/commands/tagged/2043/modules">modules</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/1334/recursive-search-and-replace-old-with-new-string-inside-files" title="Find out what others think of this command">recursive search and replace old with new string, inside files</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    recursively traverse the directory structure from . down, look for string "oldstring" in all files, and replace it with "newstring", wherever found
+also:
+<code>grep -rl oldstring . |xargs perl -pi~ -e 's/oldstring/newstring'</code> 
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-1334">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre></pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-1334" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-1334" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-1334">25</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">$ grep -rl oldstring . |xargs sed -i -e 's/oldstring/newstring/'</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/netfortius">netfortius</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2009-03-03 20:10:19                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/1334/recursive-search-and-replace-old-with-new-string-inside-files#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						9</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-1334" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/1334" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-1334" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/1334" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/grep">grep</a>
+                         
+                            <a href="/commands/using/sed">sed</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/104/perl">perl</a>
+                         
+                            <a href="/commands/tagged/110/sed">sed</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/2589/draw-a-sierpinski-triangle" title="Find out what others think of this command">Draw a Sierpinski triangle</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    OK, not the most useful but a good way to impress friends.  Requires the "display" command from ImageMagick. 
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-2589">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre></pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-2589" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-2589" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-2589">25</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">perl -e 'print &quot;P1\n256 256\n&quot;, map {$_&amp;($_&gt;&gt;8)?1:0} (0..0xffff)' | display</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/dstahlke">dstahlke</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2009-07-08 17:50:23                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/2589/draw-a-sierpinski-triangle#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						7</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-2589" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/2589" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-2589" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/2589" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/perl">perl</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/41/imagemagick">ImageMagick</a>
+                         
+                            <a href="/commands/tagged/104/perl">perl</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/4722/define-words-and-phrases-with-google." title="Find out what others think of this command">Define words and phrases with google.</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    This function takes a word or a phrase as arguments and then fetches definitions using Google's "define" syntax. The "nl" and perl portion isn't strictly necessary. It just makes the output a bit more readable, but this also works:
+<code>define(){ local y=&quot;$@&quot;;curl -sA&quot;Opera&quot; &quot;http://www.google.com/search?q=define:${y// /+}&quot;|grep -Po '(?&lt;=&lt;li&gt;)[^&lt;]+';}</code>
+If your version of grep doesn't have perl compatible regex support, then you can use this version:
+<code>define(){ local y=&quot;$@&quot;;curl -sA&quot;Opera&quot; &quot;http://www.google.com/search?q=define:${y// /+}&quot;|grep -Eo '&lt;li&gt;[^&lt;]+'|sed 's/&lt;li&gt;//g'|nl|perl -MHTML::Entities -pe 'decode_entities($_)' 2&gt;/dev/null;}</code> 
+                                    <a class="text-muted" href="javascript:void(0)" onclick="Terminal.toggleSampleOutput($(this),$('sample-output-4722'))">Show Sample Output</a>
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-4722">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre>$ define bash
+     1  knock: a vigorous blow; &quot;the sudden knock floored him&quot;; &quot;he took a bash right in his face&quot;; &quot;he got a bang on the head&quot;
+     2  sock: hit hard
+     3  an uproarious party
+     4  The American comedy television series Weeds was created by Jenji Kohan and airs on premium cable channel Showtime. ...
+     5  Bash is a free software Unix shell written for the GNU Project. Its name is an acronym which stands for Bourne-again shell. ...</pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-4722" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-4722" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-4722">18</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">define(){ local y=&quot;$@&quot;;curl -sA&quot;Opera&quot; &quot;http://www.google.com/search?q=define:${y// /+}&quot;|grep -Po '(?&lt;=&lt;li&gt;)[^&lt;]+'|nl|perl -MHTML::Entities -pe 'decode_entities($_)' 2&gt;/dev/null;}</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/eightmillion">eightmillion</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2010-01-29 05:01:11                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/4722/define-words-and-phrases-with-google.#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						4</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-4722" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/4722" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-4722" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/4722" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/grep">grep</a>
+                         
+                            <a href="/commands/using/perl">perl</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/34/bash">bash</a>
+                         
+                            <a href="/commands/tagged/104/perl">perl</a>
+                         
+                            <a href="/commands/tagged/235/curl">curl</a>
+                         
+                            <a href="/commands/tagged/354/function">function</a>
+                         
+                            <a href="/commands/tagged/654/google">google</a>
+                         
+                            <a href="/commands/tagged/1103/nl">nl</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/2345/show-git-branches-by-date-useful-for-showing-active-branches" title="Find out what others think of this command">Show git branches by date - useful for showing active branches</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    Print out list of all branches with last commit date to the branch, including relative time since commit and color coding. 
+                                    <a class="text-muted" href="javascript:void(0)" onclick="Terminal.toggleSampleOutput($(this),$('sample-output-2345'))">Show Sample Output</a>
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-2345">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre>2009-06-03 12:21:35 +0900 3 hours ago	add_cool_functionality
+2009-06-02 16:15:13 +0900 24 hours ago	remove_strange_bug
+2009-06-02 16:12:20 +0900 24 hours ago	implement_observer
+2009-06-02 14:42:58 +0900 25 hours ago	experiment_with_bobcat_feature</pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-2345" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-2345" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-2345">16</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">for k in `git branch|perl -pe s/^..//`;do echo -e `git show --pretty=format:&quot;%Cgreen%ci %Cblue%cr%Creset&quot; $k|head -n 1`\\t$k;done|sort -r</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/brunost">brunost</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2009-06-03 08:25:00                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/2345/show-git-branches-by-date-useful-for-showing-active-branches#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						3</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-2345" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/2345" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-2345" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/2345" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/echo">echo</a>
+                         
+                            <a href="/commands/using/head">head</a>
+                         
+                            <a href="/commands/using/perl">perl</a>
+                         
+                            <a href="/commands/using/sort">sort</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/34/bash">bash</a>
+                         
+                            <a href="/commands/tagged/67/git">git</a>
+                         
+                            <a href="/commands/tagged/104/perl">perl</a>
+                         
+                            <a href="/commands/tagged/163/grep">grep</a>
+                         
+                            <a href="/commands/tagged/536/branches">branches</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/2825/get-all-ips-via-ifconfig" title="Find out what others think of this command">Get all IPs via ifconfig</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    works on Linux and Solaris. I think it will work on nearly all *nix-es 
+                                    <a class="text-muted" href="javascript:void(0)" onclick="Terminal.toggleSampleOutput($(this),$('sample-output-2825'))">Show Sample Output</a>
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-2825">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre>10.200.10.147
+127.0.0.1</pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-2825" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-2825" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-2825">13</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ &amp;&amp; print $1'</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/sneaker">sneaker</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2009-07-31 09:49:17                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/2825/get-all-ips-via-ifconfig#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						4</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-2825" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/2825" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-2825" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/2825" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/ifconfig">ifconfig</a>
+                         
+                            <a href="/commands/using/perl">perl</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/11/network">Network</a>
+                         
+                            <a href="/commands/tagged/104/perl">perl</a>
+                         
+                            <a href="/commands/tagged/108/ifconfig">ifconfig</a>
+                         
+                            <a href="/commands/tagged/130/ip">IP</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/4547/grep-by-paragraph-instead-of-by-line." title="Find out what others think of this command">Grep by paragraph instead of by line.</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    This is a command that I find myself using all the time. It works like regular grep, but returns the paragraph containing the search pattern instead of just the line. It operates on files or standard input.
+<code>grepp &lt;PATTERN&gt; &lt;FILE&gt;</code>
+or
+<code>&lt;SOMECOMMAND&gt; | grepp &lt;PATTERN&gt;</code> 
+                                    <a class="text-muted" href="javascript:void(0)" onclick="Terminal.toggleSampleOutput($(this),$('sample-output-4547'))">Show Sample Output</a>
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-4547">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre>man perl | grepp Pascal
+       Perl combines (in the author's opinion, anyway) some of the best features of C, sed, awk, and sh, so people familiar with those languages should have little difficulty with it.
+       (Language historians will also note some vestiges of csh, Pascal, and even BASIC-PLUS.)  Expression syntax corresponds closely to C expression syntax.  Unlike most Unix utilities,
+       Perl does not arbitrarily limit the size of your data--if you've got the memory, Perl can slurp in your whole file as a single string.  Recursion is of unlimited depth.  And the
+       tables used by hashes (sometimes called &quot;associative arrays&quot;) grow as necessary to prevent degraded performance.  Perl can use sophisticated pattern matching techniques to scan
+       large amounts of data quickly.  Although optimized for scanning text, Perl can also deal with binary data, and can make dbm files look like hashes.  Setuid Perl scripts are safer
+       than C programs through a dataflow tracing mechanism that prevents many stupid security holes.
+
+</pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-4547" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-4547" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-4547">13</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">grepp() { [ $# -eq 1 ] &amp;&amp; perl -00ne &quot;print if /$1/i&quot; || perl -00ne &quot;print if /$1/i&quot; &lt; &quot;$2&quot;;}</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/eightmillion">eightmillion</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2010-01-12 04:30:15                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/4547/grep-by-paragraph-instead-of-by-line.#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						5</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-4547" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/4547" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-4547" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/4547" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/perl">perl</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/104/perl">perl</a>
+                         
+                            <a href="/commands/tagged/163/grep">grep</a>
+                         
+                            <a href="/commands/tagged/354/function">function</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/7535/look-up-a-unicode-character-by-name" title="Find out what others think of this command">Look up a unicode character by name</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    [Update! Thanks to a tip from ioggstream, I've fixed both of the bugs mentioned below.]
+You, yes, &#120404;&#120394;&#120400;, can be the terror of the Internet!  Why use normal, boring bullet points in your text, when you could use a ROTATED HEAVY BLACK HEART BULLET (&#10085;)!?  (Which would also be an awesome band name, by the way).
+&#65279;
+This script makes it easy to find unusual characters from the command line.  You can then cut and paste them or, if you're using a GTK application, type Control+Shift+U followed by the code point number (e.g., 2765) and then a SPACE.  
+&#65279;
+USAGE: Put this script in a file (I called mine "ugrep") and make it executable.  Run it from the command line like so,
+&#65279;
+<code>ugrep heart</code>
+&#65279;&#65279;
+The output will look like this,
+&#65279;
+&#9753;	U+2619	REVERSED ROTATED FLORAL HEART BULLET
+&#9825;	U+2661	WHITE HEART SUIT
+&#9829;	U+2665	BLACK HEART SUIT
+&#10083;	U+2763	HEAVY HEART EXCLAMATION MARK ORNAMENT
+&#10084;	U+2764	HEAVY BLACK HEART
+&#10085;	U+2765	ROTATED HEAVY BLACK HEART BULLET
+&#10086;	U+2766	FLORAL HEART
+&#10087;	U+2767	ROTATED FLORAL HEART BULLET
+&#11926;	U+2E96	CJK RADICAL HEART ONE
+&#11927;	U+2E97	CJK RADICAL HEART TWO
+&#12092;	U+2F3C	KANGXI RADICAL HEART
+&#65279;
+You can, of course, use regular expressions.  For example, if you are looking for the "pi" symbol, you could do this:
+&#65279;
+<code>ugrep '\bpi\b'</code>
+&#65279;
+REQUIREMENTS: Although this is written in Bash, it assumes you have Perl installed because it greps through the Perl Unicode character name module (/usr/lib/perl5/Unicode/CharName.pm).  Note that it would not have made more sense to write this in Perl, since the CharName.pm module doesn't actually include a subroutine for looking up a character based on the description.  (Weird.)
+&#65279;
+BUGS: In order to fit this script in the commandlinefu limits, a couple bugs were added.  &#9312; Astral characters beyond the BMP (basic multilingual plane) are not displayed correctly, but see below.  &#9313; Perl code from the perl module being grepped is sometimes extraneously matched.
+&#65279;
+MISFEATURES: Bash's printf cannot, given a Unicode codepoint, print the resulting character to the terminal.  GNU's coreutils printf (usually "/usr/bin/printf") can do so, but it is brokenly pedantic about how many hexadecimal digits follow the escape sequence and will actually die with an error if you give the wrong number.  This is especially annoying since Unicode code points are usually variable length with implied leading zeros.  The CharNames.pm file represents BMP characters as 4 hexits, but astral characters as 5.  In the actual version of this script that I use, I've kludged around this misfeature by zero-padding to 8 hexits like so,
+&#65279;
+<code>/usr/bin/printf &quot;\U$(printf &quot;%08x&quot; 0x$hex)&quot;</code>
+&#65279;
+TIP 1:  The author recommends "xsel" for command line cut-and-paste.  For example, 
+&#65279;
+<code>ugrep biohazard | xsel</code>
+&#65279;
+TIP 2: In Emacs, instead of running this command in a subshell, you can type Unicode code points directly by pressing Control-Q first, but you'll likely want to change the default input from octal to hexadecimal.  (setq read-quoted-char-radix 16).
+&#65279;
+TIP 3: Of course, if you're using X, and you want to type one of the more common unusual characters, it's easiest of all to do it with your Compose (aka Multi) key.  For example, hitting [Compose] &lt;3 types &#9829;. 
+                                    <a class="text-muted" href="javascript:void(0)" onclick="Terminal.toggleSampleOutput($(this),$('sample-output-7535'))">Show Sample Output</a>
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-7535">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre>[NOTE: commandlinefu is showing the first column as HTML entities, but in reality the literal character is shown.]
+$ ugrep heart
+&amp;#9753;	U+2619	REVERSED ROTATED FLORAL HEART BULLET
+&amp;#9825;	U+2661	WHITE HEART SUIT
+&amp;#9829;	U+2665	BLACK HEART SUIT
+&amp;#10083;	U+2763	HEAVY HEART EXCLAMATION MARK ORNAMENT
+&amp;#10084;	U+2764	HEAVY BLACK HEART
+&amp;#10085;	U+2765	ROTATED HEAVY BLACK HEART BULLET
+&amp;#10086;	U+2766	FLORAL HEART
+&amp;#10087;	U+2767	ROTATED FLORAL HEART BULLET
+&amp;#11926;	U+2E96	CJK RADICAL HEART ONE
+&amp;#11927;	U+2E97	CJK RADICAL HEART TWO
+&amp;#12092;	U+2F3C	KANGXI RADICAL HEART
+</pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-7535" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-7535" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-7535">12</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">egrep -i &quot;^[0-9a-f]{4,} .*$*&quot; $(locate CharName.pm) | while read h d; do /usr/bin/printf &quot;\U$(printf &quot;%08x&quot; 0x$h)\tU+%s\t%s\n&quot; $h &quot;$d&quot;; done</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/hackerb9">hackerb9</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2010-12-31 16:47:59                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/7535/look-up-a-unicode-character-by-name#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						4</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-7535" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/7535" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-7535" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/7535" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/egrep">egrep</a>
+                         
+                            <a href="/commands/using/locate">locate</a>
+                         
+                            <a href="/commands/using/read">read</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/34/bash">bash</a>
+                         
+                            <a href="/commands/tagged/104/perl">perl</a>
+                         
+                            <a href="/commands/tagged/163/grep">grep</a>
+                         
+                            <a href="/commands/tagged/1680/unicode">unicode</a>
+                         
+                            <a href="/commands/tagged/1681/code-points">code points</a>
+                         
+                            <a href="/commands/tagged/1682/gnu-coreutils">GNU coreutils</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/8383/numeric-zero-padding-file-rename" title="Find out what others think of this command">Numeric zero padding file rename</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    This uses Perl's rename utility (you may have to call it as prename on your box) and won't choke on spaces or other characters in filenames. It will also zero pad a number even in filenames like "vacation-4.jpg". 
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-8383">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre></pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-8383" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-8383" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-8383">12</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">rename 's/\d+/sprintf(&quot;%04d&quot;,$&amp;)/e' *.jpg</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/eightmillion">eightmillion</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2011-05-01 20:50:36                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/8383/numeric-zero-padding-file-rename#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						1</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-8383" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/8383" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-8383" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/8383" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/rename">rename</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/104/perl">perl</a>
+                         
+                            <a href="/commands/tagged/404/rename">rename</a>
+                         
+                            <a href="/commands/tagged/1838/zeropad">zeropad</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/2738/get-all-ips-via-ifconfig" title="Find out what others think of this command">Get all IPs via ifconfig</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    Fetches the IPs and ONLY the IPs from ifconfig. Simplest, shortest, cleanest.
+Perl is too good to be true...
+(P.S.: credit should go to Peteris Krumins at catonmat.net) 
+                                    <a class="text-muted" href="javascript:void(0)" onclick="Terminal.toggleSampleOutput($(this),$('sample-output-2738'))">Show Sample Output</a>
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-2738">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre>10.200.10.147
+127.0.0.1
+</pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-2738" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-2738" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-2738">11</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">ifconfig | perl -nle'/dr:(\S+)/ &amp;&amp; print $1'</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/xsawyerx">xsawyerx</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2009-07-23 09:33:31                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/2738/get-all-ips-via-ifconfig#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						4</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-2738" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/2738" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-2738" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/2738" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/ifconfig">ifconfig</a>
+                         
+                            <a href="/commands/using/perl">perl</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/64/linux">Linux</a>
+                         
+                            <a href="/commands/tagged/104/perl">perl</a>
+                         
+                            <a href="/commands/tagged/108/ifconfig">ifconfig</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/3907/list-your-largest-installed-packages-on-debianubuntu" title="Find out what others think of this command">List your largest installed packages (on Debian/Ubuntu)</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    dpigs is in the package debian-goodies (debian/ubuntu) 
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-3907">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre></pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-3907" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-3907" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-3907">11</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">dpigs</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/xrm0">xrm0</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2009-10-26 20:38:17                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/3907/list-your-largest-installed-packages-on-debianubuntu#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						0</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-3907" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/3907" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-3907" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/3907" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/40/debian">Debian</a>
+                         
+                            <a href="/commands/tagged/102/sort">sort</a>
+                         
+                            <a href="/commands/tagged/104/perl">perl</a>
+                         
+                            <a href="/commands/tagged/299/dpkg">dpkg</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/3612/get-the-total-length-of-time-in-hoursminutesseconds-hhmmss-of-all-video-or-audio-in-the-current-dir-and-below" title="Find out what others think of this command">Get the total length of time in hours:minutes:seconds (HH:MM:SS) of all video (or audio) in the current dir (and below)</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    change the *.avi to whatever you want to match, you can remove it altogether if you want to check all files. 
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-3612">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre></pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-3612" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-3612" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-3612">10</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">find -type f -name &quot;*.avi&quot; -print0 | xargs -0  mplayer -vo dummy -ao dummy -identify 2&gt;/dev/null | perl -nle '/ID_LENGTH=([0-9\.]+)/ &amp;&amp; ($t +=$1) &amp;&amp; printf &quot;%02d:%02d:%02d\n&quot;,$t/3600,$t/60%60,$t%60' | tail -n 1</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/grokskookum">grokskookum</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2009-09-24 15:50:39                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/3612/get-the-total-length-of-time-in-hoursminutesseconds-hhmmss-of-all-video-or-audio-in-the-current-dir-and-below#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						4</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-3612" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/3612" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-3612" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/3612" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/find">find</a>
+                         
+                            <a href="/commands/using/perl">perl</a>
+                         
+                            <a href="/commands/using/printf">printf</a>
+                         
+                            <a href="/commands/using/tail">tail</a>
+                         
+                            <a href="/commands/using/xargs">xargs</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/17/video">video</a>
+                         
+                            <a href="/commands/tagged/26/audio">audio</a>
+                         
+                            <a href="/commands/tagged/79/mplayer">mplayer</a>
+                         
+                            <a href="/commands/tagged/104/perl">perl</a>
+                         
+                            <a href="/commands/tagged/123/find">find</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/7221/binary-clock" title="Find out what others think of this command">Binary clock</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    Fun idea! This one adds seconds and keeps running on the same line. Perl's probably cheating though. :) 
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-7221">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre></pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-7221" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-7221" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-7221">10</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">perl -e 'for(;;){@d=split(&quot;&quot;,`date +%H%M%S`);print&quot;\r&quot;;for(0..5){printf&quot;%.4b &quot;,$d[$_]}sleep 1}'</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/putnamhill">putnamhill</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2010-12-04 00:05:54                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/7221/binary-clock#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						0</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-7221" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/7221" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-7221" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/7221" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/perl">perl</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/104/perl">perl</a>
+                         
+                            <a href="/commands/tagged/960/binary-clock">binary clock</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/14189/binary-clock" title="Find out what others think of this command">Binary clock</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                     
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-14189">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre></pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-14189" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-14189" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-14189">9</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">perl -e 'for(;;sleep 1){printf&quot;\r&quot;.&quot;%.4b &quot;x6,split&quot;&quot;,`date +%H%M%S`}'</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/unixmonkey74668">unixmonkey74668</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2015-04-26 08:48:20                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/14189/binary-clock#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						0</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-14189" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/14189" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-14189" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/14189" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/perl">perl</a>
+                         
+                            <a href="/commands/using/sleep">sleep</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/104/perl">perl</a>
+                         
+                            <a href="/commands/tagged/960/binary-clock">binary clock</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/1317/new-files-from-parts-of-current-buffer" title="Find out what others think of this command">New files from parts of current buffer</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    On command mode in Vim you can save parts of the current buffer in another file.
+ * The 'n' value represents the first line of the new file.
+ * The 'm' value represents the last line of the new file.
+ * newfile.txt is the newfile.
+The results are similar to this command in perl:
+<code>perl -ne 'print if n..m' in.sql &gt; out.sql</code> 
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-1317">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre></pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-1317" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-1317" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-1317">8</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">:n,m w newfile.txt</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/milmazz">milmazz</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2009-03-02 19:40:34                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/1317/new-files-from-parts-of-current-buffer#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						3</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-1317" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/1317" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-1317" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/1317" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/36/vim">vim</a>
+                         
+                            <a href="/commands/tagged/104/perl">perl</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/10283/count-number-of-files-in-a-directory" title="Find out what others think of this command">Count number of files in a directory</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    Just want to post a Perl alternative.
+Does not count hidden files ('.' ones). 
+                                    <a class="text-muted" href="javascript:void(0)" onclick="Terminal.toggleSampleOutput($(this),$('sample-output-10283'))">Show Sample Output</a>
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-10283">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre>49</pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-10283" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-10283" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-10283">8</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">perl -le 'print ~~ map {-s} &lt;*&gt;'</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/MarxBro">MarxBro</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2012-02-21 21:09:48                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/10283/count-number-of-files-in-a-directory#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						0</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-10283" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/10283" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-10283" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/10283" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/perl">perl</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/104/perl">perl</a>
+                         
+                            <a href="/commands/tagged/123/find">find</a>
+                         
+                            <a href="/commands/tagged/368/wc">wc</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/4745/define-words-and-phrases-with-google." title="Find out what others think of this command">Define words and phrases with google.</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    This version works on Mac (avoids grep -P, adding a sed step instead, and invokes /usr/bin/perl with full path in case you have another one installed).
+Still requires that you install perl module HTML::Entities ? here's how: <a href="http://www.perlmonks.org/?node_id=640489" rel="nofollow">http://www.perlmonks.org/?node_id=640489</a> 
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-4745">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre></pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-4745" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-4745" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-4745">7</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">define(){ local y=&quot;$@&quot;;curl -sA&quot;Opera&quot; &quot;http://www.google.com/search?q=define:${y// /+}&quot;|grep -Eo '&lt;li&gt;[^&lt;]+'|sed 's/^&lt;li&gt;//g'|nl|/usr/bin/perl -MHTML::Entities -pe 'decode_entities($_)';}</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/gthb">gthb</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2010-01-30 13:08:03                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/4745/define-words-and-phrases-with-google.#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						1</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-4745" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/4745" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-4745" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/4745" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/grep">grep</a>
+                         
+                            <a href="/commands/using/sed">sed</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/34/bash">bash</a>
+                         
+                            <a href="/commands/tagged/104/perl">perl</a>
+                         
+                            <a href="/commands/tagged/127/macosx">macosx</a>
+                         
+                            <a href="/commands/tagged/235/curl">curl</a>
+                         
+                            <a href="/commands/tagged/354/function">function</a>
+                         
+                            <a href="/commands/tagged/654/google">google</a>
+                         
+                            <a href="/commands/tagged/1103/nl">nl</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/4821/get-the-weather-forecast-for-the-next-24-to-48-for-your-location." title="Find out what others think of this command">Get the weather forecast for the next 24 to 48 for your location.</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    This shell function grabs the weather forecast for the next 24 to 48 hours from weatherunderground.com. Replace &lt;YOURZIPORLOCATION&gt; with your zip code or your "city, state" or "city, country", then calling the function without any arguments returns the weather for that location. Calling the function with a zip code or place name as an argument returns the weather for that location instead of your default. 
+To add a bit of color formatting to the output, use the following instead:
+<code>weather(){ curl -s &quot;http://api.wunderground.com/auto/wui/geo/ForecastXML/index.xml?query=${@:-&lt;YOURZIPORLOCATION&gt;}&quot;|perl -ne '/&lt;title&gt;([^&lt;]+)/&amp;&amp;printf &quot;\x1B[0;34m%s\x1B[0m: &quot;,$1;/&lt;fcttext&gt;([^&lt;]+)/&amp;&amp;print $1,&quot;\n&quot;';}</code>
+Requires: perl, curl 
+                                    <a class="text-muted" href="javascript:void(0)" onclick="Terminal.toggleSampleOutput($(this),$('sample-output-4821'))">Show Sample Output</a>
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-4821">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre>$ weather london, uk
+Tonight: Partly cloudy. Lows around 14. Northwest winds 10 to 15 mph in the evening...decreasing to 5 to 10 mph after midnight.
+Wednesday: Mostly sunny. Highs in the mid 30s. Northwest winds 5 to 10 mph in the morning...decreasing to 5 mph in the afternoon.
+
+$ weather 48104
+Tonight: Cloudy. Snow through 7 PM...then snow heavy at times. Accumulations 5 to 7 inches. Lows 19 to 23. East winds 10 to 20 mph...turning to northeast. Chance of snow 100 percent.
+Wednesday: Cloudy and windy. Light snow with areas of blowing and drifting snow through 10 am...then scattered light snow showers along with areas of blowing and drifting snow. Additional accumulations around an inch. Highs 24 to 28. North winds 20 to 30 mph...diminishing to 15 to 25 mph. Chance of snow 100 percent.
+
+$ weather
+Tonight: Blustery. Mostly cloudy. Scattered snow showers in the evening...then chance of flurries after midnight. Blowing and drifting snow through the night. Low around 14. Northwest wind 15 to 20 mph with gusts to around 30 mph.
+Wednesday: Blustery. Mostly cloudy early in the morning then becoming partly cloudy. High in the upper 20s. Northwest wind 10 to 20 mph with gusts to around 30 mph.</pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-4821" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-4821" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-4821">7</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">weather(){ curl -s &quot;http://api.wunderground.com/auto/wui/geo/ForecastXML/index.xml?query=${@:-&lt;YOURZIPORLOCATION&gt;}&quot;|perl -ne '/&lt;title&gt;([^&lt;]+)/&amp;&amp;printf &quot;%s: &quot;,$1;/&lt;fcttext&gt;([^&lt;]+)/&amp;&amp;print $1,&quot;\n&quot;';}</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/eightmillion">eightmillion</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2010-02-10 01:23:39                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/4821/get-the-weather-forecast-for-the-next-24-to-48-for-your-location.#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						5</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-4821" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/4821" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-4821" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/4821" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/perl">perl</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/104/perl">perl</a>
+                         
+                            <a href="/commands/tagged/235/curl">curl</a>
+                         
+                            <a href="/commands/tagged/354/function">function</a>
+                         
+                            <a href="/commands/tagged/1133/weather">weather</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/4840/url-encode" title="Find out what others think of this command">Url Encode</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    Converts reserved characters in a URI to their percent encoded counterparts.
+Alternate python version:
+<code>echo &quot;$url&quot; | python -c 'import sys,urllib;print urllib.quote(sys.stdin.read().strip())'</code> 
+                                    <a class="text-muted" href="javascript:void(0)" onclick="Terminal.toggleSampleOutput($(this),$('sample-output-4840'))">Show Sample Output</a>
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-4840">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre>$ echo &quot;this &amp; that&quot; | perl -MURI::Escape -ne 'chomp;print uri_escape($_),&quot;\n&quot;'
+this%20%26%20that
+
+$ echo &quot;this &amp; that&quot; | python -c 'import sys,urllib;print urllib.quote(sys.stdin.read().strip())'
+this%20%26%20that</pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-4840" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-4840" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-4840">7</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">echo &quot;$url&quot; | perl -MURI::Escape -ne 'chomp;print uri_escape($_),&quot;\n&quot;'</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/eightmillion">eightmillion</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2010-02-13 00:44:48                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/4840/url-encode#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						0</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-4840" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/4840" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-4840" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/4840" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/echo">echo</a>
+                         
+                            <a href="/commands/using/perl">perl</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/104/perl">perl</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/5087/multi-line-grep" title="Find out what others think of this command">Multi-line grep</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    Using perl you can search for patterns spanning several lines, a thing that grep can't do. Append the list of files to above command or pipe a file through it, just as with regular grep. If you add the 's' modifier to the regex, the dot '.' also matches line endings, useful if you don't known how many lines you need are between parts of your pattern. Change '*' to '*?' to make it greedy, that is match only as few characters as possible.
+See also <a href="http://www.commandlinefu.com/commands/view/1764/display-a-block-of-text-with-awk" rel="nofollow">http://www.commandlinefu.com/commands/view/1764/display-a-block-of-text-with-awk</a> to do a similar thing with awk.
+Edit: The undef has to be put in a begin-block, or a match in the first line would not be found. 
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-5087">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre></pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-5087" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-5087" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-5087">7</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">perl -ne 'BEGIN{undef $/}; print &quot;$ARGV\t$.\t$1\n&quot; if m/(first line.*\n.*second line)/mg'</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/hfs">hfs</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2010-03-18 15:46:10                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/5087/multi-line-grep#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						1</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-5087" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/5087" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-5087" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/5087" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/perl">perl</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/104/perl">perl</a>
+                         
+                            <a href="/commands/tagged/163/grep">grep</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/1686/find-all-directories-on-filesystem-containing-more-than-99mb" title="Find out what others think of this command">Find all directories on filesystem containing more than 99MB</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    Finds all directories containing more than 99MB of files, and prints them in human readable format. The directories sizes do not include their subdirectories, so it is very useful for finding any single directory with a lot of large files. 
+                                    <a class="text-muted" href="javascript:void(0)" onclick="Terminal.toggleSampleOutput($(this),$('sample-output-1686'))">Show Sample Output</a>
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-1686">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre>150M    /home/jharvey/scratch
+100M    /home/jharvey
+567M    /home/jdoe/migration</pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-1686" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-1686" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-1686">6</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">du -hS / | perl -ne '(m/\d{3,}M\s+\S/ || m/G\s+\S/) &amp;&amp; print'</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/Alioth">Alioth</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2009-03-25 18:06:53                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/1686/find-all-directories-on-filesystem-containing-more-than-99mb#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						1</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-1686" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/1686" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-1686" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/1686" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/du">du</a>
+                         
+                            <a href="/commands/using/perl">perl</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/5/filesystem">Filesystem</a>
+                         
+                            <a href="/commands/tagged/104/perl">perl</a>
+                         
+                            <a href="/commands/tagged/124/du">du</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/3784/validate-the-syntax-of-a-perl-compatible-regular-expression" title="Find out what others think of this command">validate the syntax of a perl-compatible regular expression</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    Place the regular expression you want to validate between the forward slashes in the eval block. 
+                                    <a class="text-muted" href="javascript:void(0)" onclick="Terminal.toggleSampleOutput($(this),$('sample-output-3784'))">Show Sample Output</a>
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-3784">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre>$ perl -we 'my $regex = eval {qr/*/}; die &quot;$@&quot; if $@;'
+Quantifier follows nothing in regex; marked by &lt;-- HERE in m/* &lt;-- HERE / at -e line 1.</pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-3784" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-3784" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-3784">5</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">perl -we 'my $regex = eval {qr/.*/}; die &quot;$@&quot; if $@;'</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/tlacuache">tlacuache</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2009-10-13 21:50:47                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/3784/validate-the-syntax-of-a-perl-compatible-regular-expression#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						1</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-3784" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/3784" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-3784" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/3784" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/eval">eval</a>
+                         
+                            <a href="/commands/using/perl">perl</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/104/perl">perl</a>
+                         
+                            <a href="/commands/tagged/351/regex">regex</a>
+                         
+                            <a href="/commands/tagged/471/validation">validation</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/4157/urldecoding" title="Find out what others think of this command">urldecoding</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                     
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-4157">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre></pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-4157" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-4157" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-4157">5</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">perl -pe 's/%([0-9a-f]{2})/sprintf(&quot;%s&quot;, pack(&quot;H2&quot;,$1))/eig'</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/putnamhill">putnamhill</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2009-11-25 14:32:50                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/4157/urldecoding#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						1</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-4157" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/4157" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-4157" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/4157" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/perl">perl</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/104/perl">perl</a>
+                         
+                            <a href="/commands/tagged/1029/urldecode">urldecode</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                <li class="list-group-item one-liner">
+			<div class="col-md-10">
+                <div class="summary" style="font-size:1.5em;font-weight:bold;overflow:hidden">
+                    <a href="/commands/view/4683/do-some-perl-learning..." title="Find out what others think of this command">Do some Perl learning...</a>
+                </div>
+                <div class="description" style="overflow:auto">
+					<p>
+                    Prerequisites: module Pod::Webserver installed. You can install it typing:
+<code>sudo perl -MCPAN -e 'install Pod::Webserver'</code>
+You can replace elinks with your fav browser. For FF:
+<code>podwebserver&amp; sleep 2; firefox -remote 'openurl( http://127.0.0.1:8020/, new-tab )'</code>
+If you have Firefox open, this will pop-up the index web in a new tab. 
+                					</p>
+                </div>
+
+				<div style="display:none" class="sample-output" id="sample-output-4683">
+					<div class="output-meta">
+						This is sample output - yours may be different.
+					</div>
+					<div class="output">
+						<pre></pre>
+					</div> 
+				</div>
+
+			</div>
+			<div class="col-md-2">
+                <div class="votes">
+                    <div class="pull-right voting-options" style="display:inline-block;margin-right:5px">
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-up-4683" class="glyphicon glyphicon-chevron-up"></i></a><br/>
+                        <a href="javascript:void(0)" class="vote-button"><i id="vote-down-4683" class="glyphicon glyphicon-chevron-down"></i></a>
+                    </div>
+                    <div style="position:absolute;top:3px;right:1.3em;display:inline-block;" class="num-votes" id="num-votes-4683">5</div>
+					<div class="clearfix"></div>
+                </div>
+
+			</div>
+			<div class="col-md-12">
+				<div class="line" title="Click to select this command" style="font-family:">
+					<span class="glyphicon glyphicon-usd" style="position:absolute;color:white;padding:.5em;font-size:85%;top:6px;"></span>
+					<span style="padding-left:2em;overflow:auto" class="command code bash">podwebserver&amp; sleep 2; elinks 'http://127.0.0.1:8020'</span>
+				</div>
+			</div>
+			<div class="col-md-12" style="padding-top:10px;">
+                    <span class="author">
+                        <a class="text-muted" href="/commands/by/vlan7">vlan7</a>
+                    </span>
+                    <span class="date text-muted">
+						&middot;
+                    	2010-01-27 10:57:34                    </span>
+					
+					<span class="pull-right" style="margin-right: 5em;">
+                		<a class="text-muted" href="/commands/view/4683/do-some-perl-learning...#comment">
+						<span class="glyphicon glyphicon-comment"></span>
+						1</a>
+					</span>
+					<span class="pull-right" style="margin-right: 1em;">
+												<a class="pull-right favourite-link" href="javascript:void(0)"><i id="toggle-favourite-4683" class="glyphicon glyphicon-star-empty"></i></a>
+					</span>
+				
+			</div>
+					<div class="btn-group" style="position:absolute;right:10px;cursor:pointer">
+					  <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<span class="glyphicon glyphicon-option-vertical"></span>
+					  </a>
+					  <ul class="dropdown-menu">
+						<li><a href="/commands/edit/0/4683" title="Submit a superior alternative">Submit alternative</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a class="report-link" id="report-4683" href="javascript:void(0)" title="Report this command as malicious">Report as malicious</a></li>
+						<li><a href="/commands/duplicate/4683" title="Report as duplicate">Report as a duplicate</a></li>
+					  </ul>
+					</div>
+			<div class="clearfix"></div>
+<!--
+            <div class="details">
+                <div class="meta">
+                                        <div class="functions">
+                        Functions:
+                         
+                            <a href="/commands/using/sleep">sleep</a>
+                                            </div>
+                                                            <div class="functions">
+                        Tags:
+                         
+                            <a href="/commands/tagged/104/perl">perl</a>
+                         
+                            <a href="/commands/tagged/296/firefox">firefox</a>
+                         
+                            <a href="/commands/tagged/896/server">server</a>
+                                            </div>
+                                    </div>
+                <div class="options">
+                </div>
+            </div>
+-->
+        </li>
+                        <li class="list-group-item">
+            &nbsp;<b>1</b>&nbsp;<a href="/commands/tagged/104/perl/25">2</a>&nbsp;<a href="/commands/tagged/104/perl/50">3</a>&nbsp;<a href="/commands/tagged/104/perl/25">&gt;</a>&nbsp;&nbsp;<a href="/commands/tagged/104/perl/175">Last &rsaquo;</a>        </li>
+    	    	</ul>
+</div>
+
+
+  </div>
+  <div class="col-md-3 col-lg-4">
+
+            
+
+<div class="box-copy">
+    <h3 class="righthead">What's this?</h3>
+    <div class="toggleable">
+        <p><strong>commandlinefu.com</strong> is the place to record those command-line gems that you return to again and again.
+        That way others can gain from your <abbr title="Command-line interface">CLI</abbr> wisdom and you from theirs too.  All commands can be commented on, discussed and 
+        voted up or down. </p>
+		<p class="text-center"><a class="btn btn-warning" href="/commands/edit"><strong><i class="glyphicon glyphicon-plus"></i> Share Your Commands</strong></a></p>
+        <!-- <p>If you have a new feature suggestion or find a bug, please 
+        get in touch via <a href="http://commandlinefu.uservoice.com/"><strong>http://commandlinefu.uservoice.com/</strong></a><p>-->
+    </div>
+</div>
+<hr />
+<div class="box-copy">
+    <h3 class="righthead">Check These Out</h3>
+			<p>
+		<div style="font-weight:bold;overflow:hidden;white-space:nowrap;text-overflow:ellipsis"><a href="/commands/view/4679/delete-multiple-files-with-spaces-in-filenames-with-confirmation">delete multiple files with spaces in filenames (with confirmation)</a></div>
+				<div style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis">ls -Q will show the filenames in quotes. xargs -p rm will print all the filenames piped from ls -Q and ask for confirmation before deleting the files.
+
+without the -Q switch, if we have spaces in names, then the files won't be deleted.</div>
+				</p>
+			<p>
+		<div style="font-weight:bold;overflow:hidden;white-space:nowrap;text-overflow:ellipsis"><a href="/commands/view/12350/run-the-built-in-php-server-in-current-folder">Run the built in PHP-server in current folder</a></div>
+				<div style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis">You must have PHP 5.4.0 or later to be able to run the built in server.
+
+This web server is designed for developmental purposes only, and should not be used in production.
+
+URI requests are served from the current working directory where PHP was started, unless the -t option is used to specify an explicit document root. If a URI request does not specify a file, then either index.php or index.html in the given directory are returned. If neither file exists, then a 404 response code is returned.
+
+If a PHP file is given on the command line when the web server is started it is treated as a "router" script. The script is run at the start of each HTTP request. If this script returns FALSE, then the requested resource is returned as-is. Otherwise the script's output is returned to the browser.
+
+Standard MIME types are returned for files with extensions: .css, .gif, .htm, .html, .jpe, .jpeg, .jpg, .js, .png, .svg, and .txt. The .htm and .svg extensions are recognized from PHP 5.4.4 onwards.
+
+More information here: http://php.net/manual/en/features.commandline.webserver.php</div>
+				</p>
+			<p>
+		<div style="font-weight:bold;overflow:hidden;white-space:nowrap;text-overflow:ellipsis"><a href="/commands/view/12442/foo-german-translation-with-dict.leo.org">foo <--> german translation with dict.leo.org</a></div>
+				<div style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis">Translate strings from non-german to german (and vice versa) using LEO. Put it in your ~/.bashrc.
+
+Usage:
+$ leo words
+&#8199;
+To use another language other than english, use an option:
+$ leo -xx words
+
+Valid language options:
+ch  -  chinese
+en  - english
+es  - spanish
+fr  - french
+it  - italian
+pl  - polish
+pt  - portuguese
+ru  - russian
+
+The other language will always be german!</div>
+				</p>
+			<p>
+		<div style="font-weight:bold;overflow:hidden;white-space:nowrap;text-overflow:ellipsis"><a href="/commands/view/12091/find-unreadable-file">find unreadable file</a></div>
+				</p>
+			<p>
+		<div style="font-weight:bold;overflow:hidden;white-space:nowrap;text-overflow:ellipsis"><a href="/commands/view/6500/translate-with-google-get-all-translations">translate with google, get all translations</a></div>
+				<div style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis">the google-api gives you only one translation which is sometimes insufficent. this function gives you all translations, so you can choose which one fits best.</div>
+				</p>
+			<p>
+		<div style="font-weight:bold;overflow:hidden;white-space:nowrap;text-overflow:ellipsis"><a href="/commands/view/9840/get-all-ips-via-ifconfig">Get all IPs via ifconfig</a></div>
+				</p>
+			<p>
+		<div style="font-weight:bold;overflow:hidden;white-space:nowrap;text-overflow:ellipsis"><a href="/commands/view/19964/convert-seconds-to-ddhhmmss">Convert seconds to [DD:][HH:]MM:SS</a></div>
+				<div style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis">Converts any number of seconds into days, hours, minutes and seconds.
+
+sec2dhms() {
+ declare -i SS="$1"
+ D=$(( SS / 86400 )) 
+ H=$(( SS % 86400 / 3600 ))
+ M=$(( SS % 3600 / 60 )) 
+ S=$(( SS % 60 )) 
+ [ "$D" -gt 0 ] && echo -n "${D}:"
+ [ "$H" -gt 0 ] && printf "%02g:" "$H"
+ printf "%02g:%02g\n" "$M" "$S"
+}</div>
+				</p>
+			<p>
+		<div style="font-weight:bold;overflow:hidden;white-space:nowrap;text-overflow:ellipsis"><a href="/commands/view/14541/list-files-recursively-by-size">list files recursively by size</a></div>
+				</p>
+			<p>
+		<div style="font-weight:bold;overflow:hidden;white-space:nowrap;text-overflow:ellipsis"><a href="/commands/view/3938/go-up-multiple-levels-of-directories-quickly-and-easily.">Go up multiple levels of directories quickly and easily.</a></div>
+				<div style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis">Change to your taste. Much quicker than having to add 'cd' every time. Add it to your .bashrc or .bash_profile.</div>
+				</p>
+			<p>
+		<div style="font-weight:bold;overflow:hidden;white-space:nowrap;text-overflow:ellipsis"><a href="/commands/view/324/show-all-programs-connected-or-listening-on-a-network-port">show all programs connected or listening on a network port</a></div>
+				<div style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis">Use the aliased command 'nsl'</div>
+				</p>
+	</div>
+<hr>
+<div class="box-copy">
+    <h3 class="righthead">Stay in the loop&hellip;</h3>
+    <div class="toggleable">
+        <dl>
+            <dt>Follow the Tweets.</dt>  
+            <dd>
+                <a href="http://twitter.com/commandlinefu"><img class="link-img" src="/images/twitter.jpg" /></a>
+                <p>Every new command is wrapped in a tweet and posted
+                to <a href="http://twitter.com">Twitter</a>. Following the stream is a great way of staying abreast of the latest commands.  For the more discerning, 
+                there are Twitter accounts for commands that get a minimum of 3 and 10 votes - that way only the great commands get tweeted.</p>
+                <p>
+                &raquo; <a style="font-weight:bold;" href="http://twitter.com/commandlinefu">http://twitter.com/commandlinefu</a><br/>
+                &raquo; <a style="font-weight:bold;" href="http://twitter.com/commandlinefu3">http://twitter.com/commandlinefu3</a><br/>
+                &raquo; <a style="font-weight:bold;" href="http://twitter.com/commandlinefu10">http://twitter.com/commandlinefu10</a>
+                </p>
+            </dd>
+            <dt>Subscribe to the feeds.</dt>
+            <dd>
+                <a style="font-weight:bold;" href="http://feeds2.feedburner.com/Command-line-fu"><img class="link-img" src="/images/rss.gif" /></a>
+                <p>Use your favourite RSS aggregator to stay in touch with the latest commands.  There are feeds mirroring the 3 Twitter streams
+                as well as for virtually every other subset (users, tags, functions,&hellip;):</p>
+                <p>Subscribe to the feed for:</p>
+                <ul id="feed-links">
+                <li>&raquo; <a style="font-weight:bold;" href="http://feeds2.feedburner.com/Command-line-fu">all commands</a></li>
+                <li>&raquo; <a style="font-weight:bold;" href="/feed/threeup">commands with 3 up-votes</a> (commandlinefu3)</li>
+                <li>&raquo; <a style="font-weight:bold;" href="/feed/tenup">commands with 10 up-votes</a> (commandlinefu10)</li>
+                                <li>&raquo; <a style="font-weight:bold;" href="/commands/tagged/104/perl/rss">commands tagged perl</a></li>
+                                </ul>
+            </dd>
+        </dl>
+    </div>
+</div>
+
+<!--
+<div class="box-copy">
+    <a class="visibility-toggle" id="box-copy-tags">Hide</a>
+    <h3>Top Tags</h3>
+    <div class="toggleable"><br>
+        <a href="/commands/tagged/112/awk">awk</a>, <a href="/commands/tagged/34/bash">bash</a></li>, 
+	<a href="/commands/tagged/235/curl">curl</a>, 
+	<a href="/commands/tagged/123/find">find</a>, 
+	<a href="/commands/tagged/163/grep">grep</a>, 
+	<a href="/commands/tagged/64/linux">Linux</a>, <a href="/commands/tagged/110/sed">sed</a></li>
+	</ul>
+    </div>
+</div>
+
+<div class="box-copy">
+    <a class="visibility-toggle" id="box-copy-functions">Hide</a>
+    <h3>Functions</h3>
+    <div class="toggleable">
+            </div>
+</div>
+-->
+
+  </div>
+ </div>
+</div>
+
+<footer class="bs-footer" role="contentinfo" style="background-color:#F5F5F5;">
+  <div class="container">
+    <p style="padding-top:20px;">commandlinefu.com &copy; 2018 <a href="https://www.danstools.com" target="_blank">Dan's Tools</a> | <a href="/site/faq">FAQs</a> | <a href="/site/api">API</a> | <a href="/site/widget">Widget</a>  | <a href="/site/privacy">Privacy</a></p>
+  </div>
+
+</footer>
+
+
+<!--    <div id="wrapper">
+        
+        <div id="right-block">
+        </div>
+        
+        <div id="header">
+            <h4><a href="/commands/browse" title="commandlinefu.com - the greatest commands on the web"><img src="/images/header-logo.jpg" alt="commandlinefu.com" /></a></h4>
+            <div id="nav">
+                <strong><a href="/commands/random" title="Lucky dip">Random</a></strong> |
+                <strong><a href="/commands/browse/last-week/sort-by-votes" title="Piping host commands from the last 7 days">Hot this week</a></strong> |
+                <strong><a href="/commands/browse/sort-by-votes" title="See the all-time greatest commands">All-time greats</a></strong> &bull;
+                <strong><a href="/site/faq"><abbr title="Frequently asked questions">FAQ</abbr></a></strong> |
+                <strong><a href="/site/api"><abbr title="API documentation">API</abbr></a></strong> |
+                <strong><a href="/site/widget"><abbr title="Javascript widget">Widget</abbr></a></strong>
+            </div>    
+            <div id="search">
+                <form id="search-form" action="/search/handler" method="post" >
+                    <div id="search-container">
+                        <img id="loading" src="/images/tag-loader.gif" style="display:none;float:right;margin: 5px 5px 0 0;" />
+                        <input type="text" id="search-query" class="inactive" name="q" autocomplete="off" value="" placeholder="type here to grep the archive..." />
+                    </div>
+                </form>
+                <div style="display:none" id="search-options"></div>
+            </div>
+        </div>
+        
+        
+        <div id="left-block">
+        </div>
+        
+        <div id="footer">
+        
+            <div class="advertising">
+                            </div>
+        </div>
+    </div>
+-->    
+    
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script>
+    $.noConflict();
+
+    if (typeof Prototype !== "undefined" && Prototype.BrowserFeatures.ElementExtensions)
+    {
+        var disablePrototypeJS = function (method, pluginsToDisable)
+        {
+            var handler = function (event)
+            {
+                event.target[method] = undefined;
+                setTimeout(function ()
+                {
+                    delete event.target[method];
+                }, 0);
+            };
+
+            pluginsToDisable.each(function (plugin)
+            {
+                jQuery(window).on(method + '.bs.' + plugin, handler);
+            });
+        },
+
+        pluginsToDisable = ['collapse', 'dropdown', 'modal', 'tooltip', 'popover', 'tab','collect'];
+        disablePrototypeJS('show', pluginsToDisable);
+        disablePrototypeJS('hide', pluginsToDisable);
+    }
+	</script>
+	<script>
+jQuery( document ).ready(function() {
+
+	hljs.initHighlightingOnLoad();
+	hljs.configure({useBR: true});
+
+	jQuery('span.code').each(function(i, block) {
+	  hljs.highlightBlock(block);
+	});
+
+    if (1==0 && window.canRunAds === true) {
+        jQuery('#blocker').hide();
+    } else { jQuery('#blocker').show(); }
+});
+
+	</script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <script src="/js/ads.js"></script>
+
+    </body>
+</html>

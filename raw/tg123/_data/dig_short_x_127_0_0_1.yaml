@@ -1,0 +1,7 @@
+commandlinefu_id: 13625
+translator:
+  weibo: 'fw8899'
+command: |-
+  dig +short -x 127.0.0.1
+summary: |-
+  执行反向DNS查找

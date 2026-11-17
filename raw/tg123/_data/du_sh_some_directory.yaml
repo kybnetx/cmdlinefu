@@ -1,0 +1,7 @@
+commandlinefu_id: 4906
+translator:
+  weibo: tgic
+command: |-
+  du -sh some/directory
+summary: |-
+  统计目录大小

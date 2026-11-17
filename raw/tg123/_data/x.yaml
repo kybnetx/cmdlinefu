@@ -1,0 +1,7 @@
+commandlinefu_id: 9250
+translator:
+  weibo: tgic
+command: |-
+  ((x++))
+summary: |-
+  变量自增

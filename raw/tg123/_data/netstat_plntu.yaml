@@ -1,0 +1,7 @@
+commandlinefu_id: 9385
+translator:
+  weibo: tgic
+command: |-
+  netstat -plntu
+summary: |-
+  开放的端口

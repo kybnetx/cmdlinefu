@@ -1,0 +1,7 @@
+commandlinefu_id: 8136
+translator:
+  weibo: tgic
+command: |-
+  pacman -Ql gvim
+summary: |-
+  显示安装列表(arch)

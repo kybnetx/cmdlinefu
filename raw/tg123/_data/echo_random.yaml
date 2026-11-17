@@ -1,0 +1,7 @@
+commandlinefu_id: 871
+translator:
+  weibo: tgic
+command: |-
+  echo $RANDOM
+summary: |-
+  随机数

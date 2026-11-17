@@ -1,0 +1,7 @@
+commandlinefu_id: 12284
+translator:
+  weibo: tgic
+command: |-
+  iotop
+summary: |-
+  查看io 的top

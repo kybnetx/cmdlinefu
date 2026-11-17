@@ -1,0 +1,7 @@
+commandlinefu_id: 11473
+translator:
+  weibo: 'fw8899'
+command: |-
+  if [ -n "$SSH_CONNECTION" ]; then export TMOUT=300; fi
+summary: |-
+  指定时间后自动登出ssh用户

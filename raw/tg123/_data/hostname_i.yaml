@@ -1,0 +1,7 @@
+commandlinefu_id: 5986
+translator:
+  weibo: tgic
+command: |-
+  hostname -I
+summary: |-
+  查看ip地址

@@ -1,0 +1,7 @@
+commandlinefu_id: 11145
+translator:
+  weibo: tgic
+command: |-
+  chmod +x ini.sh #./ini.sh
+summary: |-
+  添加执行权限

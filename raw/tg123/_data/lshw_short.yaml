@@ -1,0 +1,7 @@
+commandlinefu_id: 8737
+translator:
+  weibo: tgic
+command: |-
+  lshw -short
+summary: |-
+  列出所有硬件

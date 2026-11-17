@@ -1,0 +1,7 @@
+commandlinefu_id: 7885
+translator:
+  weibo: tgic
+command: |-
+  fromdos <file>
+summary: |-
+  转换 dos 文本格式 到 unix

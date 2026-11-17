@@ -1,0 +1,7 @@
+commandlinefu_id: 3783
+translator:
+  weibo: tgic
+command: |-
+  h() { if [ -z "$1" ]; then history; else history | grep "$@"; fi; }
+summary: |-
+  查找历史

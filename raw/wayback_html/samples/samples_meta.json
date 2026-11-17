@@ -1,0 +1,7 @@
+{
+ "t.html": {"kind":"tag_listing","tag_id":10,"offset":0,"url":"http://www.commandlinefu.com/commands/tagged/10/date-manipulation","capture_ts":null,"capture_note":"fetched in research phase via Wayback id_; exact 14-digit timestamp not recorded; newest in-page date 2012-05-20, so captured on/after 2012-05-20"},
+ "v13.html": {"kind":"view","command_id":13,"url":"http://www.commandlinefu.com/commands/view/13/run-the-last-command-as-root","capture_ts":null,"capture_note":"research-phase fetch; exact timestamp not recorded; newest in-page date 2009-02-08"},
+ "v13n.html": {"kind":"view","command_id":13,"url":"http://www.commandlinefu.com/commands/view/13/run-the-last-command-as-root","capture_ts":null,"capture_note":"research-phase fetch of a late capture; exact timestamp not recorded; page footer (c) 2018"},
+ "s_20120325185314.html": {"kind":"view","command_id":3198,"url":"http://www.commandlinefu.com/commands/view/3198","capture_ts":"20120325185314","capture_note":"research-phase fetch"},
+ "s_20130508231856.html": {"kind":"view","command_id":9653,"url":"http://www.commandlinefu.com/commands/view/9653","capture_ts":"20130508231856","capture_note":"research-phase fetch"}
+}

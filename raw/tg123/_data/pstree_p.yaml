@@ -1,0 +1,7 @@
+commandlinefu_id: 3124
+translator:
+  weibo: tgic
+command: |-
+  pstree -p
+summary: |-
+  进程树

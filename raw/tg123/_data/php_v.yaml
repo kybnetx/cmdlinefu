@@ -1,0 +1,7 @@
+commandlinefu_id: 13495
+translator:
+  weibo: tgic
+command: |-
+  php -v
+summary: |-
+  查看php版本

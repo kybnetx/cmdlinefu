@@ -1,0 +1,7 @@
+commandlinefu_id: 7348
+translator:
+  weibo: tgic
+command: |-
+  rename 's/\.txt$/\.md$/i' *
+summary: |-
+  批量将.txt 重命名为.md

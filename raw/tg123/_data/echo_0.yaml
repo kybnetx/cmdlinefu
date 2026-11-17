@@ -1,0 +1,7 @@
+commandlinefu_id: 9534
+translator:
+  weibo: tgic
+command: |-
+  echo $0
+summary: |-
+  显示shell名字

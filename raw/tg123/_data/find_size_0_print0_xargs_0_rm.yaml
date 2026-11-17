@@ -1,0 +1,7 @@
+commandlinefu_id: 3925
+translator:
+  weibo: tgic
+command: |-
+  find . -size 0 -print0 | xargs -0 rm
+summary: |-
+  清理空文件

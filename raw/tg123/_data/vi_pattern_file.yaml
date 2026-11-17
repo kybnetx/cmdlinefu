@@ -1,0 +1,7 @@
+commandlinefu_id: 5456
+translator:
+  weibo: tgic
+command: |-
+  vi +/pattern [file]
+summary: |-
+  打开vim 并搜索 pattern

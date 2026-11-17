@@ -1,0 +1,7 @@
+commandlinefu_id: 10297
+translator:
+  weibo: tgic
+command: |-
+  sed -i 's/\r//' <filename>
+summary: |-
+  转化为unix格式

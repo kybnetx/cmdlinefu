@@ -1,0 +1,7 @@
+commandlinefu_id: 9105
+translator:
+  weibo: '没想到321'
+command: |-
+  grep ^Dirty /proc/meminfo
+summary: |-
+  查看有多少数据等待写入磁盘。(注意：linux 的写操作是先写入page cache，这里的写入磁盘，指的其实是写入page cache)

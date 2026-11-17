@@ -1,0 +1,7 @@
+commandlinefu_id: 9312
+translator:
+  weibo: tgic
+command: |-
+  lsof +D <dirname>
+summary: |-
+  看看目录下有那些打开的文件

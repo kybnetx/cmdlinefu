@@ -1,0 +1,25 @@
+# Archived files must stay byte-for-byte identical so manifests/SHA256SUMS verifies.
+# Disable end-of-line conversion for everything covered by the checksums.
+/raw/** -text
+/clean/** -text
+/assets/** -text
+/manifests/** -text
+/tools/** -text
+/REPORT.md -text
+
+# Keep GitHub language statistics sane: archived third-party material is vendored/generated.
+/raw/** linguist-vendored
+/raw/**/*.html linguist-generated
+/raw/**/*.htm linguist-generated
+/raw/**/*.json linguist-generated
+/raw/**/*.yaml linguist-generated
+/assets/** linguist-vendored
+/clean/** linguist-generated
+/manifests/** linguist-generated
+
+# Binary artefacts
+*.sqlite binary
+*.tar.gz binary
+*.gz binary
+*.ico binary
+*.xz binary

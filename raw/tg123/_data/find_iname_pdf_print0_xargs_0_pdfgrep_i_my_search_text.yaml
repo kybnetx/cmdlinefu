@@ -1,0 +1,7 @@
+commandlinefu_id: 9189
+translator:
+  weibo: tgic
+command: |-
+  find -iname \*.pdf -print0 | xargs -0 pdfgrep -i "my search text"
+summary: |-
+  在pdf中查找

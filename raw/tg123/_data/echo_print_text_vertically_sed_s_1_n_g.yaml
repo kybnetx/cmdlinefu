@@ -1,0 +1,7 @@
+commandlinefu_id: 1358
+translator:
+  weibo: tgic
+command: |-
+  echo Print text vertically|sed 's/\(.\)/\1\n/g'
+summary: |-
+  垂直输出文本

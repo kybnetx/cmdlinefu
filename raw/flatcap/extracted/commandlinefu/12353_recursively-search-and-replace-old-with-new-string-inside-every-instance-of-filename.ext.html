@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title>
+			Recursively search and replace old with new string, inside every instance of filename.ext
+		</title>
+		<link rel='stylesheet' href='style.css' type='text/css' />
+	</head>
+	<body>
+		<div id="terminal-header">
+			<h1>
+				Recursively search and replace old with new string, inside every instance of filename.ext
+			</h1>
+		</div>
+		<div class="terminal-display one-liner" id="terminal-display-main">
+			<div class="line command">
+				find . -type f -name filename.exe -exec sed -i "s/oldstring/oldstring/g" {} +;
+			</div>
+			<div class="details description">
+				<p>
+					This is a slightly modified version of <a href="http://www.commandlinefu.com/commands/view/4283/recursive-search-and-replace-old-with-new-string-inside-files" rel="nofollow">http://www.commandlinefu.com/commands/view/4283/recursive-search-and-replace-old-with-new-string-inside-files</a> (which did not work due to incorrect syntax) with the added option to sed inside only files named filename.ext
+				</p>
+			</div>
+		</div>
+		<h3>
+			Alternatives
+		</h3>
+		<h3>
+			What others think
+		</h3>
+		<div id="comments">
+		</div>
+	</body>
+</html>

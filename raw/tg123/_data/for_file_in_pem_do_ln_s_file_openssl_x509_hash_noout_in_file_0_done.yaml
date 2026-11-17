@@ -1,0 +1,7 @@
+commandlinefu_id: 2532
+translator:
+  weibo: 'fw8899'
+command: |-
+  for file in *.pem; do ln -s $file `openssl x509 -hash -noout -in $file`.0; done
+summary: |-
+  同c_rehash

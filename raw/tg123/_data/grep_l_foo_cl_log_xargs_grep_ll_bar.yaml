@@ -1,0 +1,7 @@
+commandlinefu_id: 7633
+translator:
+  weibo: 'fw8899'
+command: |-
+  grep -l foo *cl*.log | xargs grep -lL bar
+summary: |-
+  查找包含foo但不含bar的文件

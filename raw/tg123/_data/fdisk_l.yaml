@@ -1,0 +1,7 @@
+commandlinefu_id: 13168
+translator:
+  weibo: tgic
+command: |-
+  fdisk -l
+summary: |-
+  查看分区

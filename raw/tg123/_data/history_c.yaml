@@ -1,0 +1,7 @@
+commandlinefu_id: 8859
+translator:
+  weibo: tgic
+command: |-
+  history -c
+summary: |-
+  清空历史

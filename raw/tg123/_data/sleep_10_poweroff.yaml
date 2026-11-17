@@ -1,0 +1,7 @@
+commandlinefu_id: 12175
+translator:
+  weibo: tgic
+command: |-
+  sleep 10; poweroff
+summary: |-
+  一会关机

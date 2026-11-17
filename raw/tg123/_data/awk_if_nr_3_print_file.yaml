@@ -1,0 +1,7 @@
+commandlinefu_id: 3841
+translator:
+  weibo: tgic
+command: |-
+  awk '{if (NR == 3) print}' <file>
+summary: |-
+  输出指定的行

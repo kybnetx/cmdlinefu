@@ -1,0 +1,7 @@
+commandlinefu_id: 11831
+translator:
+  weibo: tgic
+command: |-
+  whatis /usr/bin/* 2> /dev/null | less
+summary: |-
+  看看都是什么
